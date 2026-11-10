@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Changelog &#8212; bidspm v4.0.0dev
+ documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=75c7c72ae941e8b558d8" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=75c7c72ae941e8b558d8" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=75c7c72ae941e8b558d8"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=75c7c72ae941e8b558d8" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=75c7c72ae941e8b558d8" />
+
+    <script src="_static/documentation_options.js?v=071bb420"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script src="_static/mat_urls.js?v=fdbe6872"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'CHANGELOG';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Contributing" href="CONTRIBUTING.html" />
+    <link rel="prev" title="Links and references" href="links_and_references.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button type="button" class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation" aria-expanded="false" aria-controls="pst-primary-sidebar-modal">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/cpp_lab_logo.png" class="logo__image only-light" alt="bidspm v4.0.0dev
+ documentation - Home"/>
+    <img src="_static/cpp_lab_logo.png" class="logo__image only-dark pst-js-only" alt="bidspm v4.0.0dev
+ documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="general_information.html">
+    bidspm
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="installation/index.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="usage_notes.html">
+    Usage notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="demos/index.html">
+    Demos
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="faq/index.html">
+    FAQ
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="stats/index.html">
+    Statistics
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="preprocessing/index.html">
+    Preprocessing
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="output/index.html">
+    Outputs
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="QA.html">
+    Quality control
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="API.html">
+    API
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="links_and_references.html">
+    Links and references
+  </a>
+</li>
+
+
+<li class=" current active">
+  <a class="nav-link dropdown-item nav-internal" href="#" aria-current="page">
+    Changelog
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="CONTRIBUTING.html">
+    Contributing
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/cpp-lln-lab/bidspm.git" title="github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">github</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button type="button" class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page" aria-expanded="false" aria-controls="pst-secondary-sidebar-modal">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal" tabindex="-1"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="general_information.html">
+    bidspm
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="installation/index.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="usage_notes.html">
+    Usage notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="demos/index.html">
+    Demos
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="faq/index.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="stats/index.html">
+    Statistics
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="preprocessing/index.html">
+    Preprocessing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="output/index.html">
+    Outputs
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="QA.html">
+    Quality control
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="API.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="links_and_references.html">
+    Links and references
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#" aria-current="page">
+    Changelog
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="CONTRIBUTING.html">
+    Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/cpp-lln-lab/bidspm.git" title="github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">github</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-house"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Changelog</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Link to this heading">#</a></h1>
+<p>All notable changes to this project will be documented in this file.</p>
+<p>The format is based on <a class="reference external" href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>,
+and this project adheres to <a class="reference external" href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+<!--
+### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+-->
+<section id="unreleased">
+<h2>[unreleased]<a class="headerlink" href="#unreleased" title="Link to this heading">#</a></h2>
+<section id="added">
+<h3>Added<a class="headerlink" href="#added" title="Link to this heading">#</a></h3>
+</section>
+<section id="changed">
+<h3>Changed<a class="headerlink" href="#changed" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[ENH] Add SPM’s contrast number in filename of each contrasts output filename #1347 by &#64;Remi-Gau</p></li>
+</ul>
+</section>
+<section id="deprecated">
+<h3>Deprecated<a class="headerlink" href="#deprecated" title="Link to this heading">#</a></h3>
+</section>
+<section id="removed">
+<h3>Removed<a class="headerlink" href="#removed" title="Link to this heading">#</a></h3>
+</section>
+<section id="fixed">
+<h3>Fixed<a class="headerlink" href="#fixed" title="Link to this heading">#</a></h3>
+</section>
+<section id="security">
+<h3>Security<a class="headerlink" href="#security" title="Link to this heading">#</a></h3>
+</section>
+</section>
+<section id="v4-0-0-2024-09-11">
+<h2>[v4.0.0] - 2024-09-11<a class="headerlink" href="#v4-0-0-2024-09-11" title="Link to this heading">#</a></h2>
+<p><strong>Full Changelog</strong>: https://github.com/cpp-lln-lab/bidspm/compare/v3.1.0…v4.0.0</p>
+<section id="id1">
+<h3>Added<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[ENH] add QA workflow <code class="docutils literal notranslate"><span class="pre">bidsQA</span></code> to find outliers in MRIQC output or to view number of outlier timepoints (for a given metric and threshold) in each functional run <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1297">1297</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] add support for one-way ANOVA across groups at the group level <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1296">1296</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] allow for 2 sample T-Test, within group T-Test and one-way ANOVA to be more flexible with respect to what praticipants.tsv column to use to allocate subjects in each group <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1296">1296</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] make <code class="docutils literal notranslate"><span class="pre">addConfoundsToDesignMatrix</span></code> a method of <code class="docutils literal notranslate"><span class="pre">BidsModel</span></code> <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1294">1294</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] add Apptainer definition <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1254">1254</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> and by <a class="reference external" href="https://github.com/monique2208">monique2208</a></p></li>
+<li><p>[ENH] allow to copy anat only on raw datasets <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1181">1181</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] add option to concatenate runs at subject level to facilite running PPI analysis <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1133">1133</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] allow to run substeps of the bayesian model selection <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1145">1145</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] add quality control for GLM using the MACS toolbox to give a goodness of fit and several other information criteria (AIC, BIC) (MATLAB only) <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1135">1135</a>  by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] add several confound strategies to add to bids stats model and a function to create family of models <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1126">1126</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] add CLI to run bayesian model selection <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1121">1121</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] support label of activations with all atlases <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1100">1100</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] add support for session level models <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1116">1116</a> be by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p>
+<ul>
+<li><p>allow to pass dummy contrasts to session level</p></li>
+<li><p>allow inter session contrasts to be computed at the subject level</p></li>
+<li><p>improve naming of contrast to mention bids ses and run</p></li>
+</ul>
+</li>
+<li><p>[ENH] add Bayesian model selection to the python CLI <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1292">1292</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+</ul>
+</section>
+<section id="id2">
+<h3>Changed<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[ENH] align specification of F contrasts on the BIDS stats model: they should now be specified as a 2D matrix and not a 1D vector. <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1276">1276</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[DOC] change theme and structure of the documentation <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1256">1256</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[REF] refactor and update CLI in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1096">1096</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] <a class="reference internal" href="API.html#mat-src/IO/getData.m" title="getData"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">getData()</span></code></a> only loads anat data when requested <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1257">1257</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] the python CLI now uses sub-commands instead of the named parameter <code class="docutils literal notranslate"><span class="pre">--action</span></code> <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1292">1292</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+</ul>
+</section>
+<section id="id3">
+<h3>Removed<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[REF] Remove old CLI in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1096">1096</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>Fixed<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[FIX] ensure that <a class="reference internal" href="API.html#mat-src/batches/preproc/setBatchCoregistrationFuncToAnat.m" title="setBatchCoregistrationFuncToAnat"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">setBatchCoregistrationFuncToAnat()</span></code></a> takes into account bids_filter <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1295">1295</a> by <a class="reference external" href="https://github.com/d-ni374">d-ni374</a></p></li>
+<li><p>[FIX] update <a class="reference internal" href="API.html#mat-src/bids_model/createDefaultStatsModel.m" title="createDefaultStatsModel"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">createDefaultStatsModel()</span></code></a> to use proper <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> at the dataset level <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1248">1248</a> by <a class="reference external" href="https://github.com/d-ni374">d-ni374</a></p></li>
+<li><p>[FIX] make <a class="reference internal" href="API.html#mat-src/preproc/utils/getAcquisitionTime.m" title="getAcquisitionTime"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">getAcquisitionTime()</span></code></a> less brittle <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1248">1248</a> by <a class="reference external" href="https://github.com/d-ni374">d-ni374</a></p></li>
+<li><p>[FIX] fix regular expression in <a class="reference internal" href="API.html#mat-src/workflows/stats/bidsResults.m" title="bidsResults"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">bidsResults()</span></code></a> to identify contrasts <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1248">1248</a> by <a class="reference external" href="https://github.com/d-ni374">d-ni374</a>  and <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1275">1275</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] pass analysis level to stats actions when using python CLI <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1258">1258</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] remove goodness of fit from dataset level analysis as it is not supported by the MACS toolbox <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1265">1265</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] add java and zip to container recipes to allow using nidm results with octave <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1265">1265</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] copy the MACS toolbox to the SPM toolbox folder during the initialisation <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1203">1203</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] save <code class="docutils literal notranslate"><span class="pre">onsets.mat</span></code> directly in subject stats folder <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1187">1187</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] do not compute subject level contrast when running dataset level <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1102">1102</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] copy <code class="docutils literal notranslate"><span class="pre">RepetitionTime</span></code> in sidecar JSON after running smoothing in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1099">1099</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] rename results files (csv, tsv, png, nii) of each contrasts <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1104">1104</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] reslice ROIS before running ROI based analysis to make sure they are at the resolution of the BOLD images in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1110">1110</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+</ul>
+</section>
+</section>
+<section id="id5">
+<h2>[3.1.0] - 2023-07-01<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p><strong>Full Changelog</strong>: https://github.com/cpp-lln-lab/bidspm/compare/v3.0.0…v3.1.0</p>
+<section id="id6">
+<h3>Added<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[DOC] add changelog in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1056">1056</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[DOC] minor doc fixes in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1020">1020</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[DOC] Improve doc example out stats in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1014">1014</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[DOC] update doc regarding FAST model as default in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/985">985</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[DOC] update contributors and default options in doc in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/981">981</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[DOC] add doc to link to transformations in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/942">942</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[DOC] add demo code from workshop in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/935">935</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[DOC] abstract OHBM 2023 in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/934">934</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[DOC] add argument groups to python cli in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/907">907</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[DOC] update FAQ in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/897">897</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] add proper error when a column cannot be found in participants.tsv in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1050">1050</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] update CPP ROI and add methods section for ROI creation in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1026">1026</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] update rename to store original spm name of a file in metadata in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/987">987</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] add hemisphere parameter to CLI in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/950">950</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] make it possible to update bidspm from any folder in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/948">948</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] use filtering of layout in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/944">944</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] make reports more silent in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/939">939</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] add CC0 license by default to all outputs in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/898">898</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+</ul>
+</section>
+<section id="id7">
+<h3>Changed<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[ENH] overwrite files when renaming by default in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1051">1051</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] turn error into warning when no data to copy found in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/992">992</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+</ul>
+</section>
+<section id="id8">
+<h3>Removed<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[ENH] drop rsHRF support in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/906">906</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+</ul>
+</section>
+<section id="id9">
+<h3>Fixed<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[FIX] fix vismotion demo in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1070">1070</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] Exclude from GLM specification events with onsets longer than the run duration in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1060">1060</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] remove dummies from preproc dataset and not raw dataset when using CLI in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1057">1057</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] skip smoothing when running bidspm prepoc in dryRun in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1054">1054</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] handle phase entity in filename in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1034">1034</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] fix group level results after contrasts smoothing  in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1021">1021</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] copy to derivatives handles bids filter file and minimize re copying files that already exist in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1015">1015</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] allow cli to run constrat smoothing in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1012">1012</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] Force copy of data from fmriprep folder even if bidspm-preproc folder exists in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/1009">1009</a> by <a class="reference external" href="https://github.com/marcobarilari">marcobarilari</a></p></li>
+<li><p>[FIX] report proper fold number in labelfold.tsv in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/989">989</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] inconsistent slice timing throw errors and not warnings in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/982">982</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] validate condition names early to avoid downstream error in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/983">983</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] validate content results structure in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/980">980</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] missing variable for a Filter transform should not lead to a crash in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/970">970</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] display error when impossible slice timing values are given in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/969">969</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] fix QA failures in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/941">941</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] bug fix 892 in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/936">936</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] fix python cli in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/888">888</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+</ul>
+</section>
+</section>
+<section id="id10">
+<h2>[3.0.0] - 2022-12-14<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p><strong>Full Changelog</strong>: https://github.com/cpp-lln-lab/bidspm/compare/v2.3.0…v3.0.0</p>
+<section id="id11">
+<h3>Changed<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[DEP] deprecate slice order in options in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/882">882</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] change the way parametric models are run in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/873">873</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a>*</p></li>
+</ul>
+</section>
+<section id="id12">
+<h3>Added<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[ENH] include roi based calls in CLI  in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/880">880</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] add copy dataset to CLI in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/842">842</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] add smoothing to CLI in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/841">841</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] create docker image of bids app - Octave in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/837">837</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] use python based CLI to run bidspm with octave in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/832">832</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] update CPP_ROI in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/885">885</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] add extra files to derivatives datasets in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/883">883</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] incorporate opt.results in bids stats model in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/879">879</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] add option to ignore creating dataset level node in default model in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/871">871</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] implement logger in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/867">867</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] add function to return contrast filename for a certain contrast name in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/866">866</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[DOC] update FAQ to explain how to change subject level GLM folder name in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/872">872</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+</ul>
+</section>
+<section id="id13">
+<h3>Fixed<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[FIX] better handle metadata when changing suffix in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/884">884</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] exit with a warning and not an error when no contrast specified in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/870">870</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] fix SPM loading in returnContrastImageFile in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/869">869</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] fix make file in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/868">868</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+</ul>
+</section>
+</section>
+<section id="id14">
+<h2>[2.3.0] - 2022-11-22<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<p><strong>Full Changelog</strong>: https://github.com/cpp-lln-lab/bidspm/compare/v2.2.0…v2.3.0</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bidspm</span></code> main function:</p>
+<ul>
+<li><p>saving options are saved to help with bug report</p></li>
+<li><p>generate method section in reports folder when running preprocess or statistics</p></li>
+</ul>
+</li>
+</ul>
+<section id="id15">
+<h3>Added<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[DOC] add auto label of activation info in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/821">821</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[DOC] improve bids model warning in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/820">820</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[DOC] add all functions to doc in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/819">819</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] add design only to CLI <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/772">772</a></p></li>
+<li><p>[ENH] smoothing workflow will also try to smooth the corresponding anat data too</p></li>
+<li><p>[ENH] save skipped ROIs and concat beta maps in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/823">823</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] add boilerplate to CLI in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/822">822</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] error logs are generated upon crash for better bug reports in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/808">808</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] Use CLI to create default model in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/804">804</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] include bids and bids stats model validation if the validators are installed in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/787">787</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] add inverse normalize workflow in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/784">784</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] lesion detection will be done by including the CSF TPM too in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/778">778</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+</ul>
+</section>
+<section id="id16">
+<h3>Fixed<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[FIX] fix printing of windows path in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/812">812</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] use glob patterns to define dummy contrasts in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/826">826</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] rm desc when renamining some files in lesion segemtation in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/817">817</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] avoid duplicate contrasts in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/816">816</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] make collecting of OS version on windows more robust in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/806">806</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] throw warning when no results are asked in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/795">795</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] fix windows bugs in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/792">792</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] fix spelling in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/789">789</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] fix and tidy failing workflows in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/774">774</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+</ul>
+</section>
+</section>
+<section id="id17">
+<h2>[2.2.0] - 2022-10-29<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<p><strong>Full Changelog</strong>: https://github.com/cpp-lln-lab/bidspm/compare/v2.1.0…v2.2.0</p>
+<section id="id18">
+<h3>Added<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[DOC] use new copyright format in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/750">750</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[DOC] improve stats doc and warnings in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/746">746</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] add design only to CLI in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/772">772</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] add functions to help select fmriprep regressors in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/748">748</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] start switching to bidspm in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/747">747</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] use inputs from several datasets for lesion abnormality detection in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/730">730</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[ENH] Update bidspm path in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/752">752</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+</ul>
+</section>
+<section id="id19">
+<h3>Changed<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[DEP] update bids matlab in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/734">734</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+</ul>
+</section>
+<section id="id20">
+<h3>Fixed<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[FIX] fixes workflow timing in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/773">773</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] related to <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/763">763</a> and testing through CI if the patch breaks things (reopened) in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/765">765</a> by <a class="reference external" href="https://github.com/marcobarilari">marcobarilari</a></p></li>
+</ul>
+</section>
+</section>
+<section id="id21">
+<h2>[2.1.0] - 2022-07-21<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
+<p><strong>Full Changelog</strong>: https://github.com/cpp-lln-lab/bidspm/compare/v2.0.0…v2.1.0</p>
+<section id="id22">
+<h3>Added<a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[ENH] add possibility to use AAL for labelling of activations in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/717">717</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[DOC] update FAQ to help structure data to run stats on fmriprep in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/685">685</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[DOC] add demo for ds002799 in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/678">678</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[DOC] add DIY section to documtation in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/677">677</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[DOC] improve description of stats output and of bids stats model in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/670">670</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+</ul>
+</section>
+<section id="id23">
+<h3>Changed<a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[MNT] update citation file in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/721">721</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[DEP] update bids matlab in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/680">680</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+</ul>
+</section>
+<section id="id24">
+<h3>Fixed<a class="headerlink" href="#id24" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[FIX] fix lesion segmentation output (and refactor) in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/727">727</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] add more explicit error message for input parsing of getData in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/726">726</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] support globbing patterns to specify conditions in design matrix in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/716">716</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] fix ALI toolbox issues in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/723">723</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] improve warning selecting too many masks in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/715">715</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] fix and refactor demos, and update help sections in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/701">701</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] add guard clauses to run ROI based analysis only when requested in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/708">708</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] convert nan to zeros in confounds in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/700">700</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] change default space value in cpp_spm in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/699">699</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] various bug fixes in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/694">694</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] add some warnings to handle several bugs with empty ROIs in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/693">693</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] re enable octave tests CI in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/686">686</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] patches for <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/682">682</a> and  <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/683">683</a> (<a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/687">687</a>) by <a class="reference external" href="https://github.com/mwmaclean">mwmaclean</a></p></li>
+<li><p>[FIX] ensure that bidsResults does not run if we don’t have the proper options in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/679">679</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] returnRootDir only relies on fullpaths in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/676">676</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] set minimum compatible fmriprep version in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/675">675</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] renaming of design matrix images at group level in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/668">668</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] make sure 2 sample ttest can run more than one contrasts in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/665">665</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] label actiation: csv results file with no significant voxels are ignored with a warning in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/663">663</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] onsets and confounds are saved in the proper dir when there are several tasks in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/659">659</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] fix silent dry run override in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/657">657</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] use proper subject background for montage in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/656">656</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] allow extra BIDS entities to be integrated in glm dir name in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/654">654</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] make GLM path more consistent in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/652">652</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] prevent some crashes if Model.Input are not passed as arrays in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/650">650</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] fix printing of of path  in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/649">649</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] properly skip segment and sullstrip in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/638">638</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] use unix format when printing path to screen in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/634">634</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+<li><p>[FIX] getEnvInfo for windows in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/631">631</a> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a></p></li>
+</ul>
+</section>
+</section>
+<section id="id25">
+<h2>[2.0.0] - 2022-07-10<a class="headerlink" href="#id25" title="Link to this heading">#</a></h2>
+<p><strong>Full Changelog</strong>: https://github.com/cpp-lln-lab/bidspm/compare/v1.1.5…v2.0.0</p>
+<section id="id26">
+<h3>Added<a class="headerlink" href="#id26" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[DOC] prepare binder and basic jupyter notebook by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/155">155</a></p></li>
+<li><p>[DOC] general doc update by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/446">446</a></p></li>
+<li><p>[DOC] Add figures for some workflows by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/463">463</a></p></li>
+<li><p>[DOC] adds link and references to other SPM material by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/464">464</a></p></li>
+<li><p>[DOC] improve results doc and associated how to by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/470">470</a></p></li>
+<li><p>[DOC] Misc doc updates by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/484">484</a></p></li>
+<li><p>[DOC] update doc on how to filter files and what files gets upsampled by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/494">494</a></p></li>
+<li><p>[DOC] update templates by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/455">455</a></p></li>
+<li><p>[DOC] add MyST for the doc and add list of default options in the doc by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/557">557</a></p></li>
+<li><p>[DOC] update RTD with a symlink to README by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/569">569</a></p></li>
+<li><p>[DOC] fmriprep stats demo by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/594">594</a></p></li>
+<li><p>[DOC] Update getRegressorIdx.m by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/601">601</a></p></li>
+<li><p>[DOC] update where references are stored by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/614">614</a></p></li>
+<li><p>[DOC] update vismotion demo by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/624">624</a></p></li>
+<li><p>[DOC] Update FAQ and BIDS stats model related doc by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/626">626</a></p></li>
+<li><p>[ENH] adapt workflows to new bids-matlab by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/368">368</a></p></li>
+<li><p>[ENH] adapt to use fmriprep input with rshrf toolbox by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/370">370</a></p></li>
+<li><p>[ENH] add verbosity control by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/381">381</a></p></li>
+<li><p>[ENH] ROI tSNR pipeline by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/401">401</a></p></li>
+<li><p>[ENH] allow fMRIprep input for GLM by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/367">367</a></p></li>
+<li><p>[ENH] update dockerfiles by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/420">420</a></p></li>
+<li><p>[ENH] Add QA functions to plot events file and compute design efficiency by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/428">428</a></p></li>
+<li><p>[ENH] compute tSNR for a given mask by <a class="reference external" href="https://github.com/mwmaclean">mwmaclean</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/402">402</a></p></li>
+<li><p>[ENH] add a function to deinitialize CPP SPM and make sure there is just one instance in the path by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/435">435</a></p></li>
+<li><p>[ENH] Allow for multi tasks processing by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/439">439</a></p></li>
+<li><p>[ENH] Update BIDS stats model  by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/441">441</a></p></li>
+<li><p>[ENH] Enhancements subject / group level GLM and results by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/443">443</a></p></li>
+<li><p>[ENH] add elapsedTime function by <a class="reference external" href="https://github.com/marcobarilari">marcobarilari</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/229">229</a></p></li>
+<li><p>[ENH] drop support for parfor loops by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/447">447</a></p></li>
+<li><p>[ENH] reports are saved for each subject being processed by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/448">448</a></p></li>
+<li><p>[ENH] drop nifti tools dependency by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/449">449</a></p></li>
+<li><p>[ENH] add possibility to limit maximum number of volumes per run in a subject level GLM by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/451">451</a></p></li>
+<li><p>[ENH] save group stats in separate derivatives folder by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/453">453</a></p></li>
+<li><p>[ENH] improve confounds inclusion in design matrix by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/454">454</a></p></li>
+<li><p>[ENH] add metadata consistency checks by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/457">457</a></p></li>
+<li><p>[ENH] use BIDS stats model to select input task, space and override options by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/461">461</a></p></li>
+<li><p>[ENH] update roi based glm by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/465">465</a></p></li>
+<li><p>[ENH] integrates anat and func QA as part of <code class="docutils literal notranslate"><span class="pre">bidsSpatialPrepro</span></code> by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/466">466</a></p></li>
+<li><p>[ENH] create an anat only spatial preprocessing by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/467">467</a></p></li>
+<li><p>[ENH] add workflow to perform model selection using the MACS toolbox by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/472">472</a></p></li>
+<li><p>[ENH] enhancements for ROI based GLM by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/477">477</a></p></li>
+<li><p>[ENH] save jobs as m file by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/482">482</a></p></li>
+<li><p>[ENH] filter file volume by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/492">492</a></p></li>
+<li><p>[ENH] start implementing BIDS stats model transformers by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/493">493</a></p></li>
+<li><p>[ENH] Replace anat reference by bids filter by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/497">497</a></p></li>
+<li><p>[ENH] start creating main API by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/511">511</a></p></li>
+<li><p>[ENH] change verbosity levels by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/507">507</a></p></li>
+<li><p>[ENH] Add change suffix workflow by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/516">516</a></p></li>
+<li><p>[ENH] run subject level GLM with no condition by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/520">520</a></p></li>
+<li><p>[ENH] add remove dummies workflow by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/521">521</a></p></li>
+<li><p>[ENH] transformers 2 by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/522">522</a></p></li>
+<li><p>[ENH] rename output func qa by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/533">533</a></p></li>
+<li><p>[ENH] stats model and results by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/541">541</a></p></li>
+<li><p>[ENH] add workflow for creation of T1map from mp2rage by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/542">542</a></p></li>
+<li><p>[ENH] only save batches as .m files by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/559">559</a></p></li>
+<li><p>[ENH] create a BIDS app API by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/564">564</a></p></li>
+<li><p>[ENH] skullstripping fixes and options  by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/571">571</a></p></li>
+<li><p>[ENH] automatically generate method sections by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/572">572</a></p></li>
+<li><p>[ENH] fix some issue on model selection by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/574">574</a></p></li>
+<li><p>[ENH] simplify and extend bidsResults by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/577">577</a></p></li>
+<li><p>[ENH] adapt group level analysis to work with BIDS stats model by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/581">581</a></p></li>
+<li><p>[ENH] add F test by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/584">584</a></p></li>
+<li><p>[ENH] Add parametric modulation to run / subject level GLM by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/585">585</a></p></li>
+<li><p>[ENH] use native resolution for segmentation for lesion detection by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/588">588</a></p></li>
+<li><p>[ENH] add “force” parameter to bidsCopyInputFolder by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/589">589</a></p></li>
+<li><p>[ENH] add metadata to preprocessed derivatives by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/580">580</a></p></li>
+<li><p>[ENH] misc improvements at the run level GLM by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/592">592</a></p></li>
+<li><p>[ENH] improve reports by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/595">595</a></p></li>
+<li><p>[ENH] add two sample t test group level batch by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/597">597</a></p></li>
+<li><p>[ENH] allow to run “contrasts” and “results” from main API by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/615">615</a></p></li>
+<li><p>[ENH] improve group level analysis by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/620">620</a></p></li>
+<li><p>[ENH] make it possible to run models / contrasts using other columns than trial_type by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/621">621</a></p></li>
+<li><p>[ENH] add neuromorphometrics label to bidsResults output when in MNI space  by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/622">622</a></p></li>
+</ul>
+</section>
+<section id="id27">
+<h3>Changed<a class="headerlink" href="#id27" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[DEP] update bids matlab by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/570">570</a></p></li>
+<li><p>[ENH] Rename preprocessing output to bids by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/395">395</a></p></li>
+<li><p>[ENH] use official HRF model from bids stats model by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/604">604</a></p></li>
+<li><p>[ENH] properly rely on BIDS stats model to specify subject level contrast by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/576">576</a></p></li>
+<li><p>[ENH] Update submodules by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/575">575</a></p></li>
+<li><p>[ENH] Bump bids matlab by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/495">495</a></p></li>
+<li><p>[ENH] drop stats folder by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/539">539</a></p></li>
+<li><p>[ENH] change MNI to SPM default IXI549Space by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/456">456</a></p></li>
+</ul>
+</section>
+<section id="id28">
+<h3>Fixed<a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[FIX] adapt to the new bids-matlab “dev” by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/366">366</a></p></li>
+<li><p>[FIX] apply <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/418">418</a> to dev by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in  <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/419">419</a></p></li>
+<li><p>[FIX] Update binder by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/413">413</a></p></li>
+<li><p>[FIX] apply <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/425">425</a> to dev by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in  <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/426">426</a></p></li>
+<li><p>[FIX] Fix facerep demo by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/438">438</a></p></li>
+<li><p>[FIX] make sure default BIDS models are usable by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/459">459</a></p></li>
+<li><p>[FIX] resolve issues to get anat file from a different session from the func data by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/462">462</a></p></li>
+<li><p>[FIX] returnRootDir did not return the root dir by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/498">498</a></p></li>
+<li><p>[FIX] throw error when no repetition time was found by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/509">509</a></p></li>
+<li><p>[FIX] update vismotion demo by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/513">513</a></p></li>
+<li><p>[FIX] Misc bug squashing :bug: :skull: by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/515">515</a></p></li>
+<li><p>[FIX] Fix typos in the sh run file of vismotion demo by <a class="reference external" href="https://github.com/marcobarilari">marcobarilari</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/524">524</a></p></li>
+<li><p>[FIX] fix <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/545">545</a> add more options for segmentation batch by <a class="reference external" href="https://github.com/marcobarilari">marcobarilari</a> in  <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/547">547</a></p></li>
+<li><p>[FIX] creates BIDS valid filename for ROIs in individual space by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/562">562</a></p></li>
+<li><p>[FIX] fix system test and silence ALI warning by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/596">596</a></p></li>
+<li><p>[FIX] Spatial preprocessing normalizes output of skullstripping by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/602">602</a></p></li>
+<li><p>[FIX] fix several issues for GLM at the subject level by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/606">606</a></p></li>
+<li><p>[FIX] fix several issues related to getting the correct files for the GLM by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/607">607</a></p></li>
+<li><p>[FIX] GLM: allow to filter input files based on BIDS entities for bold files by <a class="reference external" href="https://github.com/Remi-Gau">Remi-Gau</a> in <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/pull/611">611</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="links_and_references.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Links and references</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="CONTRIBUTING.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Contributing</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal" tabindex="-1"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unreleased">[unreleased]</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#added">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changed">Changed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deprecated">Deprecated</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#removed">Removed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fixed">Fixed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#security">Security</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v4-0-0-2024-09-11">[v4.0.0] - 2024-09-11</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Changed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Removed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Fixed</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">[3.1.0] - 2023-07-01</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Changed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Removed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Fixed</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">[3.0.0] - 2022-12-14</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Changed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Fixed</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">[2.3.0] - 2022-11-22</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Fixed</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">[2.2.0] - 2022-10-29</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Changed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Fixed</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">[2.1.0] - 2022-07-21</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Changed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Fixed</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">[2.0.0] - 2022-07-10</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Changed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Fixed</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=75c7c72ae941e8b558d8"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=75c7c72ae941e8b558d8"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2020, the bidspm pipeline dev team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.24.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

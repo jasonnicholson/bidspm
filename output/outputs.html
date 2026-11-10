@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Outputs &#8212; bidspm v4.0.0dev
+ documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=75c7c72ae941e8b558d8" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=75c7c72ae941e8b558d8" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=75c7c72ae941e8b558d8"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=75c7c72ae941e8b558d8" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=75c7c72ae941e8b558d8" />
+
+    <script src="../_static/documentation_options.js?v=071bb420"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script src="../_static/mat_urls.js?v=fdbe6872"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'output/outputs';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Mapping" href="mapping.html" />
+    <link rel="prev" title="Outputs" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button type="button" class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation" aria-expanded="false" aria-controls="pst-primary-sidebar-modal">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/cpp_lab_logo.png" class="logo__image only-light" alt="bidspm v4.0.0dev
+ documentation - Home"/>
+    <img src="../_static/cpp_lab_logo.png" class="logo__image only-dark pst-js-only" alt="bidspm v4.0.0dev
+ documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../general_information.html">
+    bidspm
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation/index.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../usage_notes.html">
+    Usage notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../demos/index.html">
+    Demos
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq/index.html">
+    FAQ
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../stats/index.html">
+    Statistics
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../preprocessing/index.html">
+    Preprocessing
+  </a>
+</li>
+
+
+<li class=" current active">
+  <a class="nav-link dropdown-item nav-internal" href="index.html">
+    Outputs
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../QA.html">
+    Quality control
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../API.html">
+    API
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../links_and_references.html">
+    Links and references
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../CHANGELOG.html">
+    Changelog
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../CONTRIBUTING.html">
+    Contributing
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/cpp-lln-lab/bidspm.git" title="github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">github</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button type="button" class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page" aria-expanded="false" aria-controls="pst-secondary-sidebar-modal">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal" tabindex="-1"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../general_information.html">
+    bidspm
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation/index.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../usage_notes.html">
+    Usage notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../demos/index.html">
+    Demos
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq/index.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../stats/index.html">
+    Statistics
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../preprocessing/index.html">
+    Preprocessing
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Outputs
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../QA.html">
+    Quality control
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../API.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../links_and_references.html">
+    Links and references
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../CHANGELOG.html">
+    Changelog
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../CONTRIBUTING.html">
+    Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/cpp-lln-lab/bidspm.git" title="github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">github</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a aria-current="page" class="current reference internal" href="#">Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping.html">Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="method_section.html">Methods section</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-house"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Outputs</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Outputs</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="outputs">
+<h1>Outputs<a class="headerlink" href="#outputs" title="Link to this heading">#</a></h1>
+<section id="jobs-and-logs">
+<h2>jobs and logs<a class="headerlink" href="#jobs-and-logs" title="Link to this heading">#</a></h2>
+<p>Each batch is saved in <code class="docutils literal notranslate"><span class="pre">jobs</span></code> folder in time a stamped m-file: those are more
+human readable and interoperable than their equivalent <code class="docutils literal notranslate"><span class="pre">.mat</span></code> file, and they can
+still be loaded in the SPM batch interface.</p>
+<p>It is accompanied by a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file that contains information about the
+environment in which the batch was run (operating system, bidspm version…).</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>bidspm-stats
+├── jobs
+│   └── taskName
+│       ├── sub-01
+│       │   ├── batch_batchName_task-taskName_space-space_FWHM-0_YYYY-MM-HHTMM-SS.json
+│       │   └── batch_batchName_task_taskName_space_space_FWHM_0_YYYY-MM-HHTMM-SS.m
+│       ├── sub-02
+</pre></div>
+</div>
+</section>
+<section id="preprocessing">
+<h2>preprocessing<a class="headerlink" href="#preprocessing" title="Link to this heading">#</a></h2>
+<!-- markdown-link-check-disable -->
+<p>For a complete list of how SPM outputs are renamed into BIDS derivatives see the
+<a class="reference internal" href="mapping.html"><span class="doc std std-doc">Mapping</span></a> page.</p>
+<!-- markdown-link-check-enable -->
+<section id="func">
+<h3>func<a class="headerlink" href="#func" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>SPM</p></th>
+<th class="head"><p>BIDS</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>s6usub-01_task-auditory_bold.nii</p></td>
+<td><p>sub-01_task-auditory_space-individual_desc-smth6_bold.nii</p></td>
+</tr>
+<tr class="row-odd"><td><p>s6rsub-01_task-auditory_bold.nii</p></td>
+<td><p>sub-01_task-auditory_space-individual_desc-smth6_bold.nii</p></td>
+</tr>
+<tr class="row-even"><td><p>s6uasub-01_task-auditory_bold.nii</p></td>
+<td><p>sub-01_task-auditory_space-individual_desc-smth6_bold.nii</p></td>
+</tr>
+<tr class="row-odd"><td><p>s6rasub-01_task-auditory_bold.nii</p></td>
+<td><p>sub-01_task-auditory_space-individual_desc-smth6_bold.nii</p></td>
+</tr>
+<tr class="row-even"><td><p>s6wusub-01_task-auditory_bold.nii</p></td>
+<td><p>sub-01_task-auditory_space-IXI549Space_desc-smth6_bold.nii</p></td>
+</tr>
+<tr class="row-odd"><td><p>s6wrsub-01_task-auditory_bold.nii</p></td>
+<td><p>sub-01_task-auditory_space-IXI549Space_desc-smth6_bold.nii</p></td>
+</tr>
+<tr class="row-even"><td><p>s6wuasub-01_task-auditory_bold.nii</p></td>
+<td><p>sub-01_task-auditory_space-IXI549Space_desc-smth6_bold.nii</p></td>
+</tr>
+<tr class="row-odd"><td><p>s6wrasub-01_task-auditory_bold.nii</p></td>
+<td><p>sub-01_task-auditory_space-IXI549Space_desc-smth6_bold.nii</p></td>
+</tr>
+<tr class="row-even"><td><p>s6sub-01_task-auditory_bold.nii</p></td>
+<td><p>sub-01_task-auditory_desc-smth6_bold.nii</p></td>
+</tr>
+<tr class="row-odd"><td><p>rp_sub-01_task-auditory_bold.txt</p></td>
+<td><p>sub-01_task-auditory_desc-confounds_regressors.tsv</p></td>
+</tr>
+<tr class="row-even"><td><p>rp_asub-01_task-auditory_bold.txt</p></td>
+<td><p>sub-01_task-auditory_desc-confounds_regressors.tsv</p></td>
+</tr>
+<tr class="row-odd"><td><p>usub-01_task-auditory_bold.nii</p></td>
+<td><p>sub-01_task-auditory_space-individual_desc-preproc_bold.nii</p></td>
+</tr>
+<tr class="row-even"><td><p>uasub-01_task-auditory_bold.nii</p></td>
+<td><p>sub-01_task-auditory_space-individual_desc-preproc_bold.nii</p></td>
+</tr>
+<tr class="row-odd"><td><p>rsub-01_task-auditory_bold.nii</p></td>
+<td><p>sub-01_task-auditory_space-individual_desc-preproc_bold.nii</p></td>
+</tr>
+<tr class="row-even"><td><p>rasub-01_task-auditory_bold.nii</p></td>
+<td><p>sub-01_task-auditory_space-individual_desc-preproc_bold.nii</p></td>
+</tr>
+<tr class="row-odd"><td><p>std_usub-01_task-auditory_bold.nii</p></td>
+<td><p>sub-01_task-auditory_space-individual_desc-std_bold.nii</p></td>
+</tr>
+<tr class="row-even"><td><p>std_uasub-01_task-auditory_bold.nii</p></td>
+<td><p>sub-01_task-auditory_space-individual_desc-std_bold.nii</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="anat">
+<h3>anat<a class="headerlink" href="#anat" title="Link to this heading">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Not listed:</p>
+<ul class="simple">
+<li><p>some of the outputs of the segmentation done by the ALI toolbox for
+lesion detection</p></li>
+</ul>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>SPM</p></th>
+<th class="head"><p>BIDS</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wc1sub-01_T1w.nii</p></td>
+<td><p>sub-01_space-IXI549Space_res-bold_label-GM_probseg.nii</p></td>
+</tr>
+<tr class="row-odd"><td><p>wc2sub-01_T1w.nii</p></td>
+<td><p>sub-01_space-IXI549Space_res-bold_label-WM_probseg.nii</p></td>
+</tr>
+<tr class="row-even"><td><p>wc3sub-01_T1w.nii</p></td>
+<td><p>sub-01_space-IXI549Space_res-bold_label-CSF_probseg.nii</p></td>
+</tr>
+<tr class="row-odd"><td><p>rc1sub-01_T1w.nii</p></td>
+<td><p>sub-01_space-individual_res-bold_label-GM_probseg.nii</p></td>
+</tr>
+<tr class="row-even"><td><p>rc2sub-01_T1w.nii</p></td>
+<td><p>sub-01_space-individual_res-bold_label-WM_probseg.nii</p></td>
+</tr>
+<tr class="row-odd"><td><p>rc3sub-01_T1w.nii</p></td>
+<td><p>sub-01_space-individual_res-bold_label-CSF_probseg.nii</p></td>
+</tr>
+<tr class="row-even"><td><p>wmsub-01_T1w.nii</p></td>
+<td><p>sub-01_space-IXI549Space_res-r1pt0_T1w.nii</p></td>
+</tr>
+<tr class="row-odd"><td><p>wmsub-01_desc-skullstripped_T1w.nii</p></td>
+<td><p>sub-01_space-IXI549Space_res-r1pt0_desc-preproc_T1w.nii</p></td>
+</tr>
+<tr class="row-even"><td><p>msub-01_desc-skullstripped_T1w.nii</p></td>
+<td><p>sub-01_space-individual_desc-preproc_T1w.nii</p></td>
+</tr>
+<tr class="row-odd"><td><p>wsub-01_desc-skullstripped_T1w.nii</p></td>
+<td><p>sub-01_space-individual_res-r1pt0_desc-preproc_T1w.nii</p></td>
+</tr>
+<tr class="row-even"><td><p>msub-01_space-individual_desc-something_label-brain_mask.nii</p></td>
+<td><p>sub-01_space-individual_label-brain_mask.nii</p></td>
+</tr>
+<tr class="row-odd"><td><p>c1sub-01_T1w.surf.gii</p></td>
+<td><p>sub-01_desc-pialsurf_T1w.gii</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="statistics">
+<h2>Statistics<a class="headerlink" href="#statistics" title="Link to this heading">#</a></h2>
+<p>At the subject level each folder contains for each run modeled:</p>
+<ul class="simple">
+<li><p>a pair of <code class="docutils literal notranslate"><span class="pre">*_onsets.mat</span></code> / <code class="docutils literal notranslate"><span class="pre">*_onsets.tsv</span></code></p></li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">*_onsets.mat</span></code> file contains the <code class="docutils literal notranslate"><span class="pre">names</span></code>, <code class="docutils literal notranslate"><span class="pre">onsets</span></code>, <code class="docutils literal notranslate"><span class="pre">durations</span></code>, <code class="docutils literal notranslate"><span class="pre">pmod</span></code>
+required by SPM to build the “multi condition” section of the model
+specification. The <code class="docutils literal notranslate"><span class="pre">*_onsets.tsv</span></code> is a human readable equivalent organised like
+BIDS <code class="docutils literal notranslate"><span class="pre">events.tsv</span></code> files.</p>
+<ul class="simple">
+<li><p>a pair of <code class="docutils literal notranslate"><span class="pre">*_desc-confounds_regressors.mat</span></code> /
+<code class="docutils literal notranslate"><span class="pre">*_desc-confounds_regressors.tsv</span></code></p></li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">*_desc-confounds_regressors.mat</span></code> file contains the <code class="docutils literal notranslate"><span class="pre">names</span></code>, <code class="docutils literal notranslate"><span class="pre">R</span></code> required by
+SPM to build the “multi regressor” section of the model specification. The
+<code class="docutils literal notranslate"><span class="pre">*_desc-confounds_regressors.tsv</span></code> is a human readable equivalent organised like
+BIDS derivatives <code class="docutils literal notranslate"><span class="pre">timeseries.tsv</span></code> files.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>bidspm-stats
+├── sub-01
+│   └── task-taskName_space-space_FWHM-0_node-nodeName
+│       |
+│       ├── beta_0001.nii  ----------
+│       ├── beta_*.nii              |
+│       ├── con_0001.nii            |
+│       ├── con_*.nii               |
+│       ├── mask.nii                | Regular SPM output
+│       ├── ResMS.nii               |
+│       ├── RPV.nii                 |
+│       ├── SPM.mat                 |
+│       ├── spmT_0001.nii           |
+│       ├── spmT_*.nii     ----------
+│       |
+│       ├── sub-blnd01_task-taskName_space-space_label-0039_desc-contrastName_p-0pt050_k-10_MC-FWE_montage.png
+│       |
+│       ├── sub-blnd01_task-taskName_space-space_desc-afterEstimation_designmatrix.png
+│       ├── sub-blnd01_task-taskName_space-space_desc-beforeEstimation_designmatrix.png
+│       |
+│       ├── sub-blnd01_task-taskName_run-01_desc-confounds_regressors.mat ------
+│       ├── sub-blnd01_task-taskName_run-01_desc-confounds_regressors.tsv      |
+│       ├── sub-blnd01_task-taskName_run-01_onsets.mat                         |
+│       ├── sub-blnd01_task-taskName_run-01_onsets.tsv                         | Files used for model specification
+│       ├── sub-blnd01_task-taskName_run-*_desc-confounds_regressors.mat       |
+│       ├── sub-blnd01_task-taskName_run-*_desc-confounds_regressors.tsv       |
+│       ├── sub-blnd01_task-taskName_run-*_onsets.mat                          |
+│       └── sub-blnd01_task-taskName_run-*_onsets.tsv --------------------------
+...
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>outputs/derivatives/bidspm-stats
+├── CHANGES
+├── dataset_description.json
+├── derivatives
+│   └── bidspm-groupStats
+│       ├── CHANGES
+│       ├── dataset_description.json
+│       ├── jobs
+│       │   └── &lt;taskLabel&gt;
+│       │       └── group
+│       │           ├── batch_contrasts_rfx_2023-05-06T12-49.json
+│       │           ├── batch_contrasts_rfx_2023_05_06T12_49.m
+│       │           ├── batch_group_level_model_specification_estimation_2023-05-06T12-49.json
+│       │           └── batch_group_level_model_specification_estimation_2023_05_06T12_49.m
+│       ├── LICENSE
+│       ├── README.md
+│       ├── sub-ALL_task-&lt;taskLabel&gt;_space-&lt;spaceLabel&gt;_FWHM-6_conFWHM-0_node-dataset_contrast-&lt;taskLabel&gt;
+│       │   ├── beta_0001.nii
+│       │   ├── con_0001.nii
+│       │   ├── mask.nii
+│       │   ├── ResMS.nii
+│       │   ├── RPV.nii
+│       │   ├── SPM.mat
+│       │   ├── spmT_0001.nii
+│       │   ├── task-&lt;taskLabel&gt;_space-&lt;spaceLabel&gt;_desc-afterEstimation_designmatrix.png
+│       │   └── task-&lt;taskLabel&gt;_space-&lt;spaceLabel&gt;_desc-beforeEstimation_designmatrix.png
+│       └── sub-ALL_task-&lt;taskLabel&gt;_space-&lt;spaceLabel&gt;_FWHM-6_conFWHM-6_node-dataset_contrast-&lt;taskLabel&gt;
+│           ├── beta_0001.nii
+│           ├── con_0001.nii
+│           ├── mask.nii
+│           ├── ResMS.nii
+│           ├── RPV.nii
+│           ├── SPM.mat
+│           ├── spmT_0001.nii
+│           ├── task-&lt;taskLabel&gt;_space-&lt;spaceLabel&gt;_desc-afterEstimation_designmatrix.png
+│           └── task-&lt;taskLabel&gt;_space-&lt;spaceLabel&gt;_desc-beforeEstimation_designmatrix.png
+├── jobs
+│   └── &lt;taskLabel&gt;
+│       ├── group
+│       │   ├── batch_smooth_con_FWHM-6_task-&lt;taskLabel&gt;_2023-05-06T12-49.json
+│       │   └── batch_smooth_con_FWHM_6_task_&lt;taskLabel&gt;_2023_05_06T12_49.m
+│       ├── sub-292
+│       │   ├── batch_contrasts_ffx_task-&lt;taskLabel&gt;_space-&lt;spaceLabel&gt;_FWHM-6_2023-05-06T12-43.json
+│       │   ├── batch_contrasts_ffx_task_&lt;taskLabel&gt;_space_&lt;spaceLabel&gt;_FWHM_6_2023_05_06T12_43.m
+│       │   ├── batch_specifyAndEstimate_ffx_task-&lt;taskLabel&gt;_space-&lt;spaceLabel&gt;_FWHM-6_2023-05-06T12-35.json
+│       │   └── batch_specifyAndEstimate_ffx_task_&lt;taskLabel&gt;_space_&lt;spaceLabel&gt;_FWHM_6_2023_05_06T12_35.m
+│       ├── sub-302
+│       └── sub-307
+
+├── LICENSE
+├── README.md
+├── reports
+│   ├── bidspm.bib
+│   └── stats_model-default_es_model_citation.md
+├── sub-292
+│   └── task-&lt;taskLabel&gt;_space-&lt;spaceLabel&gt;_FWHM-6
+│       ├── beta_0001.nii
+│       ├── beta_0002.nii
+│       ├── ...
+│       ├── beta_0060.nii
+│       ├── con_0001.nii
+│       ├── con_0002.nii
+│       ├── con_0003.nii
+│       ├── con_0004.nii
+│       ├── con_0005.nii
+│       ├── con_0006.nii
+│       ├── mask.nii
+│       ├── ResMS.nii
+│       ├── RPV.nii
+│       ├── s6con_0001.nii
+│       ├── s6con_0002.nii
+│       ├── s6con_0003.nii
+│       ├── s6con_0004.nii
+│       ├── s6con_0005.nii
+│       ├── s6con_0006.nii
+│       ├── SPM.mat
+│       ├── spmT_0001.nii
+│       ├── spmT_0002.nii
+│       ├── spmT_0003.nii
+│       ├── spmT_0004.nii
+│       ├── spmT_0005.nii
+│       ├── spmT_0006.nii
+│       ├── sub-292_ses-&lt;sesLabel&gt;_task-&lt;taskLabel&gt;_run-01_desc-confounds_regressors.mat
+│       ├── sub-292_ses-&lt;sesLabel&gt;_task-&lt;taskLabel&gt;_run-01_desc-confounds_regressors.tsv
+│       ├── sub-292_ses-&lt;sesLabel&gt;_task-&lt;taskLabel&gt;_run-01_onsets.mat
+│       ├── sub-292_ses-&lt;sesLabel&gt;_task-&lt;taskLabel&gt;_run-01_onsets.tsv
+│       ├── sub-292_task-&lt;taskLabel&gt;_space-&lt;spaceLabel&gt;_desc-afterEstimation_designmatrix.png
+│       └── sub-292_task-&lt;taskLabel&gt;_space-&lt;spaceLabel&gt;_desc-beforeEstimation_designmatrix.png
+├── sub-302
+│   └── task-&lt;taskLabel&gt;_space-&lt;spaceLabel&gt;_FWHM-6
+│       ├── beta_0001.nii
+│       ├── beta_0002.nii
+│       ├── ...
+│       ├── beta_0154.nii
+│       ├── con_0001.nii
+│       ├── con_0002.nii
+│       ├── con_0003.nii
+│       ├── mask.nii
+│       ├── ResMS.nii
+│       ├── RPV.nii
+│       ├── s6con_0001.nii
+│       ├── s6con_0002.nii
+│       ├── s6con_0003.nii
+│       ├── SPM.mat
+│       ├── spmT_0001.nii
+│       ├── spmT_0002.nii
+│       ├── spmT_0003.nii
+│       ├── sub-302_ses-&lt;sesLabel&gt;_task-&lt;taskLabel&gt;_run-01_desc-confounds_regressors.mat
+│       ├── sub-302_ses-&lt;sesLabel&gt;_task-&lt;taskLabel&gt;_run-01_desc-confounds_regressors.tsv
+│       ├── sub-302_ses-&lt;sesLabel&gt;_task-&lt;taskLabel&gt;_run-01_onsets.mat
+│       ├── sub-302_ses-&lt;sesLabel&gt;_task-&lt;taskLabel&gt;_run-01_onsets.tsv
+│       ├── sub-302_task-&lt;taskLabel&gt;_space-&lt;spaceLabel&gt;_desc-afterEstimation_designmatrix.png
+│       └── sub-302_task-&lt;taskLabel&gt;_space-&lt;spaceLabel&gt;_desc-beforeEstimation_designmatrix.png
+└── sub-307
+    └── task-&lt;taskLabel&gt;_space-&lt;spaceLabel&gt;_FWHM-6
+        ├── beta_0001.nii
+        ├── beta_0002.nii
+        ├── ...
+        ├── beta_0237.nii
+        ├── con_0001.nii
+        ├── con_0002.nii
+        ├── con_0003.nii
+        ├── con_0004.nii
+        ├── con_0005.nii
+        ├── con_0006.nii
+        ├── con_0007.nii
+        ├── con_0008.nii
+        ├── mask.nii
+        ├── ResMS.nii
+        ├── RPV.nii
+        ├── s6con_0001.nii
+        ├── s6con_0002.nii
+        ├── s6con_0003.nii
+        ├── s6con_0004.nii
+        ├── s6con_0005.nii
+        ├── s6con_0006.nii
+        ├── s6con_0007.nii
+        ├── s6con_0008.nii
+        ├── SPM.mat
+        ├── spmT_0001.nii
+        ├── spmT_0002.nii
+        ├── spmT_0003.nii
+        ├── spmT_0004.nii
+        ├── spmT_0005.nii
+        ├── spmT_0006.nii
+        ├── spmT_0007.nii
+        ├── spmT_0008.nii
+        ├── sub-307_ses-&lt;sesLabel&gt;_task-&lt;taskLabel&gt;_run-01_desc-confounds_regressors.mat
+        ├── sub-307_ses-&lt;sesLabel&gt;_task-&lt;taskLabel&gt;_run-01_desc-confounds_regressors.tsv
+        ├── sub-307_ses-&lt;sesLabel&gt;_task-&lt;taskLabel&gt;_run-01_onsets.mat
+        ├── sub-307_ses-&lt;sesLabel&gt;_task-&lt;taskLabel&gt;_run-01_onsets.tsv
+        ├── sub-307_task-&lt;taskLabel&gt;_space-&lt;spaceLabel&gt;_desc-afterEstimation_designmatrix.png
+        └── sub-307_task-&lt;taskLabel&gt;_space-&lt;spaceLabel&gt;_desc-beforeEstimation_designmatrix.png
+</pre></div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Outputs</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="mapping.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Mapping</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal" tabindex="-1"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jobs-and-logs">jobs and logs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">preprocessing</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#func">func</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anat">anat</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics">Statistics</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/output/outputs.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=75c7c72ae941e8b558d8"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=75c7c72ae941e8b558d8"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2020, the bidspm pipeline dev team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.24.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

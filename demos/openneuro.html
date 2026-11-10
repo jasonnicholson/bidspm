@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Openneuro based demos &#8212; bidspm v4.0.0dev
+ documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=75c7c72ae941e8b558d8" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=75c7c72ae941e8b558d8" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=75c7c72ae941e8b558d8"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=75c7c72ae941e8b558d8" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=75c7c72ae941e8b558d8" />
+
+    <script src="../_static/documentation_options.js?v=071bb420"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script src="../_static/mat_urls.js?v=fdbe6872"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'demos/openneuro';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FAQ" href="../faq/index.html" />
+    <link rel="prev" title="Visual motion localizers" href="vis_motion.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button type="button" class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation" aria-expanded="false" aria-controls="pst-primary-sidebar-modal">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/cpp_lab_logo.png" class="logo__image only-light" alt="bidspm v4.0.0dev
+ documentation - Home"/>
+    <img src="../_static/cpp_lab_logo.png" class="logo__image only-dark pst-js-only" alt="bidspm v4.0.0dev
+ documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../general_information.html">
+    bidspm
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation/index.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../usage_notes.html">
+    Usage notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Demos
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq/index.html">
+    FAQ
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../stats/index.html">
+    Statistics
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../preprocessing/index.html">
+    Preprocessing
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../output/index.html">
+    Outputs
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../QA.html">
+    Quality control
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../API.html">
+    API
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../links_and_references.html">
+    Links and references
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../CHANGELOG.html">
+    Changelog
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../CONTRIBUTING.html">
+    Contributing
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/cpp-lln-lab/bidspm.git" title="github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">github</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button type="button" class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page" aria-expanded="false" aria-controls="pst-secondary-sidebar-modal">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal" tabindex="-1"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../general_information.html">
+    bidspm
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation/index.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../usage_notes.html">
+    Usage notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Demos
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq/index.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../stats/index.html">
+    Statistics
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../preprocessing/index.html">
+    Preprocessing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../output/index.html">
+    Outputs
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../QA.html">
+    Quality control
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../API.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../links_and_references.html">
+    Links and references
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../CHANGELOG.html">
+    Changelog
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../CONTRIBUTING.html">
+    Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/cpp-lln-lab/bidspm.git" title="github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">github</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="moae.html">MoAE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_repetition.html">Face repetition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bayesian_model_selection.html">Bayesian model selection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis_motion.html">Visual motion localizers</a></li>
+<li class="toctree-l1 current active"><a aria-current="page" class="current reference internal" href="#">Openneuro based demos</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-house"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Demos</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Openneuro based demos</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="openneuro-based-demos">
+<h1>Openneuro based demos<a class="headerlink" href="#openneuro-based-demos" title="Link to this heading">#</a></h1>
+<section id="download-with-datalad">
+<h2>Download with datalad<a class="headerlink" href="#download-with-datalad" title="Link to this heading">#</a></h2>
+<p>All those data can be installed with
+<a class="reference external" href="http://handbook.datalad.org/en/latest/index.html">datalad</a>.</p>
+<p>Datalad datasets can be accessed via their siblings on:
+https://github.com/OpenNeuroDatasets</p>
+<p>Check the content of the <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> to see the code snippets you need to run to
+install those datasets.</p>
+<p>Otherwise you can also get them by using the Datalad superdataset.</p>
+<p>For example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>datalad<span class="w"> </span>install<span class="w"> </span>///
+<span class="nb">cd</span><span class="w"> </span>datasets.datalad.org/
+datalad<span class="w"> </span>install<span class="w"> </span>openneuro
+datalad<span class="w"> </span>install<span class="w"> </span>openneuro/dsXXXXXX
+<span class="nb">cd</span><span class="w"> </span>openneuro/dsXXXXXX
+<span class="c1"># get rest data first subject</span>
+datalad<span class="w"> </span>get<span class="w"> </span>/openneuro/dsXXXXXX/sub-0001/func/sub-0001*
+</pre></div>
+</div>
+<dl class="mat folder">
+<dt class="sig sig-object mat" id="mat-demos/openneuro/">
+<span class="property"><span class="pre">folder</span> </span><span class="sig-name descname"><span class="pre">demos/openneuro/</span></span><a class="headerlink" href="../mat/ref/demos/openneuro/index.html" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="ds000001-balloon-analog-risk">
+<h2>ds000001: Balloon analog risk<a class="headerlink" href="#ds000001-balloon-analog-risk" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://openneuro.org/datasets/ds000001">Source dataset</a></p></li>
+</ul>
+<section id="features">
+<h3>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>one task</p></li>
+<li><p>one session</p></li>
+<li><p>several runs</p></li>
+<li><p>parametric analysis</p></li>
+</ul>
+</section>
+<section id="scripts">
+<h3>Scripts<a class="headerlink" href="#scripts" title="Link to this heading">#</a></h3>
+<dl class="mat script">
+<dt class="sig sig-object mat" id="mat-demos/openneuro/ds000001_run.m">
+<span class="sig-name descname"><span class="pre">ds000001_run</span></span><a class="headerlink" href="../mat/name/ds000001_run.html" title="Link to this definition">#</a></dt>
+<dd><p>Runs:
+- preprocessing
+- stats at the suject level
+- stats at the group level</p>
+</dd></dl>
+
+<dl class="mat script">
+<dt class="sig sig-object mat" id="mat-demos/openneuro/ds000001_smooth_run.m">
+<span class="sig-name descname"><span class="pre">ds000001_smooth_run</span></span><a class="headerlink" href="../mat/name/ds000001_smooth_run.html" title="Link to this definition">#</a></dt>
+<dd><p>Runs:
+- smoothing of fmriprep data
+- stats at the suject level</p>
+</dd></dl>
+
+<dl class="mat script">
+<dt class="sig sig-object mat" id="mat-demos/openneuro/ds000001_aroma_run.m">
+<span class="sig-name descname"><span class="pre">ds000001_aroma_run</span></span><a class="headerlink" href="../mat/name/ds000001_aroma_run.html" title="Link to this definition">#</a></dt>
+<dd><p>Runs:
+- select only the ‘AROMA’ files from the fMRIprep output
+- stats at the suject level
+- stats at the group level</p>
+</dd></dl>
+
+</section>
+</section>
+<section id="ds000114-test-retest">
+<h2>ds000114: test-retest<a class="headerlink" href="#ds000114-test-retest" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://openneuro.org/datasets/ds000114">Source dataset</a></p></li>
+</ul>
+<section id="id1">
+<h3>Features<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>several tasks</p></li>
+<li><p>several sessions</p></li>
+<li><p>one or several runs depending on task</p></li>
+<li><p>fmriprep data</p></li>
+</ul>
+</section>
+<section id="id2">
+<h3>Scripts<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<dl class="mat script">
+<dt class="sig sig-object mat" id="mat-demos/openneuro/ds000114_run.m">
+<span class="sig-name descname"><span class="pre">ds000114_run</span></span><a class="headerlink" href="../mat/name/ds000114_run.html" title="Link to this definition">#</a></dt>
+<dd><p>Demo to compare activations across sessions.</p>
+</dd></dl>
+
+</section>
+</section>
+<section id="ds000224">
+<h2>ds000224<a class="headerlink" href="#ds000224" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://openneuro.org/datasets/ds000224">Source dataset</a></p></li>
+</ul>
+<section id="id3">
+<h3>Features<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>fmriprep data</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>Scripts<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<dl class="mat script">
+<dt class="sig sig-object mat" id="mat-demos/openneuro/ds000224_run.m">
+<span class="sig-name descname"><span class="pre">ds000224_run</span></span><a class="headerlink" href="../mat/name/ds000224_run.html" title="Link to this definition">#</a></dt>
+<dd><p>show ROI based analysis.</p>
+</dd></dl>
+
+</section>
+</section>
+<section id="ds001168">
+<h2>ds001168<a class="headerlink" href="#ds001168" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://openneuro.org/datasets/ds001168">Source dataset</a></p></li>
+</ul>
+<section id="id5">
+<h3>Features<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>resting state</p></li>
+<li><p>several sessions</p></li>
+<li><p>several acquisition</p></li>
+<li><p>fieldmaps</p></li>
+<li><p>physio data</p></li>
+</ul>
+</section>
+<section id="id6">
+<h3>Scripts<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<dl class="mat script">
+<dt class="sig sig-object mat" id="mat-demos/openneuro/ds001168_run.m">
+<span class="sig-name descname"><span class="pre">ds001168_run</span></span><a class="headerlink" href="../mat/name/ds001168_run.html" title="Link to this definition">#</a></dt>
+<dd><p>Show how to denoise resting state data using the GLM
+by removing confounds from the time series</p>
+</dd></dl>
+
+</section>
+</section>
+<section id="ds001734-narps">
+<h2>ds001734: NARPS<a class="headerlink" href="#ds001734-narps" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://openneuro.org/datasets/ds001734">Source dataset</a></p></li>
+</ul>
+<section id="id7">
+<h3>Features<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>one task</p></li>
+<li><p>one session</p></li>
+<li><p>several runs</p></li>
+<li><p>several groups</p></li>
+<li><p>&gt;100 participants</p></li>
+<li><p>fmriprep data</p></li>
+</ul>
+</section>
+<section id="details">
+<h3>Details<a class="headerlink" href="#details" title="Link to this heading">#</a></h3>
+<p>More details <a class="reference external" href="https://docs.google.com/spreadsheets/d/1FU_F6kdxOD4PRQDIHXGHS4zTi_jEVaUqY_Zwg0z6S64/edit#gid=1019165812&amp;range=A51">here</a>.</p>
+<!-- TODO
+add expected value to the model
+-->
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% compute euclidean distance to the indifference line defined by</span>
+<span class="c">% gain twice as big as losses</span>
+<span class="c">% https://en.wikipedia.org/wiki/Distance_from_a_point_to_a_line</span>
+<span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span>
+<span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="n">c</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">onsets</span><span class="p">{</span><span class="n">iRun</span><span class="p">}.</span><span class="n">gain</span><span class="p">;</span>
+<span class="n">y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">onsets</span><span class="p">{</span><span class="n">iRun</span><span class="p">}.</span><span class="n">loss</span><span class="p">;</span>
+<span class="n">dist</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">^</span><span class="mf">.5</span><span class="p">;</span>
+<span class="n">onsets</span><span class="p">{</span><span class="n">iRun</span><span class="p">}.</span><span class="n">EV</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">dist</span><span class="p">;</span><span class="w"> </span><span class="c">% create an "expected value" regressor</span>
+</pre></div>
+</div>
+<!-- TODO
+transformers cannot yet be appled to confounds
+-->
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"Description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Time points with a framewise displacement (as calculated by fMRIprep) &gt; 0.5 mm were censored (no interpolation) at the subject level GLM.."</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Threshold"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Input"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">"framewise_displacement"</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"Threshold"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Binarize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Output"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">"thres_framewise_displacement"</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">},</span>
+</pre></div>
+</div>
+</section>
+<section id="id8">
+<h3>Scripts<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<dl class="mat script">
+<dt class="sig sig-object mat" id="mat-demos/openneuro/ds001734_run.m">
+<span class="sig-name descname"><span class="pre">ds001734_run</span></span><a class="headerlink" href="../mat/name/ds001734_run.html" title="Link to this definition">#</a></dt>
+<dd><p>Analysis of the NARPS dataset</p>
+</dd></dl>
+
+</section>
+</section>
+<section id="ds002799">
+<h2>ds002799<a class="headerlink" href="#ds002799" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://openneuro.org/datasets/ds002799">Source dataset</a></p></li>
+</ul>
+<section id="id9">
+<h3>Features<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>resting state and task</p></li>
+<li><p>several sessions</p></li>
+<li><p>fmriprep data</p></li>
+</ul>
+</section>
+</section>
+<section id="ds003379">
+<h2>ds003379<a class="headerlink" href="#ds003379" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://openneuro.org/datasets/ds003379">Source dataset</a></p></li>
+</ul>
+<section id="id10">
+<h3>Features<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>checkerboard localizer</p></li>
+<li><p>3 groups</p></li>
+<li><p>fmriprep data</p></li>
+</ul>
+</section>
+<section id="id11">
+<h3>Scripts<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<dl class="mat script">
+<dt class="sig sig-object mat" id="mat-demos/openneuro/ds003397_run.m">
+<span class="sig-name descname"><span class="pre">ds003397_run</span></span><a class="headerlink" href="../mat/name/ds003397_run.html" title="Link to this definition">#</a></dt>
+<dd><p>Run a one-way ANOVA across group</p>
+<p>Only a few subjects are run because of the large size of each run.</p>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="vis_motion.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Visual motion localizers</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../faq/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">FAQ</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal" tabindex="-1"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-with-datalad">Download with datalad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ds000001-balloon-analog-risk">ds000001: Balloon analog risk</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scripts">Scripts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ds000114-test-retest">ds000114: test-retest</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Scripts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ds000224">ds000224</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Scripts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ds001168">ds001168</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Scripts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ds001734-narps">ds001734: NARPS</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#details">Details</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Scripts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ds002799">ds002799</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Features</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ds003379">ds003379</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Scripts</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/demos/openneuro.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=75c7c72ae941e8b558d8"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=75c7c72ae941e8b558d8"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2020, the bidspm pipeline dev team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.24.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

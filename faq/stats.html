@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Stats &#8212; bidspm v4.0.0dev
+ documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=75c7c72ae941e8b558d8" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=75c7c72ae941e8b558d8" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=75c7c72ae941e8b558d8"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=75c7c72ae941e8b558d8" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=75c7c72ae941e8b558d8" />
+
+    <script src="../_static/documentation_options.js?v=071bb420"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script src="../_static/mat_urls.js?v=fdbe6872"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'faq/stats';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Statistics" href="../stats/index.html" />
+    <link rel="prev" title="SPM" href="spm.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button type="button" class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation" aria-expanded="false" aria-controls="pst-primary-sidebar-modal">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/cpp_lab_logo.png" class="logo__image only-light" alt="bidspm v4.0.0dev
+ documentation - Home"/>
+    <img src="../_static/cpp_lab_logo.png" class="logo__image only-dark pst-js-only" alt="bidspm v4.0.0dev
+ documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../general_information.html">
+    bidspm
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation/index.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../usage_notes.html">
+    Usage notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../demos/index.html">
+    Demos
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    FAQ
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../stats/index.html">
+    Statistics
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../preprocessing/index.html">
+    Preprocessing
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../output/index.html">
+    Outputs
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../QA.html">
+    Quality control
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../API.html">
+    API
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../links_and_references.html">
+    Links and references
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../CHANGELOG.html">
+    Changelog
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../CONTRIBUTING.html">
+    Contributing
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/cpp-lln-lab/bidspm.git" title="github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">github</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button type="button" class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page" aria-expanded="false" aria-controls="pst-secondary-sidebar-modal">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal" tabindex="-1"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../general_information.html">
+    bidspm
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation/index.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../usage_notes.html">
+    Usage notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../demos/index.html">
+    Demos
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../stats/index.html">
+    Statistics
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../preprocessing/index.html">
+    Preprocessing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../output/index.html">
+    Outputs
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../QA.html">
+    Quality control
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../API.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../links_and_references.html">
+    Links and references
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../CHANGELOG.html">
+    Changelog
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../CONTRIBUTING.html">
+    Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/cpp-lln-lab/bidspm.git" title="github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">github</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bids.html">BIDS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preproc.html">Preproc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="results.html">Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spm.html">SPM</a></li>
+<li class="toctree-l1 current active"><a aria-current="page" class="current reference internal" href="#">Stats</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-house"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">FAQ</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Stats</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <!-- the section below is automatically generated.
+
+If you want to modify the questions:
+- please edit the files in the `faq` folder in the doc
+
+-->
+<section id="stats">
+<h1>Stats<a class="headerlink" href="#stats" title="Link to this heading">#</a></h1>
+<section id="how-can-change-the-name-of-the-folder-of-the-subject-level-analysis">
+<h2>How can change the name of the folder of the subject level analysis?<a class="headerlink" href="#how-can-change-the-name-of-the-folder-of-the-subject-level-analysis" title="Link to this heading">#</a></h2>
+<p>This can be done by changing the <code class="docutils literal notranslate"><span class="pre">Name</span></code> of the run level <code class="docutils literal notranslate"><span class="pre">Nodes</span></code>
+in the BIDS stats model.</p>
+<p>If your <code class="docutils literal notranslate"><span class="pre">Nodes.Name</span></code> is one of the “default” values:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;run&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;run</span> <span class="pre">level&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;run_level&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;run-level&quot;</span></code></p></li>
+<li><p>…</p></li>
+</ul>
+<p>like in the example below</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nt">"Nodes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"Level"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Run"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"run_level"</span><span class="p">,</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+</pre></div>
+</div>
+<p>then <a class="reference internal" href="../API.html#mat-src/stats/subject_level/getFFXdir.m" title="getFFXdir"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">getFFXdir()</span></code></a> will set the subject level folder to be named as follow:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sub-subLabel
+└── task-taskLabel_space-spaceLabel_FWHM-FWHMValue
+</pre></div>
+</div>
+<p>However if your <code class="docutils literal notranslate"><span class="pre">Nodes.Name</span></code> is not one of the “default” values, like this</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nt">"Nodes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"Level"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Run"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"parametric"</span><span class="p">,</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+</pre></div>
+</div>
+<p>then the subject level folder to be named as follow:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sub-subLabel
+└── task-taskLabel_space-spaceLabel_FWHM-FWHMValue_node-parametric
+</pre></div>
+</div>
+</section>
+<section id="how-can-i-see-what-the-transformation-in-the-bids-stats-model-will-do-to-my-events-tsv">
+<h2>How can I see what the transformation in the BIDS stats model will do to my events.tsv?<a class="headerlink" href="#how-can-i-see-what-the-transformation-in-the-bids-stats-model-will-do-to-my-events-tsv" title="Link to this heading">#</a></h2>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">bids.util.plot_events</span></code> function to help you visualize what events will be used in your GLM.</p>
+<p>If you want to vivualize the events file:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bids</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">plot_events</span><span class="p">(</span><span class="n">path_to_events_files</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>This assumes the events are listed in the <code class="docutils literal notranslate"><span class="pre">trial_type</span></code> column (though this can be
+changed by the <code class="docutils literal notranslate"><span class="pre">trial_type_col</span></code> parameter).</p>
+<p>If you want to see what events will be included in your GLM after the transformations
+are applied:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bids</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">plot_events</span><span class="p">(</span><span class="n">path_to_events_files</span><span class="p">,</span><span class="w"> </span><span class="s">'model_file'</span><span class="p">,</span><span class="w"> </span><span class="n">path_to_bids_stats_model_file</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>This assumes the transformations to apply are in the root node eof the model.</p>
+<p>In case you want to save the output after the transformation:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% load the events and the stats model</span>
+<span class="n">data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bids</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">tsvread</span><span class="p">(</span><span class="n">path_to_events_files</span><span class="p">);</span>
+<span class="n">model</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BidsModel</span><span class="p">(</span><span class="s">'file'</span><span class="p">,</span><span class="w"> </span><span class="n">path_to_bids_stats_model_file</span><span class="p">);</span>
+
+<span class="c">% apply the transformation</span>
+<span class="n">transformers</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">model</span><span class="p">.</span><span class="n">Nodes</span><span class="p">{</span><span class="mi">1</span><span class="p">}.</span><span class="n">Transformations</span><span class="p">.</span><span class="n">Instructions</span><span class="p">;</span>
+<span class="p">[</span><span class="n">new_content</span><span class="p">,</span><span class="w"> </span><span class="n">json</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bids</span><span class="p">.</span><span class="n">transformers</span><span class="p">(</span><span class="n">transformers</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">);</span>
+
+<span class="c">% save the new TSV for inspection to make sure it looks like what we expect</span>
+<span class="n">bids</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">tsvwrite</span><span class="p">(</span><span class="nb">fullfile</span><span class="p">(</span><span class="nb">pwd</span><span class="p">,</span><span class="w"> </span><span class="s">'new_events.tsv'</span><span class="p">),</span><span class="w"> </span><span class="n">new_content</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="how-should-i-name-my-conditions-in-my-events-tsv">
+<h2>How should I name my conditions in my events.tsv?<a class="headerlink" href="#how-should-i-name-my-conditions-in-my-events-tsv" title="Link to this heading">#</a></h2>
+<p>In BIDS format, conditions should be named in the <code class="docutils literal notranslate"><span class="pre">trial_type</span></code> column of the <code class="docutils literal notranslate"><span class="pre">events.tsv</span></code> file.</p>
+<p>Some good practices for naming “things” can probably be applied here.</p>
+<ul class="simple">
+<li><p>use only alphanumeric characters, underscores and hyphens,
+avoid spaces in the condition names</p></li>
+</ul>
+<p>For example: <code class="docutils literal notranslate"><span class="pre">foo_bar</span></code> is ok, but <code class="docutils literal notranslate"><span class="pre">f$o}o</span> <span class="pre">b^a*r</span></code> is not.</p>
+<ul class="simple">
+<li><p>the condition names should be short AND descriptive AND human readable</p></li>
+</ul>
+<p>For example: <code class="docutils literal notranslate"><span class="pre">1</span></code> or <code class="docutils literal notranslate"><span class="pre">one</span></code> or <code class="docutils literal notranslate"><span class="pre">condition1</span></code> are short but not descriptive.</p>
+<p>An extra requirement to have condition names that can work with bidspm
+is that condition names ending with an underscore followed by one or more digits
+may lead to unwanted behavior
+(error or nothing happening - see <a class="reference external" href="https://github.com/cpp-lln-lab/bidspm/issues/973">issue</a> when computing results of a GLM.)</p>
+<p>So for example:</p>
+<p><code class="docutils literal notranslate"><span class="pre">happy_face1</span></code> and <code class="docutils literal notranslate"><span class="pre">house123</span></code> are ok, but <code class="docutils literal notranslate"><span class="pre">happy_face_1</span></code> and <code class="docutils literal notranslate"><span class="pre">house_123</span></code>  are not.</p>
+<p>If your BIDS dataset has conditions that do not follow this rule,
+then you can use
+the <a class="reference external" href="https://github.com/bids-standard/variable-transform/blob/main/spec/munge.md#replace"><code class="docutils literal notranslate"><span class="pre">Replace</span></code> variable transform</a>
+in your <a class="reference external" href="https://bidspm.readthedocs.io/en/latest/stats/bids_stats_model.html#transformation'">BIDS statistical model</a>
+to rename them on the fly without having to manually edit potentially dozens of files.</p>
+<p>See also example below.</p>
+<p>Say one of your events.tsv files looks like this:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p>onset</p></th>
+<th class="head text-right"><p>duration</p></th>
+<th class="head text-left"><p>trial_type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p>2</p></td>
+<td class="text-right"><p>2</p></td>
+<td class="text-left"><p>happy_face_1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>4</p></td>
+<td class="text-right"><p>2</p></td>
+<td class="text-left"><p>house_2</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>5</p></td>
+<td class="text-right"><p>2</p></td>
+<td class="text-left"><p>happy_face_2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>8</p></td>
+<td class="text-right"><p>2</p></td>
+<td class="text-left"><p>house_4</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>You can add the following transformation to the first node (usually the run level node)
+of your BIDS stats model.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">"Nodes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"Level"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Run"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"run_level"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"GroupBy"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">"run"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"subject"</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="nt">"Transformations"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"Description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Replace"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"Instruction"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Replace"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"Input"</span><span class="p">:</span><span class="w"> </span><span class="s2">"trial_type"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"Replace"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                    </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"happy_face_1"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"happy_face1"</span>
+<span class="w">                    </span><span class="p">},</span>
+<span class="w">                    </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"house_2"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"house2"</span>
+<span class="w">                    </span><span class="p">},</span>
+<span class="w">                    </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"happy_face_2"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"happy_face2"</span>
+<span class="w">                    </span><span class="p">},</span>
+<span class="w">                    </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"house_4"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"house4"</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">]</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">"Model"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"X"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">"trial_type.happy_face*"</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">"trial_type.house*"</span>
+<span class="w">          </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">"Description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"the rest of the bids stats model would go below this as usual."</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Related issue: https://github.com/cpp-lln-lab/bidspm/issues/973</p>
+</section>
+<section id="how-should-i-structure-my-data-to-run-my-statistical-analysis">
+<h2>How should I structure my data to run my statistical analysis?<a class="headerlink" href="#how-should-i-structure-my-data-to-run-my-statistical-analysis" title="Link to this heading">#</a></h2>
+<p>The main thing to remember is that bidspm will read the events.tsv files from
+your raw BIDS data set and will read the bold images from a <code class="docutils literal notranslate"><span class="pre">bidspm-preproc</span></code>
+folder.</p>
+<p>If your data was preprocessed with fmriprep, bidspm will first need to copy,
+unzip and smooth the data into a <code class="docutils literal notranslate"><span class="pre">bidspm-preproc</span></code> folder</p>
+<p>Here is an example of how the data is organized for the MoAE fmriprep demo and
+what the <code class="docutils literal notranslate"><span class="pre">bidspm</span></code> BIDS call would look like.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>├──<span class="w"> </span>inputs
+│<span class="w">   </span>├──<span class="w"> </span>fmriprep<span class="w">                     </span><span class="c1"># fmriprep preprocessed BIDS dataset</span>
+│<span class="w">   </span><span class="p">|</span><span class="w">   </span>├──<span class="w"> </span>dataset_description.json
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>sub-01
+│<span class="w">   </span>│<span class="w">       </span>├──<span class="w"> </span>anat
+│<span class="w">   </span>│<span class="w">       </span>├──<span class="w"> </span>figures
+│<span class="w">   </span>│<span class="w">       </span>└──<span class="w"> </span>func
+│<span class="w">   </span>│<span class="w">           </span>├──<span class="w"> </span>sub-01_task-auditory_desc-confounds_timeseries.json
+│<span class="w">   </span>│<span class="w">           </span>├──<span class="w"> </span>sub-01_task-auditory_desc-confounds_timeseries.tsv
+│<span class="w">   </span>│<span class="w">           </span>├──<span class="w"> </span>sub-01_task-auditory_space-MNI152NLin6Asym_desc-brain_mask.json
+│<span class="w">   </span>│<span class="w">           </span>├──<span class="w"> </span>sub-01_task-auditory_space-MNI152NLin6Asym_desc-brain_mask.nii.gz
+│<span class="w">   </span>│<span class="w">           </span>├──<span class="w"> </span>sub-01_task-auditory_space-MNI152NLin6Asym_desc-preproc_bold.json
+│<span class="w">   </span>│<span class="w">           </span>└──<span class="w"> </span>sub-01_task-auditory_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz
+│<span class="w">   </span>└──<span class="w"> </span>raw<span class="w">                          </span><span class="c1"># raw BIDS dataset</span>
+│<span class="w">       </span>├──<span class="w"> </span>dataset_description.json
+│<span class="w">       </span>├──<span class="w"> </span>README
+│<span class="w">       </span>├──<span class="w"> </span>sub-01
+│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>anat
+│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>sub-01_T1w.nii
+│<span class="w">       </span>│<span class="w">   </span>└──<span class="w"> </span>func
+│<span class="w">       </span>│<span class="w">       </span>├──<span class="w"> </span>sub-01_task-auditory_bold.nii
+│<span class="w">       </span>│<span class="w">       </span>└──<span class="w"> </span>sub-01_task-auditory_events.tsv
+│<span class="w">       </span>└──<span class="w"> </span>task-auditory_bold.json
+├──<span class="w"> </span>models<span class="w">                            </span><span class="c1"># models used to run the GLM</span>
+│<span class="w">   </span>├──<span class="w"> </span>model-MoAEfmriprep_smdl.json
+│<span class="w">   </span>├──<span class="w"> </span>model-MoAEindividual_smdl.json
+│<span class="w">   </span>└──<span class="w"> </span>model-MoAE_smdl.json
+├──<span class="w"> </span>options
+└──<span class="w"> </span>outputs
+<span class="w">    </span>└──<span class="w"> </span>derivatives
+<span class="w">        </span>└──<span class="w"> </span>bidspm-preproc<span class="w">          </span><span class="c1"># contains data taken from fmriprep and smoothed</span>
+<span class="w">            </span>├──<span class="w"> </span>dataset_description.json
+<span class="w">            </span>├──<span class="w"> </span>README
+<span class="w">            </span>├──<span class="w"> </span><span class="nb">jobs</span>
+<span class="w">            </span>│<span class="w">   </span>└──<span class="w"> </span>auditory
+<span class="w">            </span>│<span class="w">       </span>└──<span class="w"> </span>sub-01
+<span class="w">            </span>└──<span class="w"> </span>sub-01
+<span class="w">                </span>├──<span class="w"> </span>anat
+<span class="w">                </span>└──<span class="w"> </span>func
+<span class="w">                    </span>├──<span class="w"> </span>sub-01_task-auditory_desc-confounds_timeseries.json
+<span class="w">                    </span>├──<span class="w"> </span>sub-01_task-auditory_desc-confounds_timeseries.tsv
+<span class="w">                    </span>├──<span class="w"> </span>sub-01_task-auditory_space-MNI152NLin6Asym_desc-brain_mask.json
+<span class="w">                    </span>├──<span class="w"> </span>sub-01_task-auditory_space-MNI152NLin6Asym_desc-brain_mask.nii
+<span class="w">                    </span>├──<span class="w"> </span>sub-01_task-auditory_space-MNI152NLin6Asym_desc-preproc_bold.json
+<span class="w">                    </span>├──<span class="w"> </span>sub-01_task-auditory_space-MNI152NLin6Asym_desc-preproc_bold.nii
+<span class="w">                    </span>├──<span class="w"> </span>sub-01_task-auditory_space-MNI152NLin6Asym_desc-smth8_bold.json
+<span class="w">                    </span>└──<span class="w"> </span>sub-01_task-auditory_space-MNI152NLin6Asym_desc-smth8_bold.nii
+</pre></div>
+</div>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">WD</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fileparts</span><span class="p">(</span><span class="nb">mfilename</span><span class="p">(</span><span class="s">'fullpath'</span><span class="p">));</span>
+
+<span class="n">subject_label</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">'01'</span><span class="p">;</span>
+
+<span class="n">bids_dir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="n">WD</span><span class="p">,</span><span class="w"> </span><span class="s">'inputs'</span><span class="p">,</span><span class="w"> </span><span class="s">'raw'</span><span class="p">);</span>
+<span class="n">output_dir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="n">WD</span><span class="p">,</span><span class="w"> </span><span class="s">'outputs'</span><span class="p">,</span><span class="w"> </span><span class="s">'derivatives'</span><span class="p">);</span>
+<span class="n">preproc_dir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span><span class="w"> </span><span class="s">'bidspm-preproc'</span><span class="p">);</span>
+
+<span class="n">model_file</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="nb">pwd</span><span class="p">,</span><span class="w"> </span><span class="s">'models'</span><span class="p">,</span><span class="w"> </span><span class="s">'model-MoAEfmriprep_smdl.json'</span><span class="p">);</span>
+
+<span class="n">bidspm</span><span class="p">(</span><span class="n">bids_dir</span><span class="p">,</span><span class="w"> </span><span class="n">output_dir</span><span class="p">,</span><span class="w"> </span><span class="s">'subject'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">        </span><span class="s">'participant_label'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">subject_label</span><span class="p">},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">        </span><span class="s">'action'</span><span class="p">,</span><span class="w"> </span><span class="s">'stats'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">        </span><span class="s">'preproc_dir'</span><span class="p">,</span><span class="w"> </span><span class="n">preproc_dir</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">        </span><span class="s">'model_file'</span><span class="p">,</span><span class="w"> </span><span class="n">model_file</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">        </span><span class="s">'fwhm'</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">        </span><span class="s">'options'</span><span class="p">,</span><span class="w"> </span><span class="n">opt</span><span class="p">);</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>Generated by <a class="reference external" href="https://github.com/willmcgugan/faqtory">FAQtory</a></p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="spm.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">SPM</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../stats/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Statistics</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal" tabindex="-1"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-change-the-name-of-the-folder-of-the-subject-level-analysis">How can change the name of the folder of the subject level analysis?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-see-what-the-transformation-in-the-bids-stats-model-will-do-to-my-events-tsv">How can I see what the transformation in the BIDS stats model will do to my events.tsv?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-should-i-name-my-conditions-in-my-events-tsv">How should I name my conditions in my events.tsv?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-should-i-structure-my-data-to-run-my-statistical-analysis">How should I structure my data to run my statistical analysis?</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/faq/stats.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=75c7c72ae941e8b558d8"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=75c7c72ae941e8b558d8"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2020, the bidspm pipeline dev team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.24.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

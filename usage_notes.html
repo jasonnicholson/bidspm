@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Usage notes &#8212; bidspm v4.0.0dev
+ documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=75c7c72ae941e8b558d8" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=75c7c72ae941e8b558d8" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=75c7c72ae941e8b558d8"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=75c7c72ae941e8b558d8" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=75c7c72ae941e8b558d8" />
+
+    <script src="_static/documentation_options.js?v=071bb420"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script src="_static/mat_urls.js?v=fdbe6872"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'usage_notes';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Configuration" href="configuration.html" />
+    <link rel="prev" title="Installation on a computing cluster" href="installation/hpc.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button type="button" class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation" aria-expanded="false" aria-controls="pst-primary-sidebar-modal">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/cpp_lab_logo.png" class="logo__image only-light" alt="bidspm v4.0.0dev
+ documentation - Home"/>
+    <img src="_static/cpp_lab_logo.png" class="logo__image only-dark pst-js-only" alt="bidspm v4.0.0dev
+ documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="general_information.html">
+    bidspm
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="installation/index.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#" aria-current="page">
+    Usage notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="demos/index.html">
+    Demos
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="faq/index.html">
+    FAQ
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="stats/index.html">
+    Statistics
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="preprocessing/index.html">
+    Preprocessing
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="output/index.html">
+    Outputs
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="QA.html">
+    Quality control
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="API.html">
+    API
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="links_and_references.html">
+    Links and references
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="CHANGELOG.html">
+    Changelog
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="CONTRIBUTING.html">
+    Contributing
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/cpp-lln-lab/bidspm.git" title="github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">github</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button type="button" class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page" aria-expanded="false" aria-controls="pst-secondary-sidebar-modal">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal" tabindex="-1"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="general_information.html">
+    bidspm
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="installation/index.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#" aria-current="page">
+    Usage notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="demos/index.html">
+    Demos
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="faq/index.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="stats/index.html">
+    Statistics
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="preprocessing/index.html">
+    Preprocessing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="output/index.html">
+    Outputs
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="QA.html">
+    Quality control
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="API.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="links_and_references.html">
+    Links and references
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="CHANGELOG.html">
+    Changelog
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="CONTRIBUTING.html">
+    Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/cpp-lln-lab/bidspm.git" title="github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">github</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-house"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Usage notes</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="usage-notes">
+<h1>Usage notes<a class="headerlink" href="#usage-notes" title="Link to this heading">#</a></h1>
+<section id="api">
+<h2>API<a class="headerlink" href="#api" title="Link to this heading">#</a></h2>
+<dl class="mat folder">
+<dt class="sig sig-object mat" id="mat-src/messages/">
+<span class="property"><span class="pre">folder</span> </span><span class="sig-name descname"><span class="pre">src/messages/</span></span><a class="headerlink" href="mat/ref/src/messages/index.html" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat">
+<span class="sig-name descname"><span class="pre">bidspmHelp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>General intro function for bidspm</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>all parameters use <code class="docutils literal notranslate"><span class="pre">snake_case</span></code></p></li>
+<li><p>most “invalid” calls simply initialize bidspm</p></li>
+</ul>
+</div>
+<p><strong>BIDS APP CALLS</strong></p>
+<p>generic call:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bidspm</span><span class="p">(</span><span class="n">bids_dir</span><span class="p">,</span><span class="w"> </span><span class="n">output_dir</span><span class="p">,</span><span class="w"> </span><span class="n">analysis_level</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'action'</span><span class="p">,</span><span class="w"> </span><span class="s">'some_action'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'participant_label'</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'space'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">'individual'</span><span class="p">,</span><span class="w"> </span><span class="s">'IXI549Space'</span><span class="p">},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'bids_filter_file'</span><span class="p">,</span><span class="w"> </span><span class="nb">struct</span><span class="p">([]),</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'verbosity'</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'options'</span><span class="p">,</span><span class="w"> </span><span class="nb">struct</span><span class="p">([]))</span>
+</pre></div>
+</div>
+<p><em>Obligatory parameters</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bids_dir</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">path</span></code></span>) – path to a raw BIDS dataset</p></li>
+<li><p><strong>output_dir</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">path</span></code></span>) – path where to output data</p></li>
+<li><p><strong>analysis_level</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">string</span></code></span>) – Can either be <code class="docutils literal notranslate"><span class="pre">'subject'</span></code> or <code class="docutils literal notranslate"><span class="pre">'dataset'</span></code>.
+Defaults to <code class="docutils literal notranslate"><span class="pre">'subject'</span></code></p></li>
+<li><p><strong>action</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">char</span></code></span>) – <p>defines the pipeline to run; can be any of:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">'copy'</span></code>:          copies fmriprep data for smoothing</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'preprocess'</span></code>:    preprocesses data</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'smooth'</span></code>:        smooths data</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'default_model'</span></code>: creates a default BIDS stats model</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'create_roi'</span></code>:    creates ROIs from a given atlas</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'stats'</span></code>:         runs model specification / estimation,
+contrast computation, display results</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'contrasts'</span></code>:     runs contrast computation, display results</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'results'</span></code>:       displays results</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'bms'</span></code>:           performs bayesian model selection</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'specify_only'</span></code>   only specifies the models</p></li>
+</ul>
+</p></li>
+<li><p><strong>participant_label</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">cellstr</span></code></span>) – cell of participants labels.
+For example: <code class="docutils literal notranslate"><span class="pre">{'01',</span> <span class="pre">'03',</span> <span class="pre">'08'}</span></code>.
+Can be a regular expression.
+Defaults to <code class="docutils literal notranslate"><span class="pre">{}</span></code></p></li>
+<li><p><strong>bids_filter_file</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">path</span></code></span>) – path to JSON file or structure</p></li>
+<li><p><strong>verbosity</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">positive</span> <span class="pre">integer</span></code></span>) – can be any value between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">3</span></code>.
+Defaults to <code class="docutils literal notranslate"><span class="pre">2</span></code></p></li>
+<li><p><strong>options</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">path</span> <span class="pre">to</span> <span class="pre">JSON</span> <span class="pre">file</span> <span class="pre">or</span> <span class="pre">structure</span></code></span>) – See the <code class="docutils literal notranslate"><span class="pre">checkOptions</span></code> help to see the available options.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Arguments passed to bidspm have priorities over the options defined in <code class="docutils literal notranslate"><span class="pre">opt</span></code>.
+For example passing the argument <code class="docutils literal notranslate"><span class="pre">'dry_run',</span> <span class="pre">true</span></code>
+will override the option <code class="docutils literal notranslate"><span class="pre">opt.dryRun</span> <span class="pre">=</span>&#160; <span class="pre">false</span></code>.</p>
+</div>
+<p><strong>PREPROCESSING</strong></p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bidspm</span><span class="p">(</span><span class="n">bids_dir</span><span class="p">,</span><span class="w"> </span><span class="n">output_dir</span><span class="p">,</span><span class="w"> </span><span class="s">'subject'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'action'</span><span class="p">,</span><span class="w"> </span><span class="s">'preprocess'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'participant_label'</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'task'</span><span class="p">,</span><span class="w"> </span><span class="s">''</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'space'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">'individual'</span><span class="p">,</span><span class="w"> </span><span class="s">'IXI549Space'</span><span class="p">},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'bids_filter_file'</span><span class="p">,</span><span class="w"> </span><span class="nb">struct</span><span class="p">([]),</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'verbosity'</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'options'</span><span class="p">,</span><span class="w"> </span><span class="nb">struct</span><span class="p">([]),</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'boilerplate_only'</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'dry_run'</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'dummy_scans'</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'anat_only'</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'ignore'</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'fwhm'</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'skip_validation'</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>boilerplate_only</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">logical</span></code></span>) – Only creates dataset description reports.
+and methods description. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>space</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">cell</span> <span class="pre">string</span></code></span>) – Defaults to <code class="docutils literal notranslate"><span class="pre">{}</span></code></p></li>
+<li><p><strong>task</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">char</span></code></span>) – Only a single task can be processed at once.
+Defaults to <code class="docutils literal notranslate"><span class="pre">''</span></code>.</p></li>
+<li><p><strong>dry_run</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">logical</span></code></span>) – Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><strong>dummy_scans</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">positive</span> <span class="pre">scalar</span></code></span>) – Number of dummy scans to remove. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+<li><p><strong>anat_only</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">logical</span></code></span>) – Only preprocesses anatomical data. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>ignore</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">cellstr</span></code></span>) – can be any of <code class="docutils literal notranslate"><span class="pre">{'fieldmaps',</span> <span class="pre">'slicetiming',</span> <span class="pre">'unwarp',</span> <span class="pre">'qa'}</span></code></p></li>
+<li><p><strong>fwhm</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">positive</span> <span class="pre">scalar</span></code></span>) – Smoothing to apply to the preprocessed data. Defaults to <code class="docutils literal notranslate"><span class="pre">6</span></code>.</p></li>
+<li><p><strong>skip_validation</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">logical</span></code></span>) – To skip bids dataset or bids stats model validation.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>COPY</strong></p>
+<p>Copies and unzips input data to output dir.
+For example for fmriprep data before smoothing.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bidspm</span><span class="p">(</span><span class="n">bids_dir</span><span class="p">,</span><span class="w"> </span><span class="n">output_dir</span><span class="p">,</span><span class="w"> </span><span class="s">'subject'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'action'</span><span class="p">,</span><span class="w"> </span><span class="s">'copy'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'participant_label'</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'task'</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'space'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">'individual'</span><span class="p">,</span><span class="w"> </span><span class="s">'IXI549Space'</span><span class="p">},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'bids_filter_file'</span><span class="p">,</span><span class="w"> </span><span class="nb">struct</span><span class="p">([]),</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'verbosity'</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'options'</span><span class="p">,</span><span class="w"> </span><span class="nb">struct</span><span class="p">([]),</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'anat_only'</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'force'</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>space</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">cell</span> <span class="pre">string</span></code></span>) – Defaults to <code class="docutils literal notranslate"><span class="pre">{}</span></code></p></li>
+<li><p><strong>task</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">char</span> <span class="pre">or</span> <span class="pre">cell</span> <span class="pre">string</span></code></span>) – Defaults to <code class="docutils literal notranslate"><span class="pre">{}</span></code></p></li>
+<li><p><strong>force</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">logical</span></code></span>) – Overwrites previous data if true. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>anat_only</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">logical</span></code></span>) – Only copies anatomical data. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>CREATE_ROI</strong></p>
+<p>Creates ROIs from a given atlas.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bidspm</span><span class="p">(</span><span class="n">bids_dir</span><span class="p">,</span><span class="w"> </span><span class="n">output_dir</span><span class="p">,</span><span class="w"> </span><span class="s">'subject'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'action'</span><span class="p">,</span><span class="w"> </span><span class="s">'create_roi'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'participant_label'</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'space'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">'MNI'</span><span class="p">},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'bids_filter_file'</span><span class="p">,</span><span class="w"> </span><span class="nb">struct</span><span class="p">([]),</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'preproc_dir'</span><span class="p">,</span><span class="w"> </span><span class="n">preproc_dir</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'verbosity'</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'options'</span><span class="p">,</span><span class="w"> </span><span class="nb">struct</span><span class="p">([]),</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'roi_atlas'</span><span class="p">,</span><span class="w"> </span><span class="s">'wang'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'roi_name'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">'V1v'</span><span class="p">,</span><span class="w"> </span><span class="s">'V1d'</span><span class="p">},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'hemisphere'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">'L'</span><span class="p">,</span><span class="w"> </span><span class="s">'R'</span><span class="p">})</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>space</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">cell</span> <span class="pre">string</span></code></span>) – Defaults to <code class="docutils literal notranslate"><span class="pre">{}</span></code></p></li>
+<li><p><strong>roi_atlas</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">char</span></code></span>) – <p>Can be any of:</p>
+<blockquote>
+<div><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">'visfatlas'</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'anatomy_toobox'</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'neuromorphometrics'</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'hcpex'</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'wang'</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'glasser'</span></code></p></li>
+</ul>
+</div></blockquote>
+<p>Defaults to <code class="docutils literal notranslate"><span class="pre">'neuromorphometrics'</span></code></p>
+</p></li>
+<li><p><strong>roi_name</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">cell</span> <span class="pre">string</span></code></span>) – Name of the roi to create. If the ROI does not exist in the atlas,
+the list of available ROI will be returned in the error message.</p></li>
+<li><p><strong>hemisphere</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">cell</span> <span class="pre">string</span> <span class="pre">containing</span> <span class="pre">any</span> <span class="pre">of</span> <span class="pre">'L',</span> <span class="pre">'R'</span></code></span>) – Hemisphere of the ROI to create.
+Not all ROIs have both hemispheres.
+Defaults to <code class="docutils literal notranslate"><span class="pre">{'L',</span> <span class="pre">'R'}</span></code>.</p></li>
+<li><p><strong>preproc_dir</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">path</span></code></span>) – path to preprocessed data
+Necessary when using <code class="docutils literal notranslate"><span class="pre">'T1w'</span></code> or <code class="docutils literal notranslate"><span class="pre">'individual'</span></code> space
+to access deformation fields to inverse normalize ROIs.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>SMOOTH:</strong></p>
+<p>Copies files to output dir and smooths them.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bidspm</span><span class="p">(</span><span class="n">bids_dir</span><span class="p">,</span><span class="w"> </span><span class="n">output_dir</span><span class="p">,</span><span class="w"> </span><span class="s">'subject'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'action'</span><span class="p">,</span><span class="w"> </span><span class="s">'smooth'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'participant_label'</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'task'</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'space'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">'individual'</span><span class="p">,</span><span class="w"> </span><span class="s">'IXI549Space'</span><span class="p">},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'bids_filter_file'</span><span class="p">,</span><span class="w"> </span><span class="nb">struct</span><span class="p">([]),</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'options'</span><span class="p">,</span><span class="w"> </span><span class="nb">struct</span><span class="p">([]),</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'verbosity'</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'fwhm'</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'dry_run'</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>space</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">cell</span> <span class="pre">string</span></code></span>) – Defaults to <code class="docutils literal notranslate"><span class="pre">{}</span></code></p></li>
+<li><p><strong>task</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">char</span> <span class="pre">or</span> <span class="pre">cell</span> <span class="pre">string</span></code></span>) – Defaults to <code class="docutils literal notranslate"><span class="pre">{}</span></code></p></li>
+<li><p><strong>fwhm</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">positive</span> <span class="pre">scalar</span></code></span>) – Smoothing to apply to the preprocessed data. Defaults to <code class="docutils literal notranslate"><span class="pre">6</span></code>.</p></li>
+<li><p><strong>dry_run</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">logical</span></code></span>) – Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>anat_only</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">logical</span></code></span>) – Only smooths the anatomical data. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>CREATE DEFAULT_MODEL</strong></p>
+<p>Creates a default BIDS stats model for a given raw BIDS dataset.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bidspm</span><span class="p">(</span><span class="n">bids_dir</span><span class="p">,</span><span class="w"> </span><span class="n">output_dir</span><span class="p">,</span><span class="w"> </span><span class="s">'dataset'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'action'</span><span class="p">,</span><span class="w"> </span><span class="s">'default_model'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'participant_label'</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'task'</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'space'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">'individual'</span><span class="p">,</span><span class="w"> </span><span class="s">'IXI549Space'</span><span class="p">},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'bids_filter_file'</span><span class="p">,</span><span class="w"> </span><span class="nb">struct</span><span class="p">([]),</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'verbosity'</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'options'</span><span class="p">,</span><span class="w"> </span><span class="nb">struct</span><span class="p">([]),</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'options'</span><span class="p">,</span><span class="w"> </span><span class="nb">struct</span><span class="p">([]),</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'ignore'</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'skip_validation'</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>space</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">cell</span> <span class="pre">string</span></code></span>) – Defaults to <code class="docutils literal notranslate"><span class="pre">{}</span></code></p></li>
+<li><p><strong>task</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">char</span> <span class="pre">or</span> <span class="pre">cell</span> <span class="pre">string</span></code></span>) – Defaults to <code class="docutils literal notranslate"><span class="pre">{}</span></code></p></li>
+<li><p><strong>ignore</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">cell</span> <span class="pre">string</span></code></span>) – can be any of <code class="docutils literal notranslate"><span class="pre">{'contrasts',</span> <span class="pre">'transformations',</span> <span class="pre">'dataset'}</span></code></p></li>
+<li><p><strong>skip_validation</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">logical</span></code></span>) – To skip bids dataset or bids stats model validation.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>STATS</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">'stats'</span></code>          runs model specification / estimation,
+contrast computation, display results</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'contrasts'</span></code>      runs contrast computation, display results</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'results'</span></code>        displays results</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'specify_only'</span></code>   only specifies the models</p></li>
+</ul>
+</div>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bidspm</span><span class="p">(</span><span class="n">bids_dir</span><span class="p">,</span><span class="w"> </span><span class="n">output_dir</span><span class="p">,</span><span class="w"> </span><span class="s">'subject'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'action'</span><span class="p">,</span><span class="w"> </span><span class="s">'stats'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'participant_label'</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'task'</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'space'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">'individual'</span><span class="p">,</span><span class="w"> </span><span class="s">'IXI549Space'</span><span class="p">},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'bids_filter_file'</span><span class="p">,</span><span class="w"> </span><span class="nb">struct</span><span class="p">([]),</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'options'</span><span class="p">,</span><span class="w"> </span><span class="nb">struct</span><span class="p">([]),</span><span class="w"> </span><span class="k">...</span><span class="c">,</span>
+<span class="w">       </span><span class="s">'verbosity'</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'preproc_dir'</span><span class="p">,</span><span class="w"> </span><span class="n">preproc_dir</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'model_file'</span><span class="p">,</span><span class="w"> </span><span class="n">model_file</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="c">          % specific to stats</span>
+<span class="w">       </span><span class="s">'fwhm'</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'dry_run'</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'boilerplate_only'</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'roi_atlas'</span><span class="p">,</span><span class="w"> </span><span class="s">'neuromorphometrics'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'roi_based'</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'roi_dir'</span><span class="p">,</span><span class="w"> </span><span class="s">''</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'roi_name'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">''</span><span class="p">},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'design_only'</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'ignore'</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'concatenate'</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'use_dummy_regressor'</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">)</span>
+<span class="w">       </span><span class="s">'skip_validation'</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><em>Obligatory parameters</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>preproc_dir</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">path</span></code></span>) – path to preprocessed data</p></li>
+<li><p><strong>model_file</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">path</span> <span class="pre">to</span> <span class="pre">JSON</span> <span class="pre">file</span> <span class="pre">or</span> <span class="pre">dir</span> <span class="pre">or</span> <span class="pre">structure</span></code></span>) – Path to the BIDS model file that contains the model
+to specify and the contrasts to compute.
+A path to a dir can be passed as well.
+In this case all <code class="docutils literal notranslate"><span class="pre">*_smdl.json</span></code> files will be used
+and looped over.
+This can useful to specify several models at once
+Before running Bayesion model selection on them.</p></li>
+<li><p><strong>space</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">cell</span> <span class="pre">string</span></code></span>) – Defaults to <code class="docutils literal notranslate"><span class="pre">{}</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<p><em>Optional parameters</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fwhm</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">positive</span> <span class="pre">scalar</span></code></span>) – smoothing level of the preprocessed data</p></li>
+<li><p><strong>design_only</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">logical</span></code></span>) – to only run the model specification</p></li>
+<li><p><strong>ignore</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">cell</span> <span class="pre">string</span></code></span>) – can be any of <code class="docutils literal notranslate"><span class="pre">{'qa'}</span></code>, to skip
+quality controls into a single 4D image.</p></li>
+<li><p><strong>concatenate</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">logical</span></code></span>) – will concatenate the beta images of the
+conditions of interest convolved by an HRF.</p></li>
+<li><p><strong>dry_run</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">logical</span></code></span>) – Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>roi_atlas</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">char</span></code></span>) – Name of the atlas to use to label activations in MNI space.</p></li>
+<li><p><strong>roi_based</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">logical</span></code></span>) – Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to run a ROI-based analysis.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>roi_dir</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">path</span></code></span>) – Path to the directory containing the ROIs.</p></li>
+<li><p><strong>roi_name</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">cell</span> <span class="pre">string</span></code></span>) – Names or regex expression of the ROI to use.</p></li>
+<li><p><strong>boilerplate_only</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">logical</span></code></span>) – Only creates dataset description reports.
+and methods description. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>use_dummy_regressor</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">logical</span></code></span>) – If true any missing condition will be modelled
+by a dummy regressor of <code class="docutils literal notranslate"><span class="pre">NaN</span></code>.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>skip_validation</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">logical</span></code></span>) – To skip bids dataset or bids stats model validation.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>node_name</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">char</span></code></span>) – Model node to run.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>BAYESIAN MODE SELECTION</strong></p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bidspm</span><span class="p">(</span><span class="n">bids_dir</span><span class="p">,</span><span class="w"> </span><span class="n">output_dir</span><span class="p">,</span><span class="w"> </span><span class="s">'subject'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'action'</span><span class="p">,</span><span class="w"> </span><span class="s">'bms'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'participant_label'</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'options'</span><span class="p">,</span><span class="w"> </span><span class="nb">struct</span><span class="p">([]),</span><span class="w"> </span><span class="k">...</span><span class="c">,</span>
+<span class="w">       </span><span class="s">'verbosity'</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'models_dir'</span><span class="p">,</span><span class="w"> </span><span class="n">models_dir</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'fwhm'</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'dry_run'</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'skip_validation'</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>action</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">char</span></code></span>) – Any of: <code class="docutils literal notranslate"><span class="pre">{'bms',</span> <span class="pre">'bms-posterior',</span> <span class="pre">'bms-bms'}</span></code>
+<cite>‘bms’</cite> will performm all steps for the baeysian
+model selection.
+If <cite>‘bms’</cite> has been performed
+then <code class="docutils literal notranslate"><span class="pre">'bms-posterior'</span></code> can``’bms-bms’``
+be performed one after the other.
+See the help section of <a class="reference internal" href="API.html#mat-src/workflows/stats/bidsModelSelection.m" title="bidsModelSelection"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">bidsModelSelection()</span></code></a>
+for more details.</p></li>
+<li><p><strong>models_dir</strong> – A path to a dir can be passed as well.
+In this case all <code class="docutils literal notranslate"><span class="pre">*_smdl.json</span></code> files will be used
+and looped over.</p></li>
+<li><p><strong>dry_run</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">logical</span></code></span>) – Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>fwhm</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">positive</span> <span class="pre">scalar</span></code></span>) – smoothing level of the preprocessed data</p></li>
+<li><p><strong>skip_validation</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">logical</span></code></span>) – To skip bids dataset or bids stats model validation.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For the bayesian model selection to function
+you must first specify all your models using the <code class="docutils literal notranslate"><span class="pre">'specify_only'</span></code> action
+with the options <code class="docutils literal notranslate"><span class="pre">'use_dummy_regressor',</span> <span class="pre">true</span></code>.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">opt</span><span class="p">.</span><span class="n">glm</span><span class="p">.</span><span class="n">useDummyRegressor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+
+<span class="n">bidspm</span><span class="p">(</span><span class="n">bids_dir</span><span class="p">,</span><span class="w"> </span><span class="n">output_dir</span><span class="p">,</span><span class="w"> </span><span class="s">'subject'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">      </span><span class="s">'participant_label'</span><span class="p">,</span><span class="w"> </span><span class="n">participant_label</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">      </span><span class="s">'preproc_dir'</span><span class="p">,</span><span class="w"> </span><span class="n">preproc_dir</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">      </span><span class="s">'action'</span><span class="p">,</span><span class="w"> </span><span class="s">'specify_only'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">      </span><span class="s">'model_file'</span><span class="p">,</span><span class="w"> </span><span class="n">models_dir</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">      </span><span class="s">'use_dummy_regressor'</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span>
+<span class="w">      </span><span class="s">'fwhm'</span><span class="p">,</span><span class="w"> </span><span class="n">FWHM</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<p><strong>low level calls</strong></p>
+<p>USAGE:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% initialise (add relevant folders to path)</span>
+<span class="n">bidspm</span>
+
+<span class="s">%</span><span class="w"> </span><span class="s">equivalent</span><span class="w"> </span><span class="s">to</span>
+<span class="n">bidspm</span><span class="w"> </span><span class="s">init</span>
+<span class="n">bidspm</span><span class="p">(</span><span class="s">'action'</span><span class="p">,</span><span class="w"> </span><span class="s">'init'</span><span class="p">)</span>
+
+<span class="c">% help</span>
+<span class="n">bidspm</span><span class="w"> </span><span class="s">help</span>
+<span class="n">bidspm</span><span class="p">(</span><span class="s">'action'</span><span class="p">,</span><span class="w"> </span><span class="s">'help'</span><span class="p">)</span>
+
+<span class="c">% uninitialise (remove relevant folders from path)</span>
+<span class="n">bidspm</span><span class="w"> </span><span class="s">uninit</span>
+<span class="n">bidspm</span><span class="p">(</span><span class="s">'action'</span><span class="p">,</span><span class="w"> </span><span class="s">'uninit'</span><span class="p">)</span>
+
+<span class="c">% also adds folder for testing to the path</span>
+<span class="n">bidspm</span><span class="w"> </span><span class="s">dev</span>
+<span class="n">bidspm</span><span class="p">(</span><span class="s">'action'</span><span class="p">,</span><span class="w"> </span><span class="s">'dev'</span><span class="p">)</span>
+
+<span class="c">% tried to update the current branch from the upstream repository</span>
+<span class="n">bidspm</span><span class="w"> </span><span class="s">update</span>
+<span class="n">bidspm</span><span class="p">(</span><span class="s">'action'</span><span class="p">,</span><span class="w"> </span><span class="s">'update'</span><span class="p">)</span>
+
+<span class="c">% misc</span>
+<span class="n">bidspm</span><span class="w"> </span><span class="s">version</span>
+<span class="n">bidspm</span><span class="p">(</span><span class="s">'action'</span><span class="p">,</span><span class="w"> </span><span class="s">'version'</span><span class="p">)</span>
+
+<span class="n">bidspm</span><span class="w"> </span><span class="s">run_tests</span>
+<span class="n">bidspm</span><span class="p">(</span><span class="s">'action'</span><span class="p">,</span><span class="w"> </span><span class="s">'run_tests'</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For a more readable version of this help section,
+see the online &lt;a
+href=”<a class="reference external" href="https://bidspm.readthedocs.io/en/latest/usage_notes.html">https://bidspm.readthedocs.io/en/latest/usage_notes.html</a>”&gt;documentation&lt;/a&gt;.</p>
+</dd></dl>
+
+</section>
+<section id="command-line-api">
+<h2>Command line API<a class="headerlink" href="#command-line-api" title="Link to this heading">#</a></h2>
+<p><p>bidspm is a SPM base BIDS app</p>
+</p>
+<div class="highlight-default notranslate" id="bidspm"><div class="highlight"><pre><span></span><span class="n">Usage</span><span class="p">:</span> <span class="n">bidspm</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">v</span><span class="p">]</span>
+              <span class="n">bids_dir</span> <span class="n">output_dir</span> <span class="p">{</span><span class="n">subject</span><span class="p">,</span><span class="n">dataset</span><span class="p">}</span>
+              <span class="p">{</span><span class="n">preprocess</span><span class="p">,</span><span class="n">smooth</span><span class="p">,</span><span class="n">default_model</span><span class="p">,</span><span class="n">create_roi</span><span class="p">,</span><span class="n">stats</span><span class="p">,</span><span class="n">contrasts</span><span class="p">,</span><span class="n">results</span><span class="p">,</span><span class="n">bms</span><span class="p">}</span> <span class="o">...</span>
+</pre></div>
+</div>
+<section id="bidspm-positional-arguments">
+<span id="src.bidspm.parsers-sub_command_parser-positional-arguments"></span><h3>Positional Arguments<a class="headerlink" href="#bidspm-positional-arguments" title="Link to this heading">#</a></h3>
+<dl class="option-list">
+<dt><kbd>bids_dir</kbd></dt>
+<dd><blockquote>
+<div><p>Fullpath to the directory with the input dataset
+formatted according to the BIDS standard.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>output_dir</kbd></dt>
+<dd><blockquote>
+<div><p>Fullpath to the directory where the output files will be stored.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>analysis_level</kbd></dt>
+<dd><p>Possible choices: subject, dataset</p>
+<blockquote>
+<div><p>Level of the analysis that wsub_command_parserill be performed.
+Multiple participant level analyses can be run independently
+(in parallel) using the same <code class="docutils literal notranslate"><span class="pre">output_dir</span></code>.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>command</kbd></dt>
+<dd><p>Possible choices: preprocess, smooth, default_model, create_roi, stats, contrasts, results, bms</p>
+<p>Choose a subcommand</p>
+</dd>
+</dl>
+</section>
+<section id="bidspm-named-arguments">
+<span id="src.bidspm.parsers-sub_command_parser-named-arguments"></span><h3>Named Arguments<a class="headerlink" href="#bidspm-named-arguments" title="Link to this heading">#</a></h3>
+<dl class="option-list">
+<dt><kbd>-v, --version</kbd></dt>
+<dd><p>show program’s version number and exit</p>
+</dd>
+</dl>
+</section>
+<section id="Sub-commands">
+<h3>Sub-commands<a class="headerlink" href="#Sub-commands" title="Link to this heading">#</a></h3>
+<section id="bidspm-preprocess">
+<span id="preprocess"></span><h4>preprocess<a class="headerlink" href="#bidspm-preprocess" title="Link to this heading">#</a></h4>
+<p>Preprocessing</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bidspm</span> <span class="n">preprocess</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span>
+                  <span class="p">[</span><span class="o">--</span><span class="n">participant_label</span> <span class="n">PARTICIPANT_LABEL</span> <span class="p">[</span><span class="n">PARTICIPANT_LABEL</span> <span class="o">...</span><span class="p">]]</span>
+                  <span class="p">[</span><span class="o">--</span><span class="n">verbosity</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}]</span>
+                  <span class="p">[</span><span class="o">--</span><span class="n">bids_filter_file</span> <span class="n">BIDS_FILTER_FILE</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">options</span> <span class="n">OPTIONS</span><span class="p">]</span>
+                  <span class="p">[</span><span class="o">--</span><span class="n">boilerplate_only</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">anat_only</span><span class="p">]</span>
+                  <span class="p">[</span><span class="o">--</span><span class="n">dummy_scans</span> <span class="n">DUMMY_SCANS</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">task</span> <span class="n">TASK</span> <span class="p">[</span><span class="n">TASK</span> <span class="o">...</span><span class="p">]]</span>
+                  <span class="p">[</span><span class="o">--</span><span class="n">space</span> <span class="n">SPACE</span> <span class="p">[</span><span class="n">SPACE</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">--</span><span class="n">fwhm</span> <span class="n">FWHM</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">dry_run</span><span class="p">]</span>
+                  <span class="p">[</span><span class="o">--</span><span class="n">skip_validation</span><span class="p">]</span>
+                  <span class="p">[</span><span class="o">--</span><span class="n">ignore</span> <span class="p">{</span><span class="n">fieldmaps</span><span class="p">,</span><span class="n">slicetiming</span><span class="p">,</span><span class="n">unwarp</span><span class="p">,</span><span class="n">qa</span><span class="p">}</span> <span class="p">[{</span><span class="n">fieldmaps</span><span class="p">,</span><span class="n">slicetiming</span><span class="p">,</span><span class="n">unwarp</span><span class="p">,</span><span class="n">qa</span><span class="p">}</span> <span class="o">...</span><span class="p">]]</span>
+</pre></div>
+</div>
+<section id="bidspm-preprocess-named-arguments">
+<span id="-named-arguments"></span><h5>Named Arguments<a class="headerlink" href="#bidspm-preprocess-named-arguments" title="Link to this heading">#</a></h5>
+<dl class="option-list">
+<dt><kbd>--participant_label</kbd></dt>
+<dd><blockquote>
+<div><p>The label(s) of the participant(s) that should be analyzed.
+The label corresponds to sub-&lt;participant_label&gt; from the BIDS spec
+(so it does not include “sub-“).
+If this parameter is not provided all subjects should be analyzed.
+Multiple participants can be specified with a space separated list.
+Can be a regular expression.
+Example: <code class="docutils literal notranslate"><span class="pre">'01',</span> <span class="pre">'03',</span> <span class="pre">'08'</span></code>.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--verbosity</kbd></dt>
+<dd><p>Possible choices: 0, 1, 2, 3</p>
+<blockquote>
+<div><p>Verbosity level.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">2</span></code></p>
+</dd>
+<dt><kbd>--bids_filter_file</kbd></dt>
+<dd><blockquote>
+<div><p>Fullpath to a JSON file describing custom BIDS input filters.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--options</kbd></dt>
+<dd><blockquote>
+<div><p>Path to JSON file containing bidspm options.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--boilerplate_only</kbd></dt>
+<dd><blockquote>
+<div><p>When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> this will only generate figures describing the raw data,
+the methods section boilerplate.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><kbd>--anat_only</kbd></dt>
+<dd><blockquote>
+<div><p>If preprocessing should be done only on anatomical data.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><kbd>--dummy_scans</kbd></dt>
+<dd><blockquote>
+<div><p>Number of dummy scans to remove.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</dd>
+<dt><kbd>--task</kbd></dt>
+<dd><blockquote>
+<div><p>Tasks of the input data.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--space</kbd></dt>
+<dd><blockquote>
+<div><p>Space of the input data.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">['IXI549Space']</span></code></p>
+</dd>
+<dt><kbd>--fwhm</kbd></dt>
+<dd><p>The full width at half maximum of the gaussian kernel
+to apply to the preprocessed data
+or to use as inputs for the statistical analysis.</p>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">6.0</span></code></p>
+</dd>
+<dt><kbd>--dry_run</kbd></dt>
+<dd><blockquote>
+<div><p>When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> this will generate and save the SPM batches,
+but not actually run them.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><kbd>--skip_validation</kbd></dt>
+<dd><blockquote>
+<div><p>To skip BIDS dataset and BIDS stats model validation.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><kbd>--ignore</kbd></dt>
+<dd><p>Possible choices: fieldmaps, slicetiming, unwarp, qa</p>
+<blockquote>
+<div><p>To specify steps to skip.</p>
+</div></blockquote>
+</dd>
+</dl>
+</section>
+</section>
+<section id="bidspm-smooth">
+<span id="smooth"></span><h4>smooth<a class="headerlink" href="#bidspm-smooth" title="Link to this heading">#</a></h4>
+<p>Smooth</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bidspm</span> <span class="n">smooth</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span>
+              <span class="p">[</span><span class="o">--</span><span class="n">participant_label</span> <span class="n">PARTICIPANT_LABEL</span> <span class="p">[</span><span class="n">PARTICIPANT_LABEL</span> <span class="o">...</span><span class="p">]]</span>
+              <span class="p">[</span><span class="o">--</span><span class="n">verbosity</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}]</span> <span class="p">[</span><span class="o">--</span><span class="n">bids_filter_file</span> <span class="n">BIDS_FILTER_FILE</span><span class="p">]</span>
+              <span class="p">[</span><span class="o">--</span><span class="n">options</span> <span class="n">OPTIONS</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">task</span> <span class="n">TASK</span> <span class="p">[</span><span class="n">TASK</span> <span class="o">...</span><span class="p">]]</span>
+              <span class="p">[</span><span class="o">--</span><span class="n">space</span> <span class="n">SPACE</span> <span class="p">[</span><span class="n">SPACE</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">--</span><span class="n">fwhm</span> <span class="n">FWHM</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">anat_only</span><span class="p">]</span>
+              <span class="p">[</span><span class="o">--</span><span class="n">dry_run</span><span class="p">]</span>
+</pre></div>
+</div>
+<section id="bidspm-smooth-named-arguments">
+<span id="-named-arguments_repeat1"></span><h5>Named Arguments<a class="headerlink" href="#bidspm-smooth-named-arguments" title="Link to this heading">#</a></h5>
+<dl class="option-list">
+<dt><kbd>--participant_label</kbd></dt>
+<dd><blockquote>
+<div><p>The label(s) of the participant(s) that should be analyzed.
+The label corresponds to sub-&lt;participant_label&gt; from the BIDS spec
+(so it does not include “sub-“).
+If this parameter is not provided all subjects should be analyzed.
+Multiple participants can be specified with a space separated list.
+Can be a regular expression.
+Example: <code class="docutils literal notranslate"><span class="pre">'01',</span> <span class="pre">'03',</span> <span class="pre">'08'</span></code>.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--verbosity</kbd></dt>
+<dd><p>Possible choices: 0, 1, 2, 3</p>
+<blockquote>
+<div><p>Verbosity level.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">2</span></code></p>
+</dd>
+<dt><kbd>--bids_filter_file</kbd></dt>
+<dd><blockquote>
+<div><p>Fullpath to a JSON file describing custom BIDS input filters.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--options</kbd></dt>
+<dd><blockquote>
+<div><p>Path to JSON file containing bidspm options.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--task</kbd></dt>
+<dd><blockquote>
+<div><p>Tasks of the input data.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--space</kbd></dt>
+<dd><blockquote>
+<div><p>Space of the input data.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">['IXI549Space']</span></code></p>
+</dd>
+<dt><kbd>--fwhm</kbd></dt>
+<dd><p>The full width at half maximum of the gaussian kernel
+to apply to the preprocessed data
+or to use as inputs for the statistical analysis.</p>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">6.0</span></code></p>
+</dd>
+<dt><kbd>--anat_only</kbd></dt>
+<dd><blockquote>
+<div><p>If preprocessing should be done only on anatomical data.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><kbd>--dry_run</kbd></dt>
+<dd><blockquote>
+<div><p>When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> this will generate and save the SPM batches,
+but not actually run them.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="bidspm-default_model">
+<span id="default_model"></span><h4>default_model<a class="headerlink" href="#bidspm-default_model" title="Link to this heading">#</a></h4>
+<p>Create default model</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bidspm</span> <span class="n">default_model</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span>
+                     <span class="p">[</span><span class="o">--</span><span class="n">participant_label</span> <span class="n">PARTICIPANT_LABEL</span> <span class="p">[</span><span class="n">PARTICIPANT_LABEL</span> <span class="o">...</span><span class="p">]]</span>
+                     <span class="p">[</span><span class="o">--</span><span class="n">verbosity</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}]</span>
+                     <span class="p">[</span><span class="o">--</span><span class="n">bids_filter_file</span> <span class="n">BIDS_FILTER_FILE</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">options</span> <span class="n">OPTIONS</span><span class="p">]</span>
+                     <span class="p">[</span><span class="o">--</span><span class="n">task</span> <span class="n">TASK</span> <span class="p">[</span><span class="n">TASK</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">--</span><span class="n">space</span> <span class="n">SPACE</span> <span class="p">[</span><span class="n">SPACE</span> <span class="o">...</span><span class="p">]]</span>
+                     <span class="p">[</span><span class="o">--</span><span class="n">skip_validation</span><span class="p">]</span>
+                     <span class="p">[</span><span class="o">--</span><span class="n">ignore</span> <span class="p">{</span><span class="n">Transformations</span><span class="p">,</span><span class="n">Contrasts</span><span class="p">,</span><span class="n">Dataset</span><span class="p">}</span> <span class="p">[{</span><span class="n">Transformations</span><span class="p">,</span><span class="n">Contrasts</span><span class="p">,</span><span class="n">Dataset</span><span class="p">}</span> <span class="o">...</span><span class="p">]]</span>
+</pre></div>
+</div>
+<section id="bidspm-default_model-named-arguments">
+<span id="-named-arguments_repeat2"></span><h5>Named Arguments<a class="headerlink" href="#bidspm-default_model-named-arguments" title="Link to this heading">#</a></h5>
+<dl class="option-list">
+<dt><kbd>--participant_label</kbd></dt>
+<dd><blockquote>
+<div><p>The label(s) of the participant(s) that should be analyzed.
+The label corresponds to sub-&lt;participant_label&gt; from the BIDS spec
+(so it does not include “sub-“).
+If this parameter is not provided all subjects should be analyzed.
+Multiple participants can be specified with a space separated list.
+Can be a regular expression.
+Example: <code class="docutils literal notranslate"><span class="pre">'01',</span> <span class="pre">'03',</span> <span class="pre">'08'</span></code>.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--verbosity</kbd></dt>
+<dd><p>Possible choices: 0, 1, 2, 3</p>
+<blockquote>
+<div><p>Verbosity level.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">2</span></code></p>
+</dd>
+<dt><kbd>--bids_filter_file</kbd></dt>
+<dd><blockquote>
+<div><p>Fullpath to a JSON file describing custom BIDS input filters.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--options</kbd></dt>
+<dd><blockquote>
+<div><p>Path to JSON file containing bidspm options.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--task</kbd></dt>
+<dd><blockquote>
+<div><p>Tasks of the input data.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--space</kbd></dt>
+<dd><blockquote>
+<div><p>Space of the input data.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">['IXI549Space']</span></code></p>
+</dd>
+<dt><kbd>--skip_validation</kbd></dt>
+<dd><blockquote>
+<div><p>To skip BIDS dataset and BIDS stats model validation.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><kbd>--ignore</kbd></dt>
+<dd><p>Possible choices: Transformations, Contrasts, Dataset</p>
+<blockquote>
+<div><p>To specify steps to skip.</p>
+</div></blockquote>
+</dd>
+</dl>
+</section>
+</section>
+<section id="bidspm-create_roi">
+<span id="create_roi"></span><h4>create_roi<a class="headerlink" href="#bidspm-create_roi" title="Link to this heading">#</a></h4>
+<p>Create ROIs</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bidspm</span> <span class="n">create_roi</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span>
+                  <span class="p">[</span><span class="o">--</span><span class="n">participant_label</span> <span class="n">PARTICIPANT_LABEL</span> <span class="p">[</span><span class="n">PARTICIPANT_LABEL</span> <span class="o">...</span><span class="p">]]</span>
+                  <span class="p">[</span><span class="o">--</span><span class="n">verbosity</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}]</span>
+                  <span class="p">[</span><span class="o">--</span><span class="n">bids_filter_file</span> <span class="n">BIDS_FILTER_FILE</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">options</span> <span class="n">OPTIONS</span><span class="p">]</span>
+                  <span class="p">[</span><span class="o">--</span><span class="n">boilerplate_only</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">space</span> <span class="n">SPACE</span> <span class="p">[</span><span class="n">SPACE</span> <span class="o">...</span><span class="p">]]</span>
+                  <span class="o">--</span><span class="n">roi_name</span> <span class="n">ROI_NAME</span> <span class="p">[</span><span class="n">ROI_NAME</span> <span class="o">...</span><span class="p">]</span>
+                  <span class="p">[</span><span class="o">--</span><span class="n">roi_atlas</span> <span class="p">{</span><span class="n">glasser</span><span class="p">,</span><span class="n">wang</span><span class="p">,</span><span class="n">neuromorphometrics</span><span class="p">,</span><span class="n">anatomy_toobox</span><span class="p">,</span><span class="n">visfatlas</span><span class="p">,</span><span class="n">hcpex</span><span class="p">}]</span>
+                  <span class="p">[</span><span class="o">--</span><span class="n">preproc_dir</span> <span class="n">PREPROC_DIR</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">hemisphere</span> <span class="p">{</span><span class="n">L</span><span class="p">,</span><span class="n">R</span><span class="p">}</span> <span class="p">[{</span><span class="n">L</span><span class="p">,</span><span class="n">R</span><span class="p">}</span> <span class="o">...</span><span class="p">]]</span>
+</pre></div>
+</div>
+<section id="bidspm-create_roi-named-arguments">
+<span id="-named-arguments_repeat3"></span><h5>Named Arguments<a class="headerlink" href="#bidspm-create_roi-named-arguments" title="Link to this heading">#</a></h5>
+<dl class="option-list">
+<dt><kbd>--participant_label</kbd></dt>
+<dd><blockquote>
+<div><p>The label(s) of the participant(s) that should be analyzed.
+The label corresponds to sub-&lt;participant_label&gt; from the BIDS spec
+(so it does not include “sub-“).
+If this parameter is not provided all subjects should be analyzed.
+Multiple participants can be specified with a space separated list.
+Can be a regular expression.
+Example: <code class="docutils literal notranslate"><span class="pre">'01',</span> <span class="pre">'03',</span> <span class="pre">'08'</span></code>.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--verbosity</kbd></dt>
+<dd><p>Possible choices: 0, 1, 2, 3</p>
+<blockquote>
+<div><p>Verbosity level.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">2</span></code></p>
+</dd>
+<dt><kbd>--bids_filter_file</kbd></dt>
+<dd><blockquote>
+<div><p>Fullpath to a JSON file describing custom BIDS input filters.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--options</kbd></dt>
+<dd><blockquote>
+<div><p>Path to JSON file containing bidspm options.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--boilerplate_only</kbd></dt>
+<dd><blockquote>
+<div><p>When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> this will only generate figures describing the raw data,
+the methods section boilerplate.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><kbd>--space</kbd></dt>
+<dd><blockquote>
+<div><p>Space of the input data.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">['IXI549Space']</span></code></p>
+</dd>
+<dt><kbd>--roi_name</kbd></dt>
+<dd><blockquote>
+<div><p>Name of the roi to create. If the ROI does not exist in the atlas,
+the list of available ROI will be returned in the error message.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--roi_atlas</kbd></dt>
+<dd><p>Possible choices: glasser, wang, neuromorphometrics, anatomy_toobox, visfatlas, hcpex</p>
+<blockquote>
+<div><p>Atlas to create the regions of interest from.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">'neuromorphometrics'</span></code></p>
+</dd>
+<dt><kbd>--preproc_dir</kbd></dt>
+<dd><blockquote>
+<div><p>Fullpath to the directory with the preprocessed data.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--hemisphere</kbd></dt>
+<dd><p>Possible choices: L, R</p>
+<blockquote>
+<div><p>To specify steps to skip.</p>
+</div></blockquote>
+</dd>
+</dl>
+</section>
+</section>
+<section id="bidspm-stats">
+<span id="stats"></span><h4>stats<a class="headerlink" href="#bidspm-stats" title="Link to this heading">#</a></h4>
+<p>Specify and estimate GLM, compute contrasts and get results</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bidspm</span> <span class="n">stats</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span>
+             <span class="p">[</span><span class="o">--</span><span class="n">participant_label</span> <span class="n">PARTICIPANT_LABEL</span> <span class="p">[</span><span class="n">PARTICIPANT_LABEL</span> <span class="o">...</span><span class="p">]]</span>
+             <span class="p">[</span><span class="o">--</span><span class="n">verbosity</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}]</span> <span class="p">[</span><span class="o">--</span><span class="n">bids_filter_file</span> <span class="n">BIDS_FILTER_FILE</span><span class="p">]</span>
+             <span class="p">[</span><span class="o">--</span><span class="n">options</span> <span class="n">OPTIONS</span><span class="p">]</span> <span class="o">--</span><span class="n">model_file</span> <span class="n">MODEL_FILE</span>
+             <span class="p">[</span><span class="o">--</span><span class="n">preproc_dir</span> <span class="n">PREPROC_DIR</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">task</span> <span class="n">TASK</span> <span class="p">[</span><span class="n">TASK</span> <span class="o">...</span><span class="p">]]</span>
+             <span class="p">[</span><span class="o">--</span><span class="n">space</span> <span class="n">SPACE</span> <span class="p">[</span><span class="n">SPACE</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">--</span><span class="n">fwhm</span> <span class="n">FWHM</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">dry_run</span><span class="p">]</span>
+             <span class="p">[</span><span class="o">--</span><span class="n">skip_validation</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">boilerplate_only</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">keep_residuals</span><span class="p">]</span>
+             <span class="p">[</span><span class="o">--</span><span class="n">design_only</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">use_dummy_regressor</span><span class="p">]</span>
+             <span class="p">[</span><span class="o">--</span><span class="n">ignore</span> <span class="p">{</span><span class="n">qa</span><span class="p">}</span> <span class="p">[{</span><span class="n">qa</span><span class="p">}</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">--</span><span class="n">roi_based</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">roi_dir</span> <span class="n">ROI_DIR</span><span class="p">]</span>
+             <span class="p">[</span><span class="o">--</span><span class="n">roi_name</span> <span class="n">ROI_NAME</span> <span class="p">[</span><span class="n">ROI_NAME</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">--</span><span class="n">node_name</span> <span class="n">NODE_NAME</span><span class="p">]</span>
+             <span class="p">[</span><span class="o">--</span><span class="n">concatenate</span><span class="p">]</span>
+             <span class="p">[</span><span class="o">--</span><span class="n">roi_atlas</span> <span class="p">{</span><span class="n">glasser</span><span class="p">,</span><span class="n">wang</span><span class="p">,</span><span class="n">neuromorphometrics</span><span class="p">,</span><span class="n">anatomy_toobox</span><span class="p">,</span><span class="n">visfatlas</span><span class="p">,</span><span class="n">hcpex</span><span class="p">}]</span>
+</pre></div>
+</div>
+<section id="bidspm-stats-named-arguments">
+<span id="-named-arguments_repeat4"></span><h5>Named Arguments<a class="headerlink" href="#bidspm-stats-named-arguments" title="Link to this heading">#</a></h5>
+<dl class="option-list">
+<dt><kbd>--participant_label</kbd></dt>
+<dd><blockquote>
+<div><p>The label(s) of the participant(s) that should be analyzed.
+The label corresponds to sub-&lt;participant_label&gt; from the BIDS spec
+(so it does not include “sub-“).
+If this parameter is not provided all subjects should be analyzed.
+Multiple participants can be specified with a space separated list.
+Can be a regular expression.
+Example: <code class="docutils literal notranslate"><span class="pre">'01',</span> <span class="pre">'03',</span> <span class="pre">'08'</span></code>.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--verbosity</kbd></dt>
+<dd><p>Possible choices: 0, 1, 2, 3</p>
+<blockquote>
+<div><p>Verbosity level.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">2</span></code></p>
+</dd>
+<dt><kbd>--bids_filter_file</kbd></dt>
+<dd><blockquote>
+<div><p>Fullpath to a JSON file describing custom BIDS input filters.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--options</kbd></dt>
+<dd><blockquote>
+<div><p>Path to JSON file containing bidspm options.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--model_file</kbd></dt>
+<dd><blockquote>
+<div><p>Fullpath to BIDS stats model.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--preproc_dir</kbd></dt>
+<dd><blockquote>
+<div><p>Fullpath to the directory with the preprocessed data.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--task</kbd></dt>
+<dd><blockquote>
+<div><p>Tasks of the input data.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--space</kbd></dt>
+<dd><blockquote>
+<div><p>Space of the input data.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">['IXI549Space']</span></code></p>
+</dd>
+<dt><kbd>--fwhm</kbd></dt>
+<dd><p>The full width at half maximum of the gaussian kernel
+to apply to the preprocessed data
+or to use as inputs for the statistical analysis.</p>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">6.0</span></code></p>
+</dd>
+<dt><kbd>--dry_run</kbd></dt>
+<dd><blockquote>
+<div><p>When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> this will generate and save the SPM batches,
+but not actually run them.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><kbd>--skip_validation</kbd></dt>
+<dd><blockquote>
+<div><p>To skip BIDS dataset and BIDS stats model validation.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><kbd>--boilerplate_only</kbd></dt>
+<dd><blockquote>
+<div><p>When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> this will only generate figures describing the raw data,
+the methods section boilerplate.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><kbd>--keep_residuals</kbd></dt>
+<dd><blockquote>
+<div><p>Keep GLM residuals.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><kbd>--design_only</kbd></dt>
+<dd><blockquote>
+<div><p>To only specify the GLM without estimating it.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><kbd>--use_dummy_regressor</kbd></dt>
+<dd><blockquote>
+<div><p>If true any missing condition will be modelled</p>
+</div></blockquote>
+<p>by a dummy regressor of <code class="docutils literal notranslate"><span class="pre">NaN</span></code>.</p>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><kbd>--ignore</kbd></dt>
+<dd><p>Possible choices: qa</p>
+<blockquote>
+<div><p>To specify steps to skip.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--roi_based</kbd></dt>
+<dd><blockquote>
+<div><p>Use to run a ROI-based analysis.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><kbd>--roi_dir</kbd></dt>
+<dd><blockquote>
+<div><p>Fullpath to the directory with the regions of interest.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--roi_name</kbd></dt>
+<dd><blockquote>
+<div><p>Name of the roi to create. If the ROI does not exist in the atlas,
+the list of available ROI will be returned in the error message.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--node_name</kbd></dt>
+<dd><blockquote>
+<div><p>Model node to run.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--concatenate</kbd></dt>
+<dd><blockquote>
+<div><p>To create 4D image of all the beta and contrast images of the conditions
+of interest included in the run level design matrix.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><kbd>--roi_atlas</kbd></dt>
+<dd><p>Possible choices: glasser, wang, neuromorphometrics, anatomy_toobox, visfatlas, hcpex</p>
+<blockquote>
+<div><p>Atlas to create the regions of interest from.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">'neuromorphometrics'</span></code></p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="bidspm-contrasts">
+<span id="contrasts"></span><h4>contrasts<a class="headerlink" href="#bidspm-contrasts" title="Link to this heading">#</a></h4>
+<p>Compute contrasts and get results</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bidspm</span> <span class="n">contrasts</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span>
+                 <span class="p">[</span><span class="o">--</span><span class="n">participant_label</span> <span class="n">PARTICIPANT_LABEL</span> <span class="p">[</span><span class="n">PARTICIPANT_LABEL</span> <span class="o">...</span><span class="p">]]</span>
+                 <span class="p">[</span><span class="o">--</span><span class="n">verbosity</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}]</span> <span class="p">[</span><span class="o">--</span><span class="n">bids_filter_file</span> <span class="n">BIDS_FILTER_FILE</span><span class="p">]</span>
+                 <span class="p">[</span><span class="o">--</span><span class="n">options</span> <span class="n">OPTIONS</span><span class="p">]</span> <span class="o">--</span><span class="n">model_file</span> <span class="n">MODEL_FILE</span>
+                 <span class="p">[</span><span class="o">--</span><span class="n">preproc_dir</span> <span class="n">PREPROC_DIR</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">task</span> <span class="n">TASK</span> <span class="p">[</span><span class="n">TASK</span> <span class="o">...</span><span class="p">]]</span>
+                 <span class="p">[</span><span class="o">--</span><span class="n">space</span> <span class="n">SPACE</span> <span class="p">[</span><span class="n">SPACE</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">--</span><span class="n">fwhm</span> <span class="n">FWHM</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">dry_run</span><span class="p">]</span>
+                 <span class="p">[</span><span class="o">--</span><span class="n">skip_validation</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">boilerplate_only</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">concatenate</span><span class="p">]</span>
+</pre></div>
+</div>
+<section id="bidspm-contrasts-named-arguments">
+<span id="-named-arguments_repeat5"></span><h5>Named Arguments<a class="headerlink" href="#bidspm-contrasts-named-arguments" title="Link to this heading">#</a></h5>
+<dl class="option-list">
+<dt><kbd>--participant_label</kbd></dt>
+<dd><blockquote>
+<div><p>The label(s) of the participant(s) that should be analyzed.
+The label corresponds to sub-&lt;participant_label&gt; from the BIDS spec
+(so it does not include “sub-“).
+If this parameter is not provided all subjects should be analyzed.
+Multiple participants can be specified with a space separated list.
+Can be a regular expression.
+Example: <code class="docutils literal notranslate"><span class="pre">'01',</span> <span class="pre">'03',</span> <span class="pre">'08'</span></code>.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--verbosity</kbd></dt>
+<dd><p>Possible choices: 0, 1, 2, 3</p>
+<blockquote>
+<div><p>Verbosity level.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">2</span></code></p>
+</dd>
+<dt><kbd>--bids_filter_file</kbd></dt>
+<dd><blockquote>
+<div><p>Fullpath to a JSON file describing custom BIDS input filters.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--options</kbd></dt>
+<dd><blockquote>
+<div><p>Path to JSON file containing bidspm options.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--model_file</kbd></dt>
+<dd><blockquote>
+<div><p>Fullpath to BIDS stats model.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--preproc_dir</kbd></dt>
+<dd><blockquote>
+<div><p>Fullpath to the directory with the preprocessed data.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--task</kbd></dt>
+<dd><blockquote>
+<div><p>Tasks of the input data.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--space</kbd></dt>
+<dd><blockquote>
+<div><p>Space of the input data.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">['IXI549Space']</span></code></p>
+</dd>
+<dt><kbd>--fwhm</kbd></dt>
+<dd><p>The full width at half maximum of the gaussian kernel
+to apply to the preprocessed data
+or to use as inputs for the statistical analysis.</p>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">6.0</span></code></p>
+</dd>
+<dt><kbd>--dry_run</kbd></dt>
+<dd><blockquote>
+<div><p>When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> this will generate and save the SPM batches,
+but not actually run them.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><kbd>--skip_validation</kbd></dt>
+<dd><blockquote>
+<div><p>To skip BIDS dataset and BIDS stats model validation.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><kbd>--boilerplate_only</kbd></dt>
+<dd><blockquote>
+<div><p>When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> this will only generate figures describing the raw data,
+the methods section boilerplate.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><kbd>--concatenate</kbd></dt>
+<dd><blockquote>
+<div><p>To create 4D image of all the beta and contrast images of the conditions
+of interest included in the run level design matrix.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="bidspm-results">
+<span id="results"></span><h4>results<a class="headerlink" href="#bidspm-results" title="Link to this heading">#</a></h4>
+<p>Get results</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bidspm</span> <span class="n">results</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span>
+               <span class="p">[</span><span class="o">--</span><span class="n">participant_label</span> <span class="n">PARTICIPANT_LABEL</span> <span class="p">[</span><span class="n">PARTICIPANT_LABEL</span> <span class="o">...</span><span class="p">]]</span>
+               <span class="p">[</span><span class="o">--</span><span class="n">verbosity</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}]</span> <span class="p">[</span><span class="o">--</span><span class="n">bids_filter_file</span> <span class="n">BIDS_FILTER_FILE</span><span class="p">]</span>
+               <span class="p">[</span><span class="o">--</span><span class="n">options</span> <span class="n">OPTIONS</span><span class="p">]</span> <span class="o">--</span><span class="n">model_file</span> <span class="n">MODEL_FILE</span>
+               <span class="p">[</span><span class="o">--</span><span class="n">preproc_dir</span> <span class="n">PREPROC_DIR</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">task</span> <span class="n">TASK</span> <span class="p">[</span><span class="n">TASK</span> <span class="o">...</span><span class="p">]]</span>
+               <span class="p">[</span><span class="o">--</span><span class="n">space</span> <span class="n">SPACE</span> <span class="p">[</span><span class="n">SPACE</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">--</span><span class="n">fwhm</span> <span class="n">FWHM</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">dry_run</span><span class="p">]</span>
+               <span class="p">[</span><span class="o">--</span><span class="n">skip_validation</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">boilerplate_only</span><span class="p">]</span>
+               <span class="p">[</span><span class="o">--</span><span class="n">roi_atlas</span> <span class="p">{</span><span class="n">glasser</span><span class="p">,</span><span class="n">wang</span><span class="p">,</span><span class="n">neuromorphometrics</span><span class="p">,</span><span class="n">anatomy_toobox</span><span class="p">,</span><span class="n">visfatlas</span><span class="p">,</span><span class="n">hcpex</span><span class="p">}]</span>
+</pre></div>
+</div>
+<section id="bidspm-results-named-arguments">
+<span id="-named-arguments_repeat6"></span><h5>Named Arguments<a class="headerlink" href="#bidspm-results-named-arguments" title="Link to this heading">#</a></h5>
+<dl class="option-list">
+<dt><kbd>--participant_label</kbd></dt>
+<dd><blockquote>
+<div><p>The label(s) of the participant(s) that should be analyzed.
+The label corresponds to sub-&lt;participant_label&gt; from the BIDS spec
+(so it does not include “sub-“).
+If this parameter is not provided all subjects should be analyzed.
+Multiple participants can be specified with a space separated list.
+Can be a regular expression.
+Example: <code class="docutils literal notranslate"><span class="pre">'01',</span> <span class="pre">'03',</span> <span class="pre">'08'</span></code>.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--verbosity</kbd></dt>
+<dd><p>Possible choices: 0, 1, 2, 3</p>
+<blockquote>
+<div><p>Verbosity level.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">2</span></code></p>
+</dd>
+<dt><kbd>--bids_filter_file</kbd></dt>
+<dd><blockquote>
+<div><p>Fullpath to a JSON file describing custom BIDS input filters.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--options</kbd></dt>
+<dd><blockquote>
+<div><p>Path to JSON file containing bidspm options.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--model_file</kbd></dt>
+<dd><blockquote>
+<div><p>Fullpath to BIDS stats model.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--preproc_dir</kbd></dt>
+<dd><blockquote>
+<div><p>Fullpath to the directory with the preprocessed data.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--task</kbd></dt>
+<dd><blockquote>
+<div><p>Tasks of the input data.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--space</kbd></dt>
+<dd><blockquote>
+<div><p>Space of the input data.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">['IXI549Space']</span></code></p>
+</dd>
+<dt><kbd>--fwhm</kbd></dt>
+<dd><p>The full width at half maximum of the gaussian kernel
+to apply to the preprocessed data
+or to use as inputs for the statistical analysis.</p>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">6.0</span></code></p>
+</dd>
+<dt><kbd>--dry_run</kbd></dt>
+<dd><blockquote>
+<div><p>When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> this will generate and save the SPM batches,
+but not actually run them.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><kbd>--skip_validation</kbd></dt>
+<dd><blockquote>
+<div><p>To skip BIDS dataset and BIDS stats model validation.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><kbd>--boilerplate_only</kbd></dt>
+<dd><blockquote>
+<div><p>When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> this will only generate figures describing the raw data,
+the methods section boilerplate.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><kbd>--roi_atlas</kbd></dt>
+<dd><p>Possible choices: glasser, wang, neuromorphometrics, anatomy_toobox, visfatlas, hcpex</p>
+<blockquote>
+<div><p>Atlas to create the regions of interest from.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">'neuromorphometrics'</span></code></p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="bidspm-bms">
+<span id="bms"></span><h4>bms<a class="headerlink" href="#bidspm-bms" title="Link to this heading">#</a></h4>
+<p>Run bayesian model selection</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bidspm</span> <span class="n">bms</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span>
+           <span class="p">[</span><span class="o">--</span><span class="n">participant_label</span> <span class="n">PARTICIPANT_LABEL</span> <span class="p">[</span><span class="n">PARTICIPANT_LABEL</span> <span class="o">...</span><span class="p">]]</span>
+           <span class="p">[</span><span class="o">--</span><span class="n">verbosity</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}]</span> <span class="p">[</span><span class="o">--</span><span class="n">bids_filter_file</span> <span class="n">BIDS_FILTER_FILE</span><span class="p">]</span>
+           <span class="p">[</span><span class="o">--</span><span class="n">options</span> <span class="n">OPTIONS</span><span class="p">]</span> <span class="o">--</span><span class="n">models_dir</span> <span class="n">MODELS_DIR</span> <span class="p">[</span><span class="o">--</span><span class="n">fwhm</span> <span class="n">FWHM</span><span class="p">]</span>
+           <span class="p">[</span><span class="o">--</span><span class="n">dry_run</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">skip_validation</span><span class="p">]</span>
+</pre></div>
+</div>
+<section id="bidspm-bms-named-arguments">
+<span id="-named-arguments_repeat7"></span><h5>Named Arguments<a class="headerlink" href="#bidspm-bms-named-arguments" title="Link to this heading">#</a></h5>
+<dl class="option-list">
+<dt><kbd>--participant_label</kbd></dt>
+<dd><blockquote>
+<div><p>The label(s) of the participant(s) that should be analyzed.
+The label corresponds to sub-&lt;participant_label&gt; from the BIDS spec
+(so it does not include “sub-“).
+If this parameter is not provided all subjects should be analyzed.
+Multiple participants can be specified with a space separated list.
+Can be a regular expression.
+Example: <code class="docutils literal notranslate"><span class="pre">'01',</span> <span class="pre">'03',</span> <span class="pre">'08'</span></code>.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--verbosity</kbd></dt>
+<dd><p>Possible choices: 0, 1, 2, 3</p>
+<blockquote>
+<div><p>Verbosity level.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">2</span></code></p>
+</dd>
+<dt><kbd>--bids_filter_file</kbd></dt>
+<dd><blockquote>
+<div><p>Fullpath to a JSON file describing custom BIDS input filters.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--options</kbd></dt>
+<dd><blockquote>
+<div><p>Path to JSON file containing bidspm options.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--models_dir</kbd></dt>
+<dd><blockquote>
+<div><p>Fullpath to the directory with the models.</p>
+</div></blockquote>
+</dd>
+<dt><kbd>--fwhm</kbd></dt>
+<dd><p>The full width at half maximum of the gaussian kernel
+to apply to the preprocessed data
+or to use as inputs for the statistical analysis.</p>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">6.0</span></code></p>
+</dd>
+<dt><kbd>--dry_run</kbd></dt>
+<dd><blockquote>
+<div><p>When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> this will generate and save the SPM batches,
+but not actually run them.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><kbd>--skip_validation</kbd></dt>
+<dd><blockquote>
+<div><p>To skip BIDS dataset and BIDS stats model validation.</p>
+</div></blockquote>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+<p><blockquote>
+<div><p>All parameters use <code class="docutils literal notranslate"><span class="pre">snake_case</span></code>.
+For a more readable version of this help section,
+see the online <a class="reference external" href="https://bidspm.readthedocs.io/en/latest/usage_notes.html">https://bidspm.readthedocs.io/en/latest/usage_notes.html</a>.</p>
+</div></blockquote>
+</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="installation/hpc.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Installation on a computing cluster</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="configuration.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Configuration</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal" tabindex="-1"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#api">API</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-api">Command line API</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bidspm-positional-arguments">Positional Arguments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bidspm-named-arguments">Named Arguments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Sub-commands">Sub-commands</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bidspm-preprocess">preprocess</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#bidspm-preprocess-named-arguments">Named Arguments</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bidspm-smooth">smooth</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#bidspm-smooth-named-arguments">Named Arguments</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bidspm-default_model">default_model</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#bidspm-default_model-named-arguments">Named Arguments</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bidspm-create_roi">create_roi</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#bidspm-create_roi-named-arguments">Named Arguments</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bidspm-stats">stats</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#bidspm-stats-named-arguments">Named Arguments</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bidspm-contrasts">contrasts</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#bidspm-contrasts-named-arguments">Named Arguments</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bidspm-results">results</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#bidspm-results-named-arguments">Named Arguments</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bidspm-bms">bms</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#bidspm-bms-named-arguments">Named Arguments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=75c7c72ae941e8b558d8"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=75c7c72ae941e8b558d8"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2020, the bidspm pipeline dev team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.24.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

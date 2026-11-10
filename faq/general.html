@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>General &#8212; bidspm v4.0.0dev
+ documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=75c7c72ae941e8b558d8" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=75c7c72ae941e8b558d8" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=75c7c72ae941e8b558d8"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=75c7c72ae941e8b558d8" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=75c7c72ae941e8b558d8" />
+
+    <script src="../_static/documentation_options.js?v=071bb420"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script src="../_static/mat_urls.js?v=fdbe6872"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'faq/general';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Preproc" href="preproc.html" />
+    <link rel="prev" title="BIDS" href="bids.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button type="button" class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation" aria-expanded="false" aria-controls="pst-primary-sidebar-modal">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/cpp_lab_logo.png" class="logo__image only-light" alt="bidspm v4.0.0dev
+ documentation - Home"/>
+    <img src="../_static/cpp_lab_logo.png" class="logo__image only-dark pst-js-only" alt="bidspm v4.0.0dev
+ documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../general_information.html">
+    bidspm
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation/index.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../usage_notes.html">
+    Usage notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../demos/index.html">
+    Demos
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    FAQ
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../stats/index.html">
+    Statistics
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../preprocessing/index.html">
+    Preprocessing
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../output/index.html">
+    Outputs
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../QA.html">
+    Quality control
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../API.html">
+    API
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../links_and_references.html">
+    Links and references
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../CHANGELOG.html">
+    Changelog
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../CONTRIBUTING.html">
+    Contributing
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/cpp-lln-lab/bidspm.git" title="github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">github</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button type="button" class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page" aria-expanded="false" aria-controls="pst-secondary-sidebar-modal">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal" tabindex="-1"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../general_information.html">
+    bidspm
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation/index.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../usage_notes.html">
+    Usage notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../demos/index.html">
+    Demos
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../stats/index.html">
+    Statistics
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../preprocessing/index.html">
+    Preprocessing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../output/index.html">
+    Outputs
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../QA.html">
+    Quality control
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../API.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../links_and_references.html">
+    Links and references
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../CHANGELOG.html">
+    Changelog
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../CONTRIBUTING.html">
+    Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/cpp-lln-lab/bidspm.git" title="github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">github</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bids.html">BIDS</a></li>
+<li class="toctree-l1 current active"><a aria-current="page" class="current reference internal" href="#">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preproc.html">Preproc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="results.html">Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spm.html">SPM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stats.html">Stats</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-house"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">FAQ</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">General</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <!-- the section below is automatically generated.
+
+If you want to modify the questions:
+- please edit the files in the `faq` folder in the doc
+
+-->
+<section id="general">
+<h1>General<a class="headerlink" href="#general" title="Link to this heading">#</a></h1>
+<section id="can-i-use-parallelization-with-bidspm">
+<h2>Can I use parallelization with bidspm?<a class="headerlink" href="#can-i-use-parallelization-with-bidspm" title="Link to this heading">#</a></h2>
+<p>You can use parallelization with bidspm.
+The main way to do so is to use <code class="docutils literal notranslate"><span class="pre">parfor</span></code> loops in your code
+when running the <code class="docutils literal notranslate"><span class="pre">preprocess</span></code>, <code class="docutils literal notranslate"><span class="pre">smooth</span></code> or <code class="docutils literal notranslate"><span class="pre">stats</span></code> actions.</p>
+<p>For example, if you want to run the <code class="docutils literal notranslate"><span class="pre">preprocess</span></code> action on a list of subjects,</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">subjects</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="s">'01'</span><span class="p">,</span><span class="w"> </span><span class="s">'02'</span><span class="p">,</span><span class="w"> </span><span class="s">'03'</span><span class="p">,</span><span class="w"> </span><span class="s">'04'</span><span class="p">,</span><span class="w"> </span><span class="s">'05'</span><span class="p">};</span>
+<span class="k">parfor</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="nb">length</span><span class="p">(</span><span class="n">subjects</span><span class="p">)</span>
+<span class="w">    </span><span class="n">bidspm</span><span class="p">(</span><span class="n">bids_dir</span><span class="p">,</span><span class="w"> </span><span class="n">output_dir</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">           </span><span class="s">'participant_label'</span><span class="p">,</span><span class="w"> </span><span class="n">subjects</span><span class="p">(</span><span class="nb">i</span><span class="p">),</span><span class="w"> </span><span class="k">...</span>
+<span class="w">           </span><span class="s">'action'</span><span class="p">,</span><span class="w"> </span><span class="s">'preprocess'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">           </span><span class="s">'task'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">'tasnName'</span><span class="p">},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">           </span><span class="s">'space'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">'IXI549Space'</span><span class="p">});</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</section>
+<section id="how-can-i-know-that-things-are-set-up-properly-before-i-run-an-analysis">
+<h2>How can I know that things are set up properly before I run an analysis?<a class="headerlink" href="#how-can-i-know-that-things-are-set-up-properly-before-i-run-an-analysis" title="Link to this heading">#</a></h2>
+<p>If you want to set things up but not let SPM actually run the batches
+you can use the option:</p>
+<p><code class="docutils literal notranslate"><span class="pre">dry_run,</span> <span class="pre">true()</span></code></p>
+<p>This can be useful when debugging.</p>
+<p>You may still run into errors when SPM jobman takes over and starts running the batches,
+but you can at least see if the batches will be constructed
+without error and then inspect with the SPM GUI to make sure everything is fine.</p>
+</section>
+<section id="how-can-i-prevent-from-having-spm-windows-pop-up-all-the-time">
+<h2>How can I prevent from having SPM windows pop up all the time?<a class="headerlink" href="#how-can-i-prevent-from-having-spm-windows-pop-up-all-the-time" title="Link to this heading">#</a></h2>
+<p>Running large number of batches when the GUI of MATLAB is active can be
+annoying, as SPM windows will always pop up and become active instead of running
+in the background like most users would prefer to.</p>
+<p>One easy solution is to add a <code class="docutils literal notranslate"><span class="pre">spm_my_defaults</span></code> function with the following
+content in the MATLAB path, or in the directory where you are running your
+scripts or command from.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="k">function</span><span class="w"> </span><span class="nf">spm_my_defaults</span>
+
+<span class="w">  </span><span class="k">global</span><span class="w"> </span><span class="n">defaults</span>
+
+<span class="w">  </span><span class="n">defaults</span><span class="p">.</span><span class="n">cmdline</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>This should be picked up by bidspm and SPM upon initialization and ensure that
+SPM runs in command line mode.</p>
+</section>
+<section id="how-can-i-run-bidspm-from-the-command-line">
+<h2>How can I run bidspm from the command line?<a class="headerlink" href="#how-can-i-run-bidspm-from-the-command-line" title="Link to this heading">#</a></h2>
+<p>You can use the Python CLI of bidspm to run many functionalities from the terminal.</p>
+<p>See the README to see how to install it.</p>
+<p>You can also run your matlab script from within your terminal
+without starting the MATLAB graphic interface.</p>
+<p>For this you first need to know where is the MATLAB application.
+Here are the typical location depending on your operating system
+(where <code class="docutils literal notranslate"><span class="pre">XXx</span></code> corresponds to the version you use).</p>
+<ul class="simple">
+<li><p>Windows: <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\MATLAB\R20XXx\bin\matlab.exe</span></code></p></li>
+<li><p>Mac: <code class="docutils literal notranslate"><span class="pre">/Applications/Matlab_R20XXx.app/bin/matlab</span></code></p></li>
+<li><p>Linux: <code class="docutils literal notranslate"><span class="pre">/usr/local/MATLAB/R20XXx/bin/matlab</span></code></p></li>
+</ul>
+<p>You can then launch MATLAB from a terminal in a command line only
+with the following arguments: <code class="docutils literal notranslate"><span class="pre">-nodisplay</span> <span class="pre">-nosplash</span> <span class="pre">-nodesktop</span></code></p>
+<p>So on Linux for example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/usr/local/MATLAB/R2017a/bin/matlab<span class="w"> </span>-nodisplay<span class="w"> </span>-nosplash<span class="w"> </span>-nodesktop
+</pre></div>
+</div>
+<p>If you are on Mac or Linux, we would recommend adding those aliases to your
+<code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> or wherever else you keep your aliases.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">matlab</span><span class="o">=</span>/usr/local/MATLAB/R20XXx/bin/matlab
+<span class="nv">matlabcli</span><span class="o">=</span><span class="s1">'/usr/local/MATLAB/R20XXx/bin/matlab -nodisplay -nosplash -nodesktop'</span>
+</pre></div>
+</div>
+</section>
+<section id="how-can-i-run-bidspm-only-certain-files-like-just-the-session-02-for-example">
+<h2>How can I run bidspm only certain files, like just the session <code class="docutils literal notranslate"><span class="pre">02</span></code> for example?<a class="headerlink" href="#how-can-i-run-bidspm-only-certain-files-like-just-the-session-02-for-example" title="Link to this heading">#</a></h2>
+<p>Currently there are 2 ways of doing this.</p>
+<ul class="simple">
+<li><p>using the <code class="docutils literal notranslate"><span class="pre">bids_filter_file</span></code> parameter or an equivalent
+<code class="docutils literal notranslate"><span class="pre">bids_filter_file.json</span></code> file or its counterpart field <code class="docutils literal notranslate"><span class="pre">opt.bidsFilterFile</span></code></p></li>
+<li><p>using the <code class="docutils literal notranslate"><span class="pre">opt.query</span></code> option field.</p></li>
+</ul>
+<p>On the long run the plan is to use only the <code class="docutils literal notranslate"><span class="pre">bids_filter_file</span></code>,
+but for now both possibilities should work.</p>
+<section id="bids-filter-file">
+<h3><code class="docutils literal notranslate"><span class="pre">bids</span> <span class="pre">filter</span> <span class="pre">file</span></code><a class="headerlink" href="#bids-filter-file" title="Link to this heading">#</a></h3>
+<p>This is similar to the way you can “select” only certain files to preprocess
+with
+<a class="reference external" href="https://fmriprep.org/en/stable/faq.html#how-do-i-select-only-certain-files-to-be-input-to-fmriprep">fmriprep</a>.</p>
+<p>You can use a <code class="docutils literal notranslate"><span class="pre">opt.bidsFilterFile</span></code> field in your options to define a typical
+images “bold”, “T1w” in terms of their BIDS entities. The default value is:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">struct</span><span class="p">(</span><span class="s">'fmap'</span><span class="p">,</span><span class="w"> </span><span class="nb">struct</span><span class="p">(</span><span class="s">'modality'</span><span class="p">,</span><span class="w"> </span><span class="s">'fmap'</span><span class="p">),</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'bold'</span><span class="p">,</span><span class="w"> </span><span class="nb">struct</span><span class="p">(</span><span class="s">'modality'</span><span class="p">,</span><span class="w"> </span><span class="s">'func'</span><span class="p">,</span><span class="w"> </span><span class="s">'suffix'</span><span class="p">,</span><span class="w"> </span><span class="s">'bold'</span><span class="p">),</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'t2w'</span><span class="p">,</span><span class="w">  </span><span class="nb">struct</span><span class="p">(</span><span class="s">'modality'</span><span class="p">,</span><span class="w"> </span><span class="s">'anat'</span><span class="p">,</span><span class="w"> </span><span class="s">'suffix'</span><span class="p">,</span><span class="w"> </span><span class="s">'T2w'</span><span class="p">),</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'t1w'</span><span class="p">,</span><span class="w">  </span><span class="nb">struct</span><span class="p">(</span><span class="s">'modality'</span><span class="p">,</span><span class="w"> </span><span class="s">'anat'</span><span class="p">,</span><span class="w"> </span><span class="s">'space'</span><span class="p">,</span><span class="w"> </span><span class="s">''</span><span class="p">,</span><span class="w"> </span><span class="s">'suffix'</span><span class="p">,</span><span class="w"> </span><span class="s">'T1w'</span><span class="p">),</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="s">'roi'</span><span class="p">,</span><span class="w">  </span><span class="nb">struct</span><span class="p">(</span><span class="s">'modality'</span><span class="p">,</span><span class="w"> </span><span class="s">'roi'</span><span class="p">,</span><span class="w"> </span><span class="s">'suffix'</span><span class="p">,</span><span class="w"> </span><span class="s">'mask'</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>Similarly when using the bidspm you can use the argument <code class="docutils literal notranslate"><span class="pre">bids_filter_file</span></code> to
+pass a structure or point to a JSON file that would also define typical images
+“bold”, “T1w”…</p>
+<p>The default content in this case would be:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"fmap"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"datatype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fmap"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"bold"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"datatype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"func"</span><span class="p">,</span><span class="w"> </span><span class="nt">"suffix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bold"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"t2w"</span><span class="p">:</span><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">"datatype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"anat"</span><span class="p">,</span><span class="w"> </span><span class="nt">"suffix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"T2w"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"t1w"</span><span class="p">:</span><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">"datatype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"anat"</span><span class="p">,</span><span class="w"> </span><span class="nt">"space"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="nt">"suffix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"T1w"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"roi"</span><span class="p">:</span><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">"datatype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"roi"</span><span class="p">,</span><span class="w"> </span><span class="nt">"suffix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mask"</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>So if you wanted to run your analysis on say run <code class="docutils literal notranslate"><span class="pre">02</span></code> and <code class="docutils literal notranslate"><span class="pre">05</span></code> of session <code class="docutils literal notranslate"><span class="pre">02</span></code>,
+you would define a json file this file like this:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"fmap"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"datatype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fmap"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"bold"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"datatype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"func"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"suffix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bold"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"ses"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"run"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"02"</span><span class="p">,</span><span class="w"> </span><span class="s2">"05"</span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"t2w"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"datatype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"anat"</span><span class="p">,</span><span class="w"> </span><span class="nt">"suffix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"T2w"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"t1w"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"datatype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"anat"</span><span class="p">,</span><span class="w"> </span><span class="nt">"space"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="nt">"suffix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"T1w"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"roi"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"datatype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"roi"</span><span class="p">,</span><span class="w"> </span><span class="nt">"suffix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mask"</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="opt-query">
+<h3><code class="docutils literal notranslate"><span class="pre">opt.query</span></code><a class="headerlink" href="#opt-query" title="Link to this heading">#</a></h3>
+<p>You can select a subset of your data by using the <code class="docutils literal notranslate"><span class="pre">opt.query</span></code>.</p>
+<p>This will create a “filter” that bids-matlab will use to only “query” and
+retrieve the subset of files that match the requirement of that filter</p>
+<p>In “pure” bids-matlab it would look like:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="n">BIDS</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bids</span><span class="p">.</span><span class="n">layout</span><span class="p">(</span><span class="n">path_to_my_dataset</span><span class="p">)</span>
+<span class="w">  </span><span class="n">bids</span><span class="p">.</span><span class="n">query</span><span class="p">(</span><span class="n">BIDS</span><span class="p">,</span><span class="w"> </span><span class="s">'data'</span><span class="p">,</span><span class="w"> </span><span class="n">opt</span><span class="p">.</span><span class="n">query</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>So if you wanted to run your analysis on say run <code class="docutils literal notranslate"><span class="pre">02</span></code> and <code class="docutils literal notranslate"><span class="pre">05</span></code> of session <code class="docutils literal notranslate"><span class="pre">02</span></code>,
+you would define your filter like this:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="n">opt</span><span class="p">.</span><span class="n">query</span><span class="p">.</span><span class="n">ses</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">'02'</span>
+<span class="w">  </span><span class="n">opt</span><span class="p">.</span><span class="n">query</span><span class="p">.</span><span class="n">run</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="s">'02'</span><span class="p">,</span><span class="w"> </span><span class="s">'05'</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="what-happens-if-we-run-same-code-twice">
+<h2>What happens if we run same code twice?<a class="headerlink" href="#what-happens-if-we-run-same-code-twice" title="Link to this heading">#</a></h2>
+<p>In the vast majority of cases, if you have not touched anything to your options,
+you will overwrite the output.</p>
+<p>Two exceptions that actually have time stamps and are not over-written:</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">matlabbatches</span></code> saved in the <code class="docutils literal notranslate"><span class="pre">jobs</span></code> folders as <code class="docutils literal notranslate"><span class="pre">.m</span></code> and <code class="docutils literal notranslate"><span class="pre">.json</span></code> files.</p></li>
+<li><p>If you have saved your options with <a class="reference internal" href="../API.html#mat-src/IO/saveOptions.m" title="saveOptions"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">saveOptions()</span></code></a>
+(which is the case for most of bidspm actions),
+then the output <code class="docutils literal notranslate"><span class="pre">.json</span></code> file is saved with a time stamp too.</p></li>
+</ul>
+<p>In most of other cases if you don’t want to overwrite previous output,
+you will have to change the output directory.</p>
+<p>For the preprocess action, in general you would have to specify a different <code class="docutils literal notranslate"><span class="pre">output_dir</span></code>.</p>
+<p>For the statistics workflows,
+you have a few more choices as the name of the
+output folders includes information that comes
+from the options and / or the BIDS stats model.</p>
+<p>The output folder name (generated by <a class="reference internal" href="../API.html#mat-src/stats/subject_level/getFFXdir.m" title="getFFXdir"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">getFFXdir()</span></code></a> for the subject level
+and by <a class="reference internal" href="../API.html#mat-src/stats/group_level/getRFXdir.m" title="getRFXdir"><code class="xref mat mat-func docutils literal notranslate"><span class="pre">getRFXdir()</span></code></a> for the dataset level) should include:</p>
+<ul class="simple">
+<li><p>the FWHM used on the BOLD images</p></li>
+<li><p>info specified in the <code class="docutils literal notranslate"><span class="pre">Inputs</span></code> section of the BIDS stats model JSON file
+(like the name of the task or the MNI space of the input images)</p></li>
+<li><p>the name of the run level node if it is not one of the default one (like <code class="docutils literal notranslate"><span class="pre">&quot;run</span> <span class="pre">level&quot;</span></code>).</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>$<span class="w"> </span>ls<span class="w"> </span>demos/MoAE/outputs/derivatives/bidspm-stats/sub-01/stats
+
+<span class="w">  </span><span class="c1"># Folder name for a model on the auditory task in SPM's MNI space</span>
+<span class="w">  </span><span class="c1"># on data smoothed with a 6mm kernel</span>
+<span class="w">  </span>task-auditory_space-IXI549Space_FWHM-6
+</pre></div>
+</div>
+<p>See <a class="reference internal" href="stats.html#how-can-change-the-name-of-the-folder-of-the-subject-level-analysis"><span class="std std-ref">this question for more details</span></a>.</p>
+<hr class="docutils" />
+<p>Generated by <a class="reference external" href="https://github.com/willmcgugan/faqtory">FAQtory</a></p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="bids.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">BIDS</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="preproc.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Preproc</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal" tabindex="-1"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-use-parallelization-with-bidspm">Can I use parallelization with bidspm?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-know-that-things-are-set-up-properly-before-i-run-an-analysis">How can I know that things are set up properly before I run an analysis?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-prevent-from-having-spm-windows-pop-up-all-the-time">How can I prevent from having SPM windows pop up all the time?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-run-bidspm-from-the-command-line">How can I run bidspm from the command line?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-run-bidspm-only-certain-files-like-just-the-session-02-for-example">How can I run bidspm only certain files, like just the session <code class="docutils literal notranslate"><span class="pre">02</span></code> for example?</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bids-filter-file"><code class="docutils literal notranslate"><span class="pre">bids</span> <span class="pre">filter</span> <span class="pre">file</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opt-query"><code class="docutils literal notranslate"><span class="pre">opt.query</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-we-run-same-code-twice">What happens if we run same code twice?</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/faq/general.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=75c7c72ae941e8b558d8"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=75c7c72ae941e8b558d8"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2020, the bidspm pipeline dev team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.24.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

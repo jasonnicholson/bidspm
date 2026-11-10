@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SPM &#8212; bidspm v4.0.0dev
+ documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=75c7c72ae941e8b558d8" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=75c7c72ae941e8b558d8" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=75c7c72ae941e8b558d8"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=75c7c72ae941e8b558d8" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=75c7c72ae941e8b558d8" />
+
+    <script src="../_static/documentation_options.js?v=071bb420"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script src="../_static/mat_urls.js?v=fdbe6872"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'faq/spm';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Stats" href="stats.html" />
+    <link rel="prev" title="Results" href="results.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button type="button" class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation" aria-expanded="false" aria-controls="pst-primary-sidebar-modal">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/cpp_lab_logo.png" class="logo__image only-light" alt="bidspm v4.0.0dev
+ documentation - Home"/>
+    <img src="../_static/cpp_lab_logo.png" class="logo__image only-dark pst-js-only" alt="bidspm v4.0.0dev
+ documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../general_information.html">
+    bidspm
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation/index.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../usage_notes.html">
+    Usage notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../demos/index.html">
+    Demos
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    FAQ
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../stats/index.html">
+    Statistics
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../preprocessing/index.html">
+    Preprocessing
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../output/index.html">
+    Outputs
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../QA.html">
+    Quality control
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../API.html">
+    API
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../links_and_references.html">
+    Links and references
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../CHANGELOG.html">
+    Changelog
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../CONTRIBUTING.html">
+    Contributing
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/cpp-lln-lab/bidspm.git" title="github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">github</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button type="button" class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page" aria-expanded="false" aria-controls="pst-secondary-sidebar-modal">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal" tabindex="-1"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../general_information.html">
+    bidspm
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation/index.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../usage_notes.html">
+    Usage notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../demos/index.html">
+    Demos
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../stats/index.html">
+    Statistics
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../preprocessing/index.html">
+    Preprocessing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../output/index.html">
+    Outputs
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../QA.html">
+    Quality control
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../API.html">
+    API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../links_and_references.html">
+    Links and references
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../CHANGELOG.html">
+    Changelog
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../CONTRIBUTING.html">
+    Contributing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/cpp-lln-lab/bidspm.git" title="github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">github</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bids.html">BIDS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preproc.html">Preproc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="results.html">Results</a></li>
+<li class="toctree-l1 current active"><a aria-current="page" class="current reference internal" href="#">SPM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stats.html">Stats</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-house"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">FAQ</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">SPM</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <!-- the section below is automatically generated.
+
+If you want to modify the questions:
+- please edit the files in the `faq` folder in the doc
+
+-->
+<section id="spm">
+<h1>SPM<a class="headerlink" href="#spm" title="Link to this heading">#</a></h1>
+<section id="how-can-get-the-data-from-some-specific-voxel-in-a-nifti-image">
+<h2>How can get the data from some specific voxel in a nifti image?<a class="headerlink" href="#how-can-get-the-data-from-some-specific-voxel-in-a-nifti-image" title="Link to this heading">#</a></h2>
+<section id="spm-read-vols">
+<h3><code class="docutils literal notranslate"><span class="pre">spm_read_vols</span></code><a class="headerlink" href="#spm-read-vols" title="Link to this heading">#</a></h3>
+<p>This can be done with the <code class="docutils literal notranslate"><span class="pre">spm_read_vols</span></code> function.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% get header of Nifti images</span>
+<span class="n">header</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">spm_vol</span><span class="p">(</span><span class="n">path_to_image</span><span class="p">);</span>
+<span class="c">% get the data</span>
+<span class="n">data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">spm_read_vols</span><span class="p">(</span><span class="n">header</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">data</span></code> is an array of size (x, y, z, t) with x, y and z being the spatial dimensions
+and t being the temporal dimension.</p>
+<p>You can access the data in any voxel by using the proper index.</p>
+</section>
+<section id="spm-get-data">
+<h3><code class="docutils literal notranslate"><span class="pre">spm_get_data</span></code><a class="headerlink" href="#spm-get-data" title="Link to this heading">#</a></h3>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% get header of Nifti images</span>
+<span class="n">header</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">spm_vol</span><span class="p">(</span><span class="n">path_to_image</span><span class="p">);</span>
+<span class="c">% define voxels to return</span>
+<span class="n">XYZ</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">10</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="mi">20</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span><span class="w"> </span><span class="k">...</span>
+<span class="w">       </span><span class="mi">39</span><span class="w"> </span><span class="mi">10</span><span class="p">];</span>
+<span class="c">% get the data</span>
+<span class="n">data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">spm_get_data</span><span class="p">(</span><span class="n">header</span><span class="p">,</span><span class="w"> </span><span class="n">XYZ</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">header</span></code>         - [1 x n] structure array of file headers with <code class="docutils literal notranslate"><span class="pre">n</span></code> being the number of volumes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">XYZ</span></code>       - [3 x m] or [4 x m] location matrix {voxel}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code>      - [n x m] double values</p></li>
+</ul>
+</section>
+</section>
+<section id="how-can-i-use-spm-image-calculator-imcalc-to-create-a-roi">
+<h2>How can I use SPM image calculator (<code class="docutils literal notranslate"><span class="pre">imcalc</span></code>) to create a ROI?<a class="headerlink" href="#how-can-i-use-spm-image-calculator-imcalc-to-create-a-roi" title="Link to this heading">#</a></h2>
+<p>The image calculator utility is accessible in the SPM batch GUI:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Batch</span> <span class="pre">--&gt;</span> <span class="pre">SPM</span> <span class="pre">--&gt;</span> <span class="pre">Util</span> <span class="pre">--&gt;</span> <span class="pre">Image</span> <span class="pre">Calculator</span></code></p>
+<p>You can select the input image you want to use to create a ROI (like an atlas
+for example), and then set the expression you want to use to only keep certain
+voxels as part of the binary mask that will define your ROI.</p>
+<p>If you want to keep voxels for your ROI that have a value of 51 or 52 or 53, you
+would use the following expression:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">i1</span><span class="o">==</span><span class="mi">51</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">i1</span><span class="o">==</span><span class="mi">52</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">i1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">53</span>
+</pre></div>
+</div>
+<p>If you save the batch and its job you will get an .m file that may contain
+something like this.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">matlabbatch</span><span class="p">{</span><span class="mi">1</span><span class="p">}.</span><span class="n">spm</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">imcalc</span><span class="p">.</span><span class="n">input</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">fullpath_to_the_image</span><span class="p">;</span>
+<span class="n">matlabbatch</span><span class="p">{</span><span class="mi">1</span><span class="p">}.</span><span class="n">spm</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">imcalc</span><span class="p">.</span><span class="n">output</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">'output'</span><span class="p">;</span>
+<span class="n">matlabbatch</span><span class="p">{</span><span class="mi">1</span><span class="p">}.</span><span class="n">spm</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">imcalc</span><span class="p">.</span><span class="n">outdir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="s">''</span><span class="p">};</span>
+<span class="n">matlabbatch</span><span class="p">{</span><span class="mi">1</span><span class="p">}.</span><span class="n">spm</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">imcalc</span><span class="p">.</span><span class="n">expression</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">'i1==51 || i1==52 || i1 == 53'</span><span class="p">;</span>
+<span class="n">matlabbatch</span><span class="p">{</span><span class="mi">1</span><span class="p">}.</span><span class="n">spm</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">imcalc</span><span class="p">.</span><span class="n">var</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">struct</span><span class="p">(</span><span class="s">'name'</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="s">'value'</span><span class="p">,</span><span class="w"> </span><span class="p">{});</span>
+<span class="n">matlabbatch</span><span class="p">{</span><span class="mi">1</span><span class="p">}.</span><span class="n">spm</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">imcalc</span><span class="p">.</span><span class="n">options</span><span class="p">.</span><span class="n">dmtx</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">matlabbatch</span><span class="p">{</span><span class="mi">1</span><span class="p">}.</span><span class="n">spm</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">imcalc</span><span class="p">.</span><span class="n">options</span><span class="p">.</span><span class="n">mask</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">matlabbatch</span><span class="p">{</span><span class="mi">1</span><span class="p">}.</span><span class="n">spm</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">imcalc</span><span class="p">.</span><span class="n">options</span><span class="p">.</span><span class="n">interp</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">matlabbatch</span><span class="p">{</span><span class="mi">1</span><span class="p">}.</span><span class="n">spm</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">imcalc</span><span class="p">.</span><span class="n">options</span><span class="p">.</span><span class="n">dtype</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="how-can-set-the-value-of-a-specific-voxel-in-a-nifti-image">
+<h2>How can set the value of a specific voxel in a nifti image?<a class="headerlink" href="#how-can-set-the-value-of-a-specific-voxel-in-a-nifti-image" title="Link to this heading">#</a></h2>
+<p>This can be done with the <code class="docutils literal notranslate"><span class="pre">spm_write_vols</span></code> function.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% get nifti header</span>
+<span class="n">header</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">spm_vol</span><span class="p">(</span><span class="n">path_to_image</span><span class="p">);</span>
+
+<span class="c">% get atlas content</span>
+<span class="n">content</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">spm_read_vols</span><span class="p">(</span><span class="n">header</span><span class="p">);</span>
+
+<span class="c">% set the voxel (1,1,1) to 0</span>
+<span class="n">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">z</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">content</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="c">% prepare header for the output</span>
+<span class="n">new_header</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">header</span><span class="p">;</span>
+<span class="n">new_header</span><span class="p">.</span><span class="n">fname</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">'changed_nifti.nii'</span><span class="p">;</span>
+
+<span class="c">% write mask</span>
+<span class="n">spm_write_vol</span><span class="p">(</span><span class="n">new_header</span><span class="p">,</span><span class="w"> </span><span class="n">content</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="how-do-i-get-the-header-of-a-nifti-image">
+<h2>How do I get the header of a nifti image?<a class="headerlink" href="#how-do-i-get-the-header-of-a-nifti-image" title="Link to this heading">#</a></h2>
+<section id="getting-the-header">
+<h3>Getting the header<a class="headerlink" href="#getting-the-header" title="Link to this heading">#</a></h3>
+<p>This can be done with the <code class="docutils literal notranslate"><span class="pre">spm_vol</span></code> function.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% get header of Nifti images</span>
+<span class="n">header</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">spm_vol</span><span class="p">(</span><span class="n">path_to_image</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>If the input image is a 4D nifti file, the structure <code class="docutils literal notranslate"><span class="pre">header</span></code> returned will have as many elements
+as they are volumes in the file.</p>
+<p>The fields of the structures are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">header.fname</span></code> - the filename of the image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">header.dim</span></code>   - the x, y and z dimensions of the volume</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">header.dt</span></code>    - A 1x2 array.  First element is datatype (see spm_type).
+The second is 1 or 0 depending on the endian-ness.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">header.pinfo</span></code> - plane info for each plane of the volume.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">header.pinfo(1,:)</span></code> - scale for each plane</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">header.pinfo((2,:)</span></code> - offset for each plane
+The true voxel intensities of the jth image are given
+by: <code class="docutils literal notranslate"><span class="pre">val*header.pinfo(1,j)</span> <span class="pre">+</span> <span class="pre">header.pinfo(2,j)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">header.pinfo((3,:)</span></code> - offset into image (in bytes).
+If the size of pinfo is 3x1, then the volume is assumed
+to be contiguous and each plane has the same scalefactor
+and offset.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">header.mat</span></code>   - a 4x4 affine transformation matrix mapping from
+voxel coordinates to real world coordinates.
+This can also be directly accessed by <code class="docutils literal notranslate"><span class="pre">spm_get_space</span></code>.</p></li>
+</ul>
+</section>
+<section id="voxel-size">
+<h3>Voxel size<a class="headerlink" href="#voxel-size" title="Link to this heading">#</a></h3>
+<p>The voxel size are the 3 first values of the main diagonal of <code class="docutils literal notranslate"><span class="pre">header.mat</span></code>.
+Get the value along the main diagonal of the matrix and stores it in a
+temporary variable.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">diag</span><span class="p">(</span><span class="n">header</span><span class="p">.</span><span class="n">mat</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Then we only keep the 3 first values of this diagonal to get the x, y, z dimension
+of each voxel (in mm) of this image.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% the "abs" is there to have the absolute value</span>
+<span class="n">VoxelsDimension</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">temp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">));</span>
+</pre></div>
+</div>
+</section>
+<section id="getting-the-voxel-subscripts-of-a-given-set-of-world-space-coordinates">
+<h3>Getting the voxel subscripts of a given set of world space coordinates<a class="headerlink" href="#getting-the-voxel-subscripts-of-a-given-set-of-world-space-coordinates" title="Link to this heading">#</a></h3>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% world coordinate in mm</span>
+<span class="n">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">z</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">world_space_coordinates</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="n">z</span><span class="p">;</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
+
+<span class="c">% Remember that if a matrix A performs a certain transformation,</span>
+<span class="c">% the matrix inv(A) will perform the reverse transformation</span>
+<span class="n">voxel_subscripts</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">inv</span><span class="p">(</span><span class="n">header</span><span class="p">.</span><span class="n">mat</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">world_space_coordinates</span><span class="p">;</span>
+
+<span class="c">% we need to use 'round' to get a value that is not in between 2 voxels.</span>
+<span class="n">voxel_subscripts</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">round</span><span class="p">(</span><span class="n">voxel_subscripts</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">));</span>
+</pre></div>
+</div>
+</section>
+<section id="getting-the-world-space-coordinate-of-a-given-voxel">
+<h3>Getting the world space coordinate of a given voxel<a class="headerlink" href="#getting-the-world-space-coordinate-of-a-given-voxel" title="Link to this heading">#</a></h3>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">z</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+
+<span class="c">% We have to pad with an extra one to be able</span>
+<span class="c">% to multiply it with the transformation matrix.</span>
+<span class="n">voxel_subscripts</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="n">z</span><span class="p">;</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
+<span class="n">world_space_coordinates</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">header</span><span class="p">.</span><span class="n">mat</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">voxel_subscripts</span><span class="p">;</span>
+
+<span class="c">% Only the three first value of this vector are of interest to us</span>
+<span class="n">world_space_coordinates</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">world_space_coordinates</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="how-do-i-know-which-matlab-function-performs-a-given-spm-process">
+<h2>How do I know which matlab function performs a given SPM process?<a class="headerlink" href="#how-do-i-know-which-matlab-function-performs-a-given-spm-process" title="Link to this heading">#</a></h2>
+<p>If you are looking for which SPM function does task X, click on the <code class="docutils literal notranslate"><span class="pre">help</span></code>
+button in the main SPM menu window, then on the task X (e.g Results): the new
+window will tell you the name of the function that performs the task you are
+interested in (<code class="docutils literal notranslate"><span class="pre">spm_results_ui.m</span></code> in this case).</p>
+<p>Another tip is that usually when you run a given process in SPM, the command
+line will display the main function called.</p>
+<p>For example clicking on the <code class="docutils literal notranslate"><span class="pre">Check</span> <span class="pre">Reg</span></code> button and selecting an image to view
+display:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">SPM12</span><span class="p">:</span><span class="w"> </span><span class="n">spm_check_registration</span><span class="w"> </span><span class="p">(</span><span class="n">v6245</span><span class="p">)</span><span class="w">              </span><span class="mi">13</span><span class="p">:</span><span class="mi">42</span><span class="p">:</span><span class="mi">08</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">30</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="mi">2018</span>
+<span class="o">========================================================================</span>
+<span class="n">Display</span><span class="w"> </span><span class="s">D:\SPM\spm12\canonical\avg305T1.nii,1</span>
+</pre></div>
+</div>
+<p>This tells you that this called the <code class="docutils literal notranslate"><span class="pre">spm_check_registration.m</span></code> matlab function.</p>
+<p>You can also find other interesting suggestions in this discussion of the SPM
+mailing list:
+<a class="reference external" href="https://www.jiscmail.ac.uk/cgi-bin/webadmin?A2=ind1803&amp;L=spm&amp;P=R58295&amp;1=spm&amp;9=A&amp;J=on&amp;d=No+Match%3BMatch%3BMatches&amp;z=4">Peeking under the hood – how?</a>.</p>
+<p>Once you have identified the you can then type either type <code class="docutils literal notranslate"><span class="pre">help</span> <span class="pre">function_name</span></code>
+if you want some more information about this function or <code class="docutils literal notranslate"><span class="pre">edit</span> <span class="pre">function_name</span></code> if
+you want to see the code and figure out how the function works.</p>
+</section>
+<section id="how-do-i-merge-2-masks-with-spm">
+<h2>How do I merge 2 masks with SPM?<a class="headerlink" href="#how-do-i-merge-2-masks-with-spm" title="Link to this heading">#</a></h2>
+<p>Here is a code snippet to merge 2 masks:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">path_to_mask_1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">'FIX_ME'</span><span class="p">;</span>
+<span class="n">path_to_mask_2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">'FIX_ME'</span><span class="p">;</span>
+
+<span class="c">% get header of Nifti images</span>
+<span class="n">header_1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">spm_vol</span><span class="p">(</span><span class="n">path_to_mask_1</span><span class="p">);</span>
+<span class="n">header_2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">spm_vol</span><span class="p">(</span><span class="n">path_to_mask_2</span><span class="p">);</span>
+
+<span class="c">% if you want to make sure that images are in the same space</span>
+<span class="c">% and have same resolution</span>
+<span class="n">masks</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">char</span><span class="p">({</span><span class="n">path_to_mask_1</span><span class="p">;</span><span class="w"> </span><span class="n">path_to_mask_2</span><span class="p">});</span>
+<span class="n">spm_check_orientations</span><span class="p">(</span><span class="n">spm_vol</span><span class="p">(</span><span class="n">masks</span><span class="p">));</span>
+
+<span class="c">% get data of Nifti images</span>
+<span class="n">mask_1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">spm_read_vols</span><span class="p">(</span><span class="n">header_1</span><span class="p">);</span>
+<span class="n">mask_2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">spm_read_vols</span><span class="p">(</span><span class="n">header_2</span><span class="p">);</span>
+
+<span class="c">% concatenate data along the 4th dimension</span>
+<span class="n">merged_mask</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">cat</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">mask_1</span><span class="p">,</span><span class="w"> </span><span class="n">mask_2</span><span class="p">);</span>
+
+<span class="c">% keep any voxel that has some value along the 4th dimension</span>
+<span class="n">merged_mask</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">any</span><span class="p">(</span><span class="n">merged_mask</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+
+<span class="c">% create a new header of the final mask</span>
+<span class="n">merged_mask_header</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">header_1</span><span class="p">;</span>
+<span class="n">merged_mask_header</span><span class="p">.</span><span class="n">fname</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">'new_mask.nii'</span><span class="p">;</span>
+
+<span class="n">spm_write_vol</span><span class="p">(</span><span class="n">merged_mask_header</span><span class="p">,</span><span class="w"> </span><span class="n">merged_mask</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Also good way to learn about some basic low level functions of SPM.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">spm_vol</span></code>: reads the header of a 3D or 4D Nifti images</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spm_read_vols</span></code>: given a header it will get the data of Nifti image</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spm_write_vol</span></code>: given a header and a 3D matrix, it will write a Nifti image</p></li>
+</ul>
+<p>For more info about basic files, check the
+<a class="reference external" href="https://en.wikibooks.org/wiki/SPM/Programming_intro#SPM_functions">SPM wikibooks</a>.</p>
+</section>
+<section id="what-is-the-content-of-the-spm-mat-file">
+<h2>What is the content of the SPM.mat file?<a class="headerlink" href="#what-is-the-content-of-the-spm-mat-file" title="Link to this heading">#</a></h2>
+<p>This is here because SPM has the sad (and bad) Matlabic tradition of using variable names
+that have often attempted to replicate the notation in the papers to make engineers
+and the generally math enclined happy,
+rather than the <code class="docutils literal notranslate"><span class="pre">TypicalLongVariableNames</span></code> that many programmers and new comers
+would prefer to see to help with code readability.</p>
+<p>Adapted from: <a class="reference external" href="http://andysbrainblog.blogspot.com/2013/10/whats-in-spmmat-file.html">andysbrainblog</a></p>
+<section id="details-on-experiment">
+<h3>details on experiment<a class="headerlink" href="#details-on-experiment" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xY.RT</span></code>                - TR length (RT =”repeat time”)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xY.P</span></code>                 - matrix of file names</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xY.VY</span></code>                - (number of runs x 1) struct array of mapped image volumes (.nii file info)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.modality</span></code>             - the data you’re using (PET, FMRI, EEG)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.stats.[modality].UFp</span></code> - critical F-threshold for selecting voxels over which the non-sphericity is estimated
+(if required) [default: <code class="docutils literal notranslate"><span class="pre">0.001</span></code>]</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.stats.maxres</span></code>         - maximum number of residual images for smoothness estimation</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.stats.maxmem</span></code>         - maximum amount of data processed at a time (in bytes)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.SPMid</span></code>                - version of SPM used</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.swd</span></code>                  - directory for SPM.mat and nii files. default is <code class="docutils literal notranslate"><span class="pre">pwd</span></code></p></li>
+</ul>
+</section>
+<section id="basis-function">
+<h3>basis function<a class="headerlink" href="#basis-function" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xBF.name</span></code>     - name of basis function</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xBF.length</span></code>   - length in seconds of basis</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xBF.order</span></code>    - order of basis set</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xBF.T</span></code>        - number of subdivisions of TR</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xBF.T0</span></code>       - first time bin (see slice timing)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xBF.UNITS</span></code>    - options: <code class="docutils literal notranslate"><span class="pre">'scans'</span></code> or <code class="docutils literal notranslate"><span class="pre">'secs'</span></code> for onsets</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xBF.Volterra</span></code> - order of convolution</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xBF.dt</span></code>       - length of time bin in seconds</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xBF.bf</span></code>       - basis set matrix</p></li>
+</ul>
+</section>
+<section id="session-structure">
+<h3>Session structure<a class="headerlink" href="#session-structure" title="Link to this heading">#</a></h3>
+<p>Note that in SPM lingo sessions are equivalent to a runs in BIDS.</p>
+<section id="user-specified-covariates-regressors">
+<h4>user-specified covariates/regressors<a class="headerlink" href="#user-specified-covariates-regressors" title="Link to this heading">#</a></h4>
+<p>e.g. motion</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.Sess([session]).C.C</span></code>    - (n x c) double regressor (<code class="docutils literal notranslate"><span class="pre">c</span></code> is number of covariates, <code class="docutils literal notranslate"><span class="pre">n</span></code> is number of sessions)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.Sess([session]).C.name</span></code> - names of covariates</p></li>
+</ul>
+</section>
+<section id="conditions-modulators-specified">
+<h4>conditions &amp; modulators specified<a class="headerlink" href="#conditions-modulators-specified" title="Link to this heading">#</a></h4>
+<p>i.e. input structure array</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.Sess([session]).U(condition).dt</span></code>:  - time bin length (seconds)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.Sess([session]).U(condition).name</span></code> - names of conditions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.Sess([session]).U(condition).ons</span></code>  - onset for condition’s trials</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.Sess([session]).U(condition).dur</span></code>  - duration for condition’s trials</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.Sess([session]).U(condition).u</span></code>    - (t x j) inputs or stimulus function matrix</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.Sess([session]).U(condition).pst</span></code>  - (1 x k) peri-stimulus times (seconds)</p></li>
+</ul>
+</section>
+<section id="parameters-modulators-specified">
+<h4>parameters/modulators specified<a class="headerlink" href="#parameters-modulators-specified" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.Sess([session]).U(condition).P</span></code>      - parameter structure/matrix</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.Sess([session]).U(condition).P.name</span></code> - names of modulators/parameters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.Sess([session]).U(condition).P.h</span></code>    - polynomial order of modulating parameter (order of polynomial expansion where 0 is none)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.Sess([session]).U(condition).P.P</span></code>    - vector of modulating values</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.Sess([session]).U(condition).P.P.i</span></code>  - sub-indices of <code class="docutils literal notranslate"><span class="pre">U(i).u</span></code> for plotting</p></li>
+</ul>
+</section>
+<section id="scan-indices-for-sessions">
+<h4>scan indices for sessions<a class="headerlink" href="#scan-indices-for-sessions" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.Sess([session]).row</span></code></p></li>
+</ul>
+</section>
+<section id="effect-indices-for-sessions">
+<h4>effect indices for sessions<a class="headerlink" href="#effect-indices-for-sessions" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.Sess([session]).col</span></code></p></li>
+</ul>
+</section>
+<section id="f-contrast-information-for-input-specific-effects">
+<h4>F Contrast information for input-specific effects<a class="headerlink" href="#f-contrast-information-for-input-specific-effects" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.Sess([session]).Fc</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.Sess([session]).Fc.i</span></code>    - F Contrast columns for input-specific effects</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.Sess([session]).Fc.name</span></code> - F Contrast names for input-specific effects</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.nscan([session])</span></code> - number of scans per session (or if e.g. a t-test, total number of con*.nii files)</p></li>
+</ul>
+</section>
+</section>
+<section id="global-variate-normalization-details">
+<h3>global variate/normalization details<a class="headerlink" href="#global-variate-normalization-details" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xGX.iGXcalc</span></code> - either <code class="docutils literal notranslate"><span class="pre">'none'</span></code> or <code class="docutils literal notranslate"><span class="pre">'scaling'</span></code></p></li>
+</ul>
+<p>For fMRI usually is <code class="docutils literal notranslate"><span class="pre">none</span></code> (no global normalization).
+If global normalization is <code class="docutils literal notranslate"><span class="pre">scaling</span></code>, see <code class="docutils literal notranslate"><span class="pre">spm_fmri_spm_ui</span></code> for parameters that will then appear under <code class="docutils literal notranslate"><span class="pre">SPM.xGX</span></code>.</p>
+</section>
+<section id="design-matrix-information">
+<h3>design matrix information<a class="headerlink" href="#design-matrix-information" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.X</span></code>        - design matrix (raw, not temporally smoothed)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.name</span></code>     - cellstr of parameter names corresponding to columns of design matrix</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.I</span></code>        - (nScan x 4) matrix of factor level indicators. first column is the replication number.
+Other columns are the levels of each experimental factor.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.iH</span></code>       - vector of H partition (indicator variables) indices</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.iC</span></code>       - vector of C partition (covariates) indices</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.iB</span></code>       - vector of B partition (block effects) indices</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.iG</span></code>       - vector of G partition (nuisance variables) indices</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.K</span></code>        - cell. low frequency confound: high-pass cutoff (seconds)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.K.HParam</span></code> - low frequency cutoff value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.K.X0</span></code>     - cosines (high-pass filter)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.W</span></code>        - Optional whitening/weighting matrix used to give weighted least squares estimates (WLS).
+If not specified <code class="docutils literal notranslate"><span class="pre">spm_spm</span></code> will set this to whiten the data
+and render the OLS estimates maximum likelihood i.e. <code class="docutils literal notranslate"><span class="pre">W*W'</span> <span class="pre">inv(xVi.V)</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.xKXs</span></code>     - space structure for K<em>W</em>X, the ‘filtered and whitened’ design matrix</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.xKXs.X</span></code>   - matrix of trials and betas (columns) in each trial</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.xKXs.tol</span></code> - tolerance</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.xKXs.ds</span></code>  - vectors of singular values</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.xKXs.u</span></code>   - u as in X u*diag(ds)*v’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.xKXs.v</span></code>   - v as in X u*diag(ds)*v’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.xKXs.rk</span></code>  - rank</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.xKXs.oP</span></code>  - orthogonal projector on X</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.xKXs.oPp</span></code> - orthogonal projector on X’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.xKXs.ups</span></code> - space in which this one is embedded</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.xKXs.sus</span></code> - subspace</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.pKX</span></code>      - pseudoinverse of K<em>W</em>X, computed by <code class="docutils literal notranslate"><span class="pre">spm_sp</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.Bcov</span></code>     - xX.pKX<em>xX.V</em>xX.pKX - variance-covariance matrix of parameter estimates
+(when multiplied by the voxel-specific hyperparameter ResMS of the parameter estimates (ResSS/xX.trRV ResMS) )</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.trRV</span></code>     - trace of R*V</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.trRVRV</span></code>   - trace of RVRV</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.erdf</span></code>     - effective residual degrees of freedom (<code class="docutils literal notranslate"><span class="pre">trRV^2/trRVRV</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.nKX</span></code>      - design matrix (<code class="docutils literal notranslate"><span class="pre">xX.xKXs.X</span></code>) scaled for display (see <code class="docutils literal notranslate"><span class="pre">spm_DesMtx('sca',...</span></code> for details)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.sF</span></code>       - cellstr of factor names (columns in <code class="docutils literal notranslate"><span class="pre">SPM.xX.I</span></code>, i think)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.D</span></code>        - struct, design definition</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.xVi</span></code>      - correlation constraints (see non-sphericity below)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xC</span></code>          - struct. array of covariate info</p></li>
+</ul>
+</section>
+<section id="header-info">
+<h3>header info<a class="headerlink" href="#header-info" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.P</span></code> - a matrix of filenames</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.V</span></code> - a vector of structures containing image volume information.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.V.fname</span></code>      - the filename of the image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.V.dim</span></code>        - the x, y and z dimensions of the volume</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.V.dt</span></code>         - a (1 x 2) array. First element is datatype (see <code class="docutils literal notranslate"><span class="pre">spm_type</span></code>).
+The second is 1 or 0 depending on the endian-ness.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.V.mat</span></code>        - a (4 x 4) affine transformation matrix mapping from voxel coordinates
+to real world coordinates.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.V.pinfo</span></code>      - plane info for each plane of the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.V.pinfo(1,:)</span></code> - scale for each plane</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.V.pinfo(2,:)</span></code> - offset for each plane The true voxel intensities of the j<sup><code class="docutils literal notranslate"><span class="pre">th</span></code></sup> image are given by: <code class="docutils literal notranslate"><span class="pre">val*V.pinfo(1,j)</span> <span class="pre">+</span> <span class="pre">V.pinfo(2,j</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.V.pinfo(3,:)</span></code> - offset into image (in bytes). If the size of pinfo is 3x1,
+then the volume is assumed to be contiguous and each plane has the same scale factor and offset.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="structure-describing-intrinsic-temporal-non-sphericity">
+<h3>structure describing intrinsic temporal non-sphericity<a class="headerlink" href="#structure-describing-intrinsic-temporal-non-sphericity" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xVi.I</span></code>   - typically the same as <code class="docutils literal notranslate"><span class="pre">SPM.xX.I</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xVi.h</span></code>   - hyperparameters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xVi.V</span></code>   - xVi.h(1)*xVi.Vi{1} + …</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xVi.Cy</span></code>  - spatially whitened (used by ReML to estimate h)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xVi.CY</span></code>  - <code class="docutils literal notranslate"><span class="pre">&lt;(Y</span> <span class="pre">-</span> <span class="pre">)*(Y</span> <span class="pre">-</span> <span class="pre">)'&gt;</span></code> (used by <code class="docutils literal notranslate"><span class="pre">spm_spm_Bayes</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xVi.Vi</span></code>  - array of non-sphericity components</p>
+<ul>
+<li><p>defaults to <code class="docutils literal notranslate"><span class="pre">{speye(size(xX.X,1))}</span></code> - i.i.d.</p></li>
+<li><p>specifying a cell array of constraints (Qi)</p></li>
+<li><p>These constraints invoke <code class="docutils literal notranslate"><span class="pre">spm_reml</span></code> to estimate hyperparameters assuming V is constant over voxels that provide a high precise estimate of xX.V</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xVi.form</span></code> - form of non-sphericity (either <code class="docutils literal notranslate"><span class="pre">'none'</span></code> or <code class="docutils literal notranslate"><span class="pre">'AR(1)'</span></code> or <code class="docutils literal notranslate"><span class="pre">'FAST'</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xX.V</span></code>     - Optional non-sphericity matrix. <code class="docutils literal notranslate"><span class="pre">CCov(e)sigma^2*V</span></code>.
+If not specified <code class="docutils literal notranslate"><span class="pre">spm_spm</span></code> will compute this using a 1st pass to identify significant voxels over which to estimate V.
+A 2nd pass is then used to re-estimate the parameters with WLS and save the ML estimates (unless xX.W is already specified).</p></li>
+</ul>
+</section>
+<section id="filtering-information">
+<h3>filtering information<a class="headerlink" href="#filtering-information" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.K</span></code> - filter matrix or filtered structure</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.K(s)</span></code>        - structure array containing partition-specific specifications</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.K(s).RT</span></code>     - observation interval in seconds</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.K(s).row</span></code>    - row of Y constituting block/partitions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.K(s).HParam</span></code> - cut-off period in seconds</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.K(s).X0</span></code>     - low frequencies to be removed (DCT)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.Y</span></code> - filtered data matrix</p></li>
+</ul>
+</section>
+<section id="masking-information">
+<h3>masking information<a class="headerlink" href="#masking-information" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xM</span></code>     - Structure containing masking information, or a simple column vector of thresholds corresponding to the images in VY.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xM.T</span></code>   - (n x 1) double - Masking index</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xM.TH</span></code>  - (nVar x nScan) matrix of analysis thresholds, one per image</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xM.I</span></code>   - Implicit masking (<code class="docutils literal notranslate"><span class="pre">0</span></code> –&gt; none; <code class="docutils literal notranslate"><span class="pre">1</span></code> –&gt; implicit zero/NaN mask)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xM.VM</span></code>  - struct array of mapped explicit mask image volumes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xM.xs</span></code>  - (1 x 1) struct ; cellstr description</p></li>
+</ul>
+</section>
+<section id="design-information">
+<h3>design information<a class="headerlink" href="#design-information" title="Link to this heading">#</a></h3>
+<p>self-explanatory names, for once</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xsDes.Basis_functions</span></code> - type of basis function</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xsDes.Number_of_sessions</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xsDes.Trials_per_session</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xsDes.Interscan_interval</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xsDes.High_pass_Filter</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xsDes.Global_calculation</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xsDes.Grand_mean_scaling</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xsDes.Global_normalisation</span></code></p></li>
+</ul>
+</section>
+<section id="details-on-scanner-data">
+<h3>details on scanner data<a class="headerlink" href="#details-on-scanner-data" title="Link to this heading">#</a></h3>
+<p>e.g. smoothness</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xVol</span></code> - structure containing details of volume analyzed</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xVol.M</span></code>    - (4 x 4) voxel –&gt; mm transformation matrix</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xVol.iM</span></code>   - (4 x 4) mm –&gt; voxel transformation matrix</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xVol.DIM</span></code>  - image dimensions - column vector (in voxels)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xVol.XYZ</span></code>  - (3 x S) vector of in-mask voxel coordinates</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xVol.S</span></code>    - Lebesgue measure or volume (in voxels)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xVol.R</span></code>    - vector of resel counts (in resels)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xVol.FWHM</span></code> - Smoothness of components - FWHM, (in voxels)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="info-on-beta-files">
+<h3>info on beta files<a class="headerlink" href="#info-on-beta-files" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.Vbeta</span></code> - struct array of beta image handles</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.Vbeta.fname</span></code>   - beta nii file names</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.Vbeta.descrip</span></code> - names for each beta file</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="info-on-variance-of-the-error">
+<h3>info on variance of the error<a class="headerlink" href="#info-on-variance-of-the-error" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.VResMS</span></code> - file struct of ResMS image handle</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.VResMS.fname</span></code> - variance of error file name</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="info-on-mask">
+<h3>info on mask<a class="headerlink" href="#info-on-mask" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.VM</span></code> - file struct of Mask image handle</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.VM.fname</span></code> - name of mask nii file</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="contrast-details">
+<h3>contrast details<a class="headerlink" href="#contrast-details" title="Link to this heading">#</a></h3>
+<p>added after running contrasts</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xCon</span></code> - Contrast definitions structure array. See also <code class="docutils literal notranslate"><span class="pre">spm_FcUtil.m</span></code> for structure, rules &amp; handling.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xCon.name</span></code> - Contrast name</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xCon.STAT</span></code> - Statistic indicator character (<code class="docutils literal notranslate"><span class="pre">'T'</span></code>, <code class="docutils literal notranslate"><span class="pre">'F'</span></code> or <code class="docutils literal notranslate"><span class="pre">'P'</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xCon.c</span></code>    - Contrast weights (column vector contrasts)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xCon.X0</span></code>   - Reduced design matrix data (spans design space under Ho)</p>
+<ul>
+<li><p>Stored as coordinates in the orthogonal basis of xX.X from spm_sp    (Matrix in SPM99b)</p></li>
+<li><p>Extract using X0 <code class="docutils literal notranslate"><span class="pre">spm_FcUtil('X0',</span> <span class="pre">...</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xCon.iX0</span></code> - Indicates how contrast was specified:</p>
+<ul>
+<li><p>If by columns for reduced design matrix then iX0 contains the column indices.</p></li>
+<li><p>Otherwise, it’s a string containing the <code class="docutils literal notranslate"><span class="pre">spm_FcUtil</span></code> ‘Set’ action:
+Usually one of <code class="docutils literal notranslate"><span class="pre">{'c','c+','X0'}</span></code> defines the indices of the columns that will not be tested. Can be empty.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xCon.X1o</span></code> - Remaining design space data (X1o is orthogonal to X0)</p>
+<ul>
+<li><p>Stored as coordinates in the orthogonal basis of xX.X from <code class="docutils literal notranslate"><span class="pre">spm_sp</span></code> (Matrix in SPM99b)</p></li>
+<li><p>Extract using X1o <code class="docutils literal notranslate"><span class="pre">spm_FcUtil('X1o',</span> <span class="pre">...</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xCon.eidf</span></code> - Effective interest degrees of freedom (numerator df)</p>
+<ul>
+<li><p>Or effect-size threshold for Posterior probability</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xCon.Vcon</span></code> - Name of contrast (for ‘T’s) or ESS (for ‘F’s) image</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPM.xCon.Vspm</span></code> - Name of SPM image</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p>Generated by <a class="reference external" href="https://github.com/willmcgugan/faqtory">FAQtory</a></p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="results.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Results</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="stats.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Stats</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal" tabindex="-1"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-get-the-data-from-some-specific-voxel-in-a-nifti-image">How can get the data from some specific voxel in a nifti image?</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spm-read-vols"><code class="docutils literal notranslate"><span class="pre">spm_read_vols</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spm-get-data"><code class="docutils literal notranslate"><span class="pre">spm_get_data</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-use-spm-image-calculator-imcalc-to-create-a-roi">How can I use SPM image calculator (<code class="docutils literal notranslate"><span class="pre">imcalc</span></code>) to create a ROI?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-set-the-value-of-a-specific-voxel-in-a-nifti-image">How can set the value of a specific voxel in a nifti image?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-get-the-header-of-a-nifti-image">How do I get the header of a nifti image?</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-the-header">Getting the header</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#voxel-size">Voxel size</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-the-voxel-subscripts-of-a-given-set-of-world-space-coordinates">Getting the voxel subscripts of a given set of world space coordinates</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-the-world-space-coordinate-of-a-given-voxel">Getting the world space coordinate of a given voxel</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-know-which-matlab-function-performs-a-given-spm-process">How do I know which matlab function performs a given SPM process?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-merge-2-masks-with-spm">How do I merge 2 masks with SPM?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-content-of-the-spm-mat-file">What is the content of the SPM.mat file?</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#details-on-experiment">details on experiment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basis-function">basis function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#session-structure">Session structure</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#user-specified-covariates-regressors">user-specified covariates/regressors</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-modulators-specified">conditions &amp; modulators specified</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters-modulators-specified">parameters/modulators specified</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#scan-indices-for-sessions">scan indices for sessions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#effect-indices-for-sessions">effect indices for sessions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#f-contrast-information-for-input-specific-effects">F Contrast information for input-specific effects</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#global-variate-normalization-details">global variate/normalization details</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#design-matrix-information">design matrix information</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#header-info">header info</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-describing-intrinsic-temporal-non-sphericity">structure describing intrinsic temporal non-sphericity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-information">filtering information</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#masking-information">masking information</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#design-information">design information</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#details-on-scanner-data">details on scanner data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#info-on-beta-files">info on beta files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#info-on-variance-of-the-error">info on variance of the error</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#info-on-mask">info on mask</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contrast-details">contrast details</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/faq/spm.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=75c7c72ae941e8b558d8"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=75c7c72ae941e8b558d8"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2020, the bidspm pipeline dev team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.24.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
